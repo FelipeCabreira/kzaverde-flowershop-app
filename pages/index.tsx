@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import Head from 'next/head'
 
 import Script from 'dangerous-html/react'
-import { useTranslations } from 'next-intl'
 
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
@@ -12,8 +11,8 @@ const Home: FC = () => {
     <>
       <div className="home-container1">
         <Head>
-          <title>Worthwhile Bewitched Tapir</title>
-          <meta property="og:title" content="Worthwhile Bewitched Tapir" />
+          <title>KzaVerde</title>
+          <meta property="og:title" content="KzaVerde" />
           <link
             rel="canonical"
             href="https://worthwhile-bewitched-tapir-xn2j0r.teleporthq.app/"
@@ -39,7 +38,7 @@ const Home: FC = () => {
               or reservation.
             </p>
             <div className="hero-welcome__actions">
-              <a href="https://wa.me/yourlink">
+              <a href="https://wa.me/c/555183388338">
                 <div className="btn btn-lg btn-primary">
                   <svg
                     width="24"

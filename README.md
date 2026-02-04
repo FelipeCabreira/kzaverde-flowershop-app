@@ -46,6 +46,12 @@ A modern, fully-typed Next.js application for browsing and reserving premium flo
 
 ---
 
+## Be aware to check vulnerabilities in react
+Run 
+```bash
+npx fix-react2shell-next
+```
+
 ## 🛠 Tech Stack
 
 ### Core

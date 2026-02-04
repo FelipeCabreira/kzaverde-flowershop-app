@@ -1,0 +1,44 @@
+{
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Eternal Blush",
+      "price": "$$",
+      "description": "A romantic arrangement of blush roses and complementary white flowers",
+      "image": "/catalog/eternal-blush.jpg",
+      "category": "bestsellers"
+    },
+    {
+      "id": 2,
+      "name": "Golden Hour",
+      "price": "$$$",
+      "description": "Warm golden and orange tones perfect for celebrations",
+      "image": "/catalog/golden-hour.jpg",
+      "category": "seasonal"
+    },
+    {
+      "id": 3,
+      "name": "Pastel Dreams",
+      "price": "$$",
+      "description": "Soft pastel flowers in gentle, calming tones",
+      "image": "/catalog/pastel-dreams.jpg",
+      "category": "occasions"
+    },
+    {
+      "id": 4,
+      "name": "White Serenity",
+      "price": "$$$",
+      "description": "Pure white blooms arranged for elegance and grace",
+      "image": "/catalog/white-serenity.jpg",
+      "category": "weddings"
+    },
+    {
+      "id": 5,
+      "name": "Wild Meadow",
+      "price": "$$",
+      "description": "Wildflower mix with natural beauty and charm",
+      "image": "/catalog/wild-meadow.jpg",
+      "category": "bestsellers"
+    }
+  ]
+}
