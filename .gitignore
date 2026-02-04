@@ -6,6 +6,7 @@ pnpm-lock.yaml
 
 # Next.js
 .next/
+.next/trace/
 out/
 build/
 dist/
