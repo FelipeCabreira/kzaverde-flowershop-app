@@ -9,7 +9,7 @@ const Navigation: FC = () => {
       <div className="navigation-container1">
         <nav id="main-navigation" className="navigation-root">
           <div className="navigation-container">
-            <a href="Homepage">
+            <a href="/">
               <div
                 aria-label="Verdantia Flowers Homepage"
                 className="navigation-logo-link"
@@ -40,28 +40,28 @@ const Navigation: FC = () => {
             <div className="navigation-desktop-menu">
               <ul className="navigation-links-list">
                 <li>
-                  <a href="Homepage">
+                  <a href="/">
                     <div className="navigation-link">
                       <span>Home</span>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a href="#catalog">
+                  <a href="/#catalog">
                     <div className="navigation-link">
                       <span>Catalog</span>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a href="#store">
+                  <a href="/#store">
                     <div className="navigation-link">
                       <span>Our Store</span>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a href="#contact">
+                  <a href="/#contact">
                     <div className="navigation-link">
                       <span>Contact</span>
                     </div>
@@ -70,7 +70,7 @@ const Navigation: FC = () => {
               </ul>
               <div className="navigation-actions">
                 <a
-                  href="https://wa.me/yourlink"
+                  href="https://wa.me/c/555183388338"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -124,7 +124,7 @@ const Navigation: FC = () => {
         </nav>
         <div id="mobile-overlay" className="navigation-mobile-overlay">
           <div className="navigation-overlay-header">
-            <a href="Homepage">
+            <a href="/">
               <div className="navigation-logo-link">
                 <div className="navigation-logo-wrapper">
                   <svg
@@ -172,28 +172,28 @@ const Navigation: FC = () => {
           <div className="navigation-overlay-content">
             <ul className="navigation-overlay-links">
               <li className="navigation-stagger-item">
-                <a href="Homepage">
+                <a href="/">
                   <div className="navigation-overlay-link">
                     <span>Home</span>
                   </div>
                 </a>
               </li>
               <li className="navigation-stagger-item">
-                <a href="#catalog">
+                <a href="/#catalog">
                   <div className="navigation-overlay-link">
                     <span>Catalog</span>
                   </div>
                 </a>
               </li>
               <li className="navigation-stagger-item">
-                <a href="#store">
+                <a href="/#store">
                   <div className="navigation-overlay-link">
                     <span>Our Store</span>
                   </div>
                 </a>
               </li>
               <li className="navigation-stagger-item">
-                <a href="#contact">
+                <a href="/#contact">
                   <div className="navigation-overlay-link">
                     <span>Contact</span>
                   </div>
@@ -203,7 +203,7 @@ const Navigation: FC = () => {
             <div className="navigation-overlay-footer navigation-stagger-item">
               <p className="section-content">Reserve your bouquet today</p>
               <a
-                href="https://wa.me/yourlink"
+                href="https://wa.me/c/555183388338"
                 target="_blank"
                 rel="noreferrer noopener"
               >
