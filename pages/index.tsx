@@ -360,7 +360,7 @@ const Home: FC = () => {
               </div>
             </div>
             <div className="reserve-cta__footer">
-              <a href="https://wa.me/yourlink">
+              <a href="https://wa.me/c/555183388338">
                 <div className="btn btn-accent btn-xl">
                   <svg
                     width="24"
@@ -396,81 +396,91 @@ const Home: FC = () => {
           </div>
           <div className="featured-products__rail">
             <div className="product-card">
-              <img
-                alt="Eternal Blush"
-                src="https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                className="product-card__img"
-              />
+              <a href="/product/1" className="product-card__link">
+                <img
+                  alt="Eternal Blush"
+                  src="https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                  className="product-card__img"
+                />
+              </a>
               <div className="product-card__info">
                 <h3 className="section-content">Eternal Blush</h3>
                 <span className="product-card__price">$$</span>
-                <a href="https://wa.me/yourlink?text=I'd like to reserve Eternal Blush">
+                <a href="/product/1">
                   <div className="btn btn-sm btn-primary">
-                    <span>Reserve</span>
+                    <span>View Details</span>
                   </div>
                 </a>
               </div>
             </div>
             <div className="product-card">
-              <img
-                alt="Golden Hour"
-                src="https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                className="product-card__img"
-              />
+              <a href="/product/2" className="product-card__link">
+                <img
+                  alt="Golden Hour"
+                  src="https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                  className="product-card__img"
+                />
+              </a>
               <div className="product-card__info">
                 <h3 className="section-content">Golden Hour</h3>
                 <span className="product-card__price">$$$</span>
-                <a href="https://wa.me/yourlink?text=I'd like to reserve Golden Hour">
+                <a href="/product/2">
                   <div className="btn btn-sm btn-primary">
-                    <span>Reserve</span>
+                    <span>View Details</span>
                   </div>
                 </a>
               </div>
             </div>
             <div className="product-card">
-              <img
-                alt="Pastel Dreams"
-                src="https://images.pexels.com/photos/15358707/pexels-photo-15358707.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                className="product-card__img"
-              />
+              <a href="/product/3" className="product-card__link">
+                <img
+                  alt="Pastel Dreams"
+                  src="https://images.pexels.com/photos/15358707/pexels-photo-15358707.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                  className="product-card__img"
+                />
+              </a>
               <div className="product-card__info">
                 <h3 className="section-content">Pastel Dreams</h3>
                 <span className="product-card__price">$$</span>
-                <a href="https://wa.me/yourlink?text=I'd like to reserve Pastel Dreams">
+                <a href="/product/3">
                   <div className="btn btn-sm btn-primary">
-                    <span>Reserve</span>
+                    <span>View Details</span>
                   </div>
                 </a>
               </div>
             </div>
             <div className="product-card">
-              <img
-                alt="White Serenity"
-                src="https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                className="product-card__img"
-              />
+              <a href="/product/4" className="product-card__link">
+                <img
+                  alt="White Serenity"
+                  src="https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                  className="product-card__img"
+                />
+              </a>
               <div className="product-card__info">
                 <h3 className="section-content">White Serenity</h3>
                 <span className="product-card__price">$$$</span>
-                <a href="https://wa.me/yourlink?text=I'd like to reserve White Serenity">
+                <a href="/product/4">
                   <div className="btn btn-sm btn-primary">
-                    <span>Reserve</span>
+                    <span>View Details</span>
                   </div>
                 </a>
               </div>
             </div>
             <div className="product-card">
-              <img
-                alt="Wild Meadow"
-                src="https://images.pexels.com/photos/3184888/pexels-photo-3184888.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                className="product-card__img"
-              />
+              <a href="/product/5" className="product-card__link">
+                <img
+                  alt="Wild Meadow"
+                  src="https://images.pexels.com/photos/3184888/pexels-photo-3184888.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
+                  className="product-card__img"
+                />
+              </a>
               <div className="product-card__info">
                 <h3 className="section-content">Wild Meadow</h3>
                 <span className="product-card__price">$$</span>
-                <a href="https://wa.me/yourlink?text=I'd like to reserve Wild Meadow">
+                <a href="/product/5">
                   <div className="btn btn-sm btn-primary">
-                    <span>Reserve</span>
+                    <span>View Details</span>
                   </div>
                 </a>
               </div>

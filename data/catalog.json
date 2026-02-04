@@ -3,42 +3,155 @@
     {
       "id": 1,
       "name": "Eternal Blush",
-      "price": "$$",
-      "description": "A romantic arrangement of blush roses and complementary white flowers",
+      "price": "$89.99",
+      "displayPrice": "$$",
+      "description": "Experience the timeless elegance of our signature rose bouquet, featuring hand-selected premium roses paired with delicate eucalyptus leaves. Each bloom is carefully arranged to create a stunning display that speaks volumes. Perfect for special occasions, romantic gestures, or simply brightening someone's day.",
       "image": "/catalog/eternal-blush.jpg",
-      "category": "bestsellers"
+      "images": [
+        "/catalog/eternal-blush.jpg",
+        "/catalog/eternal-blush-2.jpg",
+        "/catalog/eternal-blush-3.jpg",
+        "/catalog/eternal-blush-4.jpg"
+      ],
+      "category": "bestsellers",
+      "rating": 4.0,
+      "reviews": 127
     },
     {
       "id": 2,
       "name": "Golden Hour",
-      "price": "$$$",
-      "description": "Warm golden and orange tones perfect for celebrations",
+      "price": "$125.00",
+      "displayPrice": "$$$",
+      "description": "Warm golden and orange tones perfectly blended to capture the magic of sunset. This luxurious arrangement features premium sunflowers, roses, and complementary blooms that bring warmth and joy to any space. Ideal for celebrations and special moments.",
       "image": "/catalog/golden-hour.jpg",
-      "category": "seasonal"
+      "images": [
+        "/catalog/golden-hour.jpg",
+        "/catalog/golden-hour-2.jpg",
+        "/catalog/golden-hour-3.jpg",
+        "/catalog/golden-hour-4.jpg"
+      ],
+      "category": "seasonal",
+      "rating": 4.0,
+      "reviews": 85
     },
     {
       "id": 3,
       "name": "Pastel Dreams",
-      "price": "$$",
-      "description": "Soft pastel flowers in gentle, calming tones",
+      "price": "$75.00",
+      "displayPrice": "$$",
+      "description": "Soft pastel flowers in gentle, calming tones create a serene and peaceful atmosphere. This delicate arrangement features light pink, lavender, and cream-colored blooms that evoke tranquility and beauty.",
       "image": "/catalog/pastel-dreams.jpg",
-      "category": "occasions"
+      "images": [
+        "/catalog/pastel-dreams.jpg",
+        "/catalog/pastel-dreams-2.jpg",
+        "/catalog/pastel-dreams-3.jpg",
+        "/catalog/pastel-dreams-4.jpg"
+      ],
+      "category": "occasions",
+      "rating": 4.0,
+      "reviews": 92
     },
     {
       "id": 4,
       "name": "White Serenity",
-      "price": "$$$",
-      "description": "Pure white blooms arranged for elegance and grace",
+      "price": "$110.00",
+      "displayPrice": "$$$",
+      "description": "Pure white blooms arranged for elegance and grace. This sophisticated arrangement is perfect for formal occasions, weddings, or any event requiring understated luxury and timeless beauty.",
       "image": "/catalog/white-serenity.jpg",
-      "category": "weddings"
+      "images": [
+        "/catalog/white-serenity.jpg",
+        "/catalog/white-serenity-2.jpg",
+        "/catalog/white-serenity-3.jpg",
+        "/catalog/white-serenity-4.jpg"
+      ],
+      "category": "weddings",
+      "rating": 4.0,
+      "reviews": 156
     },
     {
       "id": 5,
       "name": "Wild Meadow",
-      "price": "$$",
-      "description": "Wildflower mix with natural beauty and charm",
+      "price": "$80.00",
+      "displayPrice": "$$",
+      "description": "Wildflower mix with natural beauty and charm. This vibrant collection of colorful blooms brings the joy and freedom of nature to your home, perfect for those who appreciate natural, untamed beauty.",
       "image": "/catalog/wild-meadow.jpg",
-      "category": "bestsellers"
+      "images": [
+        "/catalog/wild-meadow.jpg",
+        "/catalog/wild-meadow-2.jpg",
+        "/catalog/wild-meadow-3.jpg",
+        "/catalog/wild-meadow-4.jpg"
+      ],
+      "category": "bestsellers",
+      "rating": 4.0,
+      "reviews": 112
+    },
+    {
+      "id": 6,
+      "name": "Pink Peony Arrangement",
+      "price": "$75.00",
+      "displayPrice": "$$",
+      "description": "Gorgeous pink peonies arranged with complementary greenery in a classic vase. These romantic blooms symbolize prosperity and romance, making them perfect for anniversaries and special celebrations.",
+      "image": "/catalog/pink-peony-arrangement.jpg",
+      "images": [
+        "/catalog/pink-peony-arrangement.jpg",
+        "/catalog/pink-peony-arrangement-2.jpg",
+        "/catalog/pink-peony-arrangement-3.jpg",
+        "/catalog/pink-peony-arrangement-4.jpg"
+      ],
+      "category": "occasions",
+      "rating": 4.2,
+      "reviews": 98
+    },
+    {
+      "id": 7,
+      "name": "Purple Flower Collection",
+      "price": "$68.00",
+      "displayPrice": "$$",
+      "description": "A stunning collection of purple flowers including lisianthus and statice. This sophisticated arrangement brings elegance and grace to any space, perfect for showing admiration and respect.",
+      "image": "/catalog/purple-flower-collection.jpg",
+      "images": [
+        "/catalog/purple-flower-collection.jpg",
+        "/catalog/purple-flower-collection-2.jpg",
+        "/catalog/purple-flower-collection-3.jpg",
+        "/catalog/purple-flower-collection-4.jpg"
+      ],
+      "category": "occasions",
+      "rating": 3.9,
+      "reviews": 76
+    },
+    {
+      "id": 8,
+      "name": "White Ranunculus Bouquet",
+      "price": "$82.00",
+      "displayPrice": "$$",
+      "description": "Delicate white ranunculus flowers arranged with fresh greenery. The intricate layers of petals create a romantic and ethereal look, perfect for weddings and formal events.",
+      "image": "/catalog/white-ranunculus-bouquet.jpg",
+      "images": [
+        "/catalog/white-ranunculus-bouquet.jpg",
+        "/catalog/white-ranunculus-bouquet-2.jpg",
+        "/catalog/white-ranunculus-bouquet-3.jpg",
+        "/catalog/white-ranunculus-bouquet-4.jpg"
+      ],
+      "category": "weddings",
+      "rating": 4.3,
+      "reviews": 134
+    },
+    {
+      "id": 9,
+      "name": "Orchid Elegance",
+      "price": "$95.00",
+      "displayPrice": "$$$",
+      "description": "Exotic orchids combined with warm autumn tones including gerbera daisies and dried foliage. This luxurious arrangement makes a statement and offers a long-lasting, sophisticated display.",
+      "image": "/catalog/orchid-elegance.jpg",
+      "images": [
+        "/catalog/orchid-elegance.jpg",
+        "/catalog/orchid-elegance-2.jpg",
+        "/catalog/orchid-elegance-3.jpg",
+        "/catalog/orchid-elegance-4.jpg"
+      ],
+      "category": "bestsellers",
+      "rating": 4.4,
+      "reviews": 167
     }
   ]
 }
