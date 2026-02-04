@@ -7,7 +7,7 @@ const Footer: FC = () => {
   return (
     <>
       <div className="footer-container1">
-        <footer className="footer-wrapper">
+        <footer id="contact" className="footer-wrapper">
           <div className="footer-container">
             <div className="footer-grid">
               <div className="footer-column footer-brand-column">
