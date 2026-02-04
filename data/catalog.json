@@ -6,12 +6,12 @@
       "price": "$89.99",
       "displayPrice": "$$",
       "description": "Experience the timeless elegance of our signature rose bouquet, featuring hand-selected premium roses paired with delicate eucalyptus leaves. Each bloom is carefully arranged to create a stunning display that speaks volumes. Perfect for special occasions, romantic gestures, or simply brightening someone's day.",
-      "image": "/catalog/eternal-blush.jpg",
+      "image": "https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500",
       "images": [
-        "/catalog/eternal-blush.jpg",
-        "/catalog/eternal-blush-2.jpg",
-        "/catalog/eternal-blush-3.jpg",
-        "/catalog/eternal-blush-4.jpg"
+        "https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/1400172/pexels-photo-1400172.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500"
       ],
       "category": "bestsellers",
       "rating": 4.0,
@@ -23,12 +23,12 @@
       "price": "$125.00",
       "displayPrice": "$$$",
       "description": "Warm golden and orange tones perfectly blended to capture the magic of sunset. This luxurious arrangement features premium sunflowers, roses, and complementary blooms that bring warmth and joy to any space. Ideal for celebrations and special moments.",
-      "image": "/catalog/golden-hour.jpg",
+      "image": "https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&cs=tinysrgb&w=1500",
       "images": [
-        "/catalog/golden-hour.jpg",
-        "/catalog/golden-hour-2.jpg",
-        "/catalog/golden-hour-3.jpg",
-        "/catalog/golden-hour-4.jpg"
+        "https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/9475521/pexels-photo-9475521.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/3620881/pexels-photo-3620881.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/3681405/pexels-photo-3681405.jpeg?auto=compress&cs=tinysrgb&w=1500"
       ],
       "category": "seasonal",
       "rating": 4.0,
@@ -40,12 +40,12 @@
       "price": "$75.00",
       "displayPrice": "$$",
       "description": "Soft pastel flowers in gentle, calming tones create a serene and peaceful atmosphere. This delicate arrangement features light pink, lavender, and cream-colored blooms that evoke tranquility and beauty.",
-      "image": "/catalog/pastel-dreams.jpg",
+      "image": "https://images.pexels.com/photos/15358707/pexels-photo-15358707.jpeg?auto=compress&cs=tinysrgb&w=1500",
       "images": [
-        "/catalog/pastel-dreams.jpg",
-        "/catalog/pastel-dreams-2.jpg",
-        "/catalog/pastel-dreams-3.jpg",
-        "/catalog/pastel-dreams-4.jpg"
+        "https://images.pexels.com/photos/15358707/pexels-photo-15358707.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/3682209/pexels-photo-3682209.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/3620881/pexels-photo-3620881.jpeg?auto=compress&cs=tinysrgb&w=1500"
       ],
       "category": "occasions",
       "rating": 4.0,
@@ -57,12 +57,12 @@
       "price": "$110.00",
       "displayPrice": "$$$",
       "description": "Pure white blooms arranged for elegance and grace. This sophisticated arrangement is perfect for formal occasions, weddings, or any event requiring understated luxury and timeless beauty.",
-      "image": "/catalog/white-serenity.jpg",
+      "image": "https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&cs=tinysrgb&w=1500",
       "images": [
-        "/catalog/white-serenity.jpg",
-        "/catalog/white-serenity-2.jpg",
-        "/catalog/white-serenity-3.jpg",
-        "/catalog/white-serenity-4.jpg"
+        "https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/1400172/pexels-photo-1400172.jpeg?auto=compress&cs=tinysrgb&w=1500"
       ],
       "category": "weddings",
       "rating": 4.0,
@@ -74,12 +74,12 @@
       "price": "$80.00",
       "displayPrice": "$$",
       "description": "Wildflower mix with natural beauty and charm. This vibrant collection of colorful blooms brings the joy and freedom of nature to your home, perfect for those who appreciate natural, untamed beauty.",
-      "image": "/catalog/wild-meadow.jpg",
+      "image": "https://images.pexels.com/photos/3184888/pexels-photo-3184888.jpeg?auto=compress&cs=tinysrgb&w=1500",
       "images": [
-        "/catalog/wild-meadow.jpg",
-        "/catalog/wild-meadow-2.jpg",
-        "/catalog/wild-meadow-3.jpg",
-        "/catalog/wild-meadow-4.jpg"
+        "https://images.pexels.com/photos/3184888/pexels-photo-3184888.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/1574932/pexels-photo-1574932.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/4739042/pexels-photo-4739042.jpeg?auto=compress&cs=tinysrgb&w=1500"
       ],
       "category": "bestsellers",
       "rating": 4.0,
@@ -91,12 +91,12 @@
       "price": "$75.00",
       "displayPrice": "$$",
       "description": "Gorgeous pink peonies arranged with complementary greenery in a classic vase. These romantic blooms symbolize prosperity and romance, making them perfect for anniversaries and special celebrations.",
-      "image": "/catalog/pink-peony-arrangement.jpg",
+      "image": "https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
       "images": [
-        "/catalog/pink-peony-arrangement.jpg",
-        "/catalog/pink-peony-arrangement-2.jpg",
-        "/catalog/pink-peony-arrangement-3.jpg",
-        "/catalog/pink-peony-arrangement-4.jpg"
+        "https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/3682209/pexels-photo-3682209.jpeg?auto=compress&cs=tinysrgb&w=1500"
       ],
       "category": "occasions",
       "rating": 4.2,
@@ -108,12 +108,12 @@
       "price": "$68.00",
       "displayPrice": "$$",
       "description": "A stunning collection of purple flowers including lisianthus and statice. This sophisticated arrangement brings elegance and grace to any space, perfect for showing admiration and respect.",
-      "image": "/catalog/purple-flower-collection.jpg",
+      "image": "https://images.pexels.com/photos/3681405/pexels-photo-3681405.jpeg?auto=compress&cs=tinysrgb&w=1500",
       "images": [
-        "/catalog/purple-flower-collection.jpg",
-        "/catalog/purple-flower-collection-2.jpg",
-        "/catalog/purple-flower-collection-3.jpg",
-        "/catalog/purple-flower-collection-4.jpg"
+        "https://images.pexels.com/photos/3681405/pexels-photo-3681405.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/3620881/pexels-photo-3620881.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/1400172/pexels-photo-1400172.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500"
       ],
       "category": "occasions",
       "rating": 3.9,
@@ -125,12 +125,12 @@
       "price": "$82.00",
       "displayPrice": "$$",
       "description": "Delicate white ranunculus flowers arranged with fresh greenery. The intricate layers of petals create a romantic and ethereal look, perfect for weddings and formal events.",
-      "image": "/catalog/white-ranunculus-bouquet.jpg",
+      "image": "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1500",
       "images": [
-        "/catalog/white-ranunculus-bouquet.jpg",
-        "/catalog/white-ranunculus-bouquet-2.jpg",
-        "/catalog/white-ranunculus-bouquet-3.jpg",
-        "/catalog/white-ranunculus-bouquet-4.jpg"
+        "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500"
       ],
       "category": "weddings",
       "rating": 4.3,
@@ -142,12 +142,12 @@
       "price": "$95.00",
       "displayPrice": "$$$",
       "description": "Exotic orchids combined with warm autumn tones including gerbera daisies and dried foliage. This luxurious arrangement makes a statement and offers a long-lasting, sophisticated display.",
-      "image": "/catalog/orchid-elegance.jpg",
+      "image": "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500",
       "images": [
-        "/catalog/orchid-elegance.jpg",
-        "/catalog/orchid-elegance-2.jpg",
-        "/catalog/orchid-elegance-3.jpg",
-        "/catalog/orchid-elegance-4.jpg"
+        "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/3620881/pexels-photo-3620881.jpeg?auto=compress&cs=tinysrgb&w=1500",
+        "https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500"
       ],
       "category": "bestsellers",
       "rating": 4.4,
