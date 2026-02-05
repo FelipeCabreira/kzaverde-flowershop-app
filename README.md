@@ -77,6 +77,7 @@ npx fix-react2shell-next
 - Playfair Display
 - STIX Two Text
 - Inter
+- Default needs to be check
 
 ---
 
