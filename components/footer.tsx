@@ -40,7 +40,7 @@ const Footer: FC = () => {
                   and delivered with care.
                 </p>
                 <div className="footer-social-links">
-                  <a href="#">
+                  <a href="https://www.facebook.com/kzaverde">
                     <div aria-label="Facebook" className="footer-social-icon">
                       <svg
                         width="24"
@@ -59,7 +59,7 @@ const Footer: FC = () => {
                       </svg>
                     </div>
                   </a>
-                  <a href="#">
+                  <a href="https://www.instagram.com/kzaverde/">
                     <div aria-label="Instagram" className="footer-social-icon">
                       <svg
                         width="24"
@@ -108,9 +108,30 @@ const Footer: FC = () => {
                       </svg>
                     </div>
                   </a>
+                  <a href="https://linktr.ee/kzaverdefloricultura">
+                    <div aria-label="Linktree" className="footer-social-icon">
+                      <svg
+                        width="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
                 </div>
               </div>
-              <div className="footer-column">
+              {/* <div className="footer-column">
                 <h2 className="section-subtitle footer-column-title">
                   Quick Links
                 </h2>
@@ -138,7 +159,7 @@ const Footer: FC = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.google.com/maps/search/Rua+Tomaz+Flores+141+Porto+Alegre" target="_blank" rel="noopener noreferrer">
                         <div className="footer-link">
                           <span>Store Locations</span>
                         </div>
@@ -153,6 +174,21 @@ const Footer: FC = () => {
                     </li>
                   </ul>
                 </nav>
+              </div> */}
+              <div className="footer-column">
+                <h2 className="section-subtitle footer-column-title">
+                  Opening Hours
+                </h2>
+                <div className="footer-opening-hours">
+                  <div className="footer-hours-item">
+                    <span className="footer-hours-day">Seg à Sexta</span>
+                    <span className="footer-hours-time">9h - 18h</span>
+                  </div>
+                  <div className="footer-hours-item">
+                    <span className="footer-hours-day">Sábado</span>
+                    <span className="footer-hours-time">9h - 16h</span>
+                  </div>
+                </div>
               </div>
               <div className="footer-column">
                 <h2 className="section-subtitle footer-column-title">
@@ -179,9 +215,11 @@ const Footer: FC = () => {
                         </g>
                       </svg>
                     </div>
-                    <span className="footer-contact-text">
-                      123 Floral Avenue, Botanical District, NY 10001
-                    </span>
+                    <a href="https://www.google.com/maps/search/Rua+Tomaz+Flores+141+Porto+Alegre" target="_blank" rel="noopener noreferrer">
+                      <span className="footer-contact-text">
+                        Rua Tomaz Flores, 141
+                      </span>
+                    </a>
                   </div>
                   <div className="footer-contact-item">
                     <div className="footer-contact-icon">
@@ -202,7 +240,7 @@ const Footer: FC = () => {
                       </svg>
                     </div>
                     <span className="footer-contact-text">
-                      +1 (555) 123-4567
+                      (51) 98338.8338
                     </span>
                   </div>
                   <div className="footer-contact-item">
@@ -231,9 +269,11 @@ const Footer: FC = () => {
                         </g>
                       </svg>
                     </div>
-                    <span className="footer-contact-text">
-                      hello@verdantiaflowers.com
-                    </span>
+                    <a href="mailto:sergio@kzaverde.com">
+                      <span className="footer-contact-text">
+                        sergio@kzaverde.com
+                      </span>
+                    </a>
                   </div>
                 </div>
                 <div className="footer-cta-wrapper">
@@ -335,6 +375,9 @@ const Footer: FC = () => {
           }
           .footer-container3 {
             display: contents;
+          }
+          .footer-hours-time {
+            padding: 2rem;
           }
         `}
       </style>
