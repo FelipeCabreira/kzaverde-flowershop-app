@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Eternal Blush",
+    "price": "R$ 100,00",
+    "image": "https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500",
+    "alt": "Eternal Blush"
+  },
+  {
+    "id": 2,
+    "name": "Golden Hour",
+    "price": "R$ 120,00",
+    "image": "https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&cs=tinysrgb&w=1500",
+    "alt": "Golden Hour"
+  },
+  {
+    "id": 3,
+    "name": "Pastel Dreams",
+    "price": "R$ 30,00",
+    "image": "https://images.pexels.com/photos/15358707/pexels-photo-15358707.jpeg?auto=compress&cs=tinysrgb&w=1500",
+    "alt": "Pastel Dreams"
+  },
+  {
+    "id": 4,
+    "name": "White Serenity",
+    "price": "R$ 150,00",
+    "image": "https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&cs=tinysrgb&w=1500",
+    "alt": "White Serenity"
+  },
+  {
+    "id": 5,
+    "name": "Wild Meadow",
+    "price": "R$ 120,00",
+    "image": "https://images.pexels.com/photos/3184888/pexels-photo-3184888.jpeg?auto=compress&cs=tinysrgb&w=1500",
+    "alt": "Wild Meadow"
+  }
+]

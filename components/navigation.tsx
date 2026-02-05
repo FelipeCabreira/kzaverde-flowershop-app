@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 
 import Script from 'dangerous-html/react'
-import { useTranslations } from 'next-intl'
 
 const Navigation: FC = () => {
   return (
@@ -11,7 +10,7 @@ const Navigation: FC = () => {
           <div className="navigation-container">
             <a href="/">
               <div
-                aria-label="Verdantia Flowers Homepage"
+                aria-label="KzaVerde Homepage"
                 className="navigation-logo-link"
               >
                 <div className="navigation-logo-wrapper">
@@ -33,7 +32,7 @@ const Navigation: FC = () => {
                       <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12A4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5a4.5 4.5 0 1 1-4.5 4.5m0-9V9m-4.5 3H9m7.5 0H15m-3 4.5V15M8 8l1.88 1.88m4.24 0L16 8m-8 8l1.88-1.88m4.24 0L16 16"></path>
                     </g>
                   </svg>
-                  <span className="navigation-brand-name">Verdantia</span>
+                  <span className="navigation-brand-name">KzaVerde</span>
                 </div>
               </div>
             </a>
@@ -42,28 +41,28 @@ const Navigation: FC = () => {
                 <li>
                   <a href="/">
                     <div className="navigation-link">
-                      <span>Home</span>
+                      <span>Ínicio</span>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a href="/#catalog">
                     <div className="navigation-link">
-                      <span>Catalog</span>
+                      <span>Produtos</span>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a href="/#store">
                     <div className="navigation-link">
-                      <span>Our Store</span>
+                      <span>Nossa Loja</span>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a href="/#contact">
                     <div className="navigation-link">
-                      <span>Contact</span>
+                      <span>Contato</span>
                     </div>
                   </a>
                 </li>
@@ -95,7 +94,7 @@ const Navigation: FC = () => {
                         <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0za5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path>
                       </g>
                     </svg>
-                    <span>Order Now</span>
+                    <span>WhatsApp</span>
                   </div>
                 </a>
               </div>
@@ -145,7 +144,7 @@ const Navigation: FC = () => {
                       <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12A4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5a4.5 4.5 0 1 1-4.5 4.5m0-9V9m-4.5 3H9m7.5 0H15m-3 4.5V15M8 8l1.88 1.88m4.24 0L16 8m-8 8l1.88-1.88m4.24 0L16 16"></path>
                     </g>
                   </svg>
-                  <span className="navigation-brand-name">Verdantia</span>
+                  <span className="navigation-brand-name">KzaVerde</span>
                 </div>
               </div>
             </a>
@@ -174,28 +173,28 @@ const Navigation: FC = () => {
               <li className="navigation-stagger-item">
                 <a href="/">
                   <div className="navigation-overlay-link">
-                    <span>Home</span>
+                    <span>Ínicio</span>
                   </div>
                 </a>
               </li>
               <li className="navigation-stagger-item">
                 <a href="/#catalog">
                   <div className="navigation-overlay-link">
-                    <span>Catalog</span>
+                    <span>Produtos</span>
                   </div>
                 </a>
               </li>
               <li className="navigation-stagger-item">
                 <a href="/#store">
                   <div className="navigation-overlay-link">
-                    <span>Our Store</span>
+                    <span>Nossa Loja</span>
                   </div>
                 </a>
               </li>
               <li className="navigation-stagger-item">
                 <a href="/#contact">
                   <div className="navigation-overlay-link">
-                    <span>Contact</span>
+                    <span>Contato</span>
                   </div>
                 </a>
               </li>

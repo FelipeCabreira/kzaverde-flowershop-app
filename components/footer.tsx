@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 
-import Script from 'dangerous-html/react'
-import { useTranslations } from 'next-intl'
+import Script from "dangerous-html/react";
+import { useTranslations } from "next-intl";
 
 const Footer: FC = () => {
   return (
@@ -32,12 +32,12 @@ const Footer: FC = () => {
                       </g>
                     </svg>
                   </div>
-                  <span className="footer-brand-name">Verdantia</span>
+                  <span className="footer-brand-name">KzaVerde</span>
                 </div>
                 <p className="section-content footer-description">
-                  Bringing nature&apos;s finest blooms to your doorstep.
-                  Hand-crafted arrangements for every emotion, grown with love
-                  and delivered with care.
+                  Trazendo as flores mais belas da natureza até a sua porta.
+                  Arranjos artesanais para cada emoção, cultivados com amor e
+                  entregues com carinho.
                 </p>
                 <div className="footer-social-links">
                   <a href="https://www.facebook.com/kzaverde">
@@ -177,7 +177,7 @@ const Footer: FC = () => {
               </div> */}
               <div className="footer-column">
                 <h2 className="section-subtitle footer-column-title">
-                  Opening Hours
+                  Horário de Funcionamento
                 </h2>
                 <div className="footer-opening-hours">
                   <div className="footer-hours-item">
@@ -192,7 +192,7 @@ const Footer: FC = () => {
               </div>
               <div className="footer-column">
                 <h2 className="section-subtitle footer-column-title">
-                  Visit Our Store
+                  Visite nossa loja
                 </h2>
                 <div className="footer-contact-info">
                   <div className="footer-contact-item">
@@ -215,7 +215,11 @@ const Footer: FC = () => {
                         </g>
                       </svg>
                     </div>
-                    <a href="https://www.google.com/maps/search/Rua+Tomaz+Flores+141+Porto+Alegre" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href="https://www.google.com/maps/search/Rua+Tomaz+Flores+141+Porto+Alegre"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <span className="footer-contact-text">
                         Rua Tomaz Flores, 141
                       </span>
@@ -239,9 +243,7 @@ const Footer: FC = () => {
                         ></path>
                       </svg>
                     </div>
-                    <span className="footer-contact-text">
-                      (51) 98338.8338
-                    </span>
+                    <span className="footer-contact-text">(51) 98338.8338</span>
                   </div>
                   <div className="footer-contact-item">
                     <div className="footer-contact-icon">
@@ -297,11 +299,11 @@ const Footer: FC = () => {
                         </g>
                       </svg>
                       <span>
-                        {' '}
+                        {" "}
                         Reserve via WhatsApp
                         <span
                           dangerouslySetInnerHTML={{
-                            __html: ' ',
+                            __html: " ",
                           }}
                         />
                       </span>
@@ -313,7 +315,7 @@ const Footer: FC = () => {
             <div className="footer-bottom">
               <div className="footer-bottom-content">
                 <p className="footer-copyright">
-                  &amp;copy; 2026 Verdantia Flowers. All rights reserved.
+                  &amp;copy; 2026 KzaVerde. All rights reserved.
                 </p>
                 <div className="footer-bottom-links">
                   <a href="#">
@@ -382,7 +384,7 @@ const Footer: FC = () => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

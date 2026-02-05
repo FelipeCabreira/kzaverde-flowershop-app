@@ -1,4 +1,4 @@
-# Verdantia Flowers - Floral E-Commerce Platform
+# KzaVerde - Floral E-Commerce Platform
 
 A modern, fully-typed Next.js application for browsing and reserving premium floral arrangements. Built with React 17, Next.js 12, and TypeScript.
 

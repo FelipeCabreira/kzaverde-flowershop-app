@@ -5,6 +5,8 @@ import Script from 'dangerous-html/react'
 
 import Navigation from '../components/navigation'
 import Footer from '../components/footer'
+import ProductCard from '../components/product-card'
+import productsData from '../data/products.json'
 
 const Home: FC = () => {
   return (
@@ -31,11 +33,13 @@ const Home: FC = () => {
           ></video>
           <div className="hero-welcome__overlay"></div>
           <div className="hero-welcome__content">
-            <h1 className="hero-title">Verdantia Flowers</h1>
+            <h1 className="hero-title">KzaVerde</h1>
             <p className="hero-subtitle">
-              Bespoke floral arrangements for life&apos;s most beautiful
-              moments. Fresh blooms, hand-picked and ready for same-day pick-up
-              or reservation.
+              {/* Na KzaVerde floricultura Sergio & Marta voltam com o coração em flor 
+              com miniaturas que contam histórias e antiguidades que guardam memórias.
+    <br />
+    <br /> */}
+              Cada detalhe e um gesto de carinho. <br /> Cada flor, uma promessa de beleza.
             </p>
             <div className="hero-welcome__actions">
               <a href="https://wa.me/c/555183388338">
@@ -62,15 +66,16 @@ const Home: FC = () => {
                   </span>
                 </div>
               </a>
-              <a href="#catalog">
+              <a href="#featured-products">
                 <div className="btn-outline btn btn-lg">
-                  <span>Browse Catalog</span>
+                  <span>Produtos</span>
                 </div>
               </a>
             </div>
           </div>
         </section>
-        <section className="quick-search">
+        {/* Search by produtos section or promotions */}
+        {/* <section className="quick-search">
           <div className="quick-search__card">
             <div className="quick-search__header">
               <h2 className="section-title">Find Your Perfect Bloom</h2>
@@ -200,8 +205,9 @@ const Home: FC = () => {
               </div>
             </form>
           </div>
-        </section>
-        <section id="catalog" className="featured-collections">
+        </section> */}
+        {/* Produtos e promotions section  */}
+        {/* <section id="catalog" className="featured-collections">
           <div className="featured-collections__inner">
             <div className="featured-collections__header">
               <h2 className="section-title">Curated Collections</h2>
@@ -284,13 +290,33 @@ const Home: FC = () => {
               </div>
             </div>
           </div>
+        </section> */}
+          <section id="featured-products" className="featured-products">
+          <div className="featured-products__header">
+            <h2 className="section-title">Mais vendidos</h2>
+            <p className="section-subtitle">
+              Nossos favoritos atuais, disponíveis para pré-encomenda imediata.
+            </p>
+          </div>
+          <div className="featured-products__rail">
+            {productsData.map((product) => (
+              <ProductCard
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                price={product.price}
+                image={product.image}
+                alt={product.alt}
+              />
+            ))}
+          </div>
         </section>
         <section className="reserve-cta">
           <div className="reserve-cta__inner">
             <div className="reserve-cta__header">
-              <h2 className="section-title">How to Reserve</h2>
+              <h2 className="section-title">Como reservar</h2>
               <p className="section-subtitle">
-                Simple steps to secure your favorite blooms.
+               Etapas simples para garantir suas flores favoritas.
               </p>
             </div>
             <div className="reserve-cta__steps">
@@ -311,9 +337,9 @@ const Home: FC = () => {
                     <path d="m21 21l-4.3-4.3"></path>
                   </svg>
                 </div>
-                <h3 className="section-content">1. Browse Catalog</h3>
+                <h3 className="section-content">1. Escolha seu produto no nosso catálogo</h3>
                 <p className="section-content">
-                  Find the perfect arrangement from our curated selection.
+                  Encontre o arranjo perfeito na nossa seleção curada.
                 </p>
               </div>
               <div className="reserve-cta__step">
@@ -332,9 +358,10 @@ const Home: FC = () => {
                     <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
                   </svg>
                 </div>
-                <h3 className="section-content">2. WhatsApp Us</h3>
+                <h3 className="section-content">2. WhatsApp</h3>
                 <p className="section-content">
-                  Send us a message with the product name and desired date.
+                  Envie-nos uma mensagem com o nome do produto e a data desejada.
+
                 </p>
               </div>
               <div className="reserve-cta__step">
@@ -353,9 +380,9 @@ const Home: FC = () => {
                     <path d="M20 6L9 17l-5-5"></path>
                   </svg>
                 </div>
-                <h3 className="section-content">3. Confirm &amp; Pick Up</h3>
+                <h3 className="section-content">3. Confirmação e Retirada</h3>
                 <p className="section-content">
-                  We confirm your order and have it ready for same-day pick-up.
+                  Confirmamos seu pedido e deixamos pronto para retirada no mesmo dia.
                 </p>
               </div>
             </div>
@@ -375,7 +402,7 @@ const Home: FC = () => {
                   </svg>
                   <span>
                     {' '}
-                    Start Your Reservation
+                    Fale conosco via WhatsApp
                     <span
                       dangerouslySetInnerHTML={{
                         __html: ' ',
@@ -387,111 +414,12 @@ const Home: FC = () => {
             </div>
           </div>
         </section>
-        <section className="featured-products">
-          <div className="featured-products__header">
-            <h2 className="section-title">Top Items</h2>
-            <p className="section-subtitle">
-              Our current favorites, available for immediate pre-order.
-            </p>
-          </div>
-          <div className="featured-products__rail">
-            <div className="product-card">
-              <a href="/product/1" className="product-card__link">
-                <img
-                  alt="Eternal Blush"
-                  src="https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                  className="product-card__img"
-                />
-              </a>
-              <div className="product-card__info">
-                <h3 className="section-content">Eternal Blush</h3>
-                <span className="product-card__price">$$</span>
-                <a href="/product/1">
-                  <div className="btn btn-sm btn-primary">
-                    <span>View Details</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div className="product-card">
-              <a href="/product/2" className="product-card__link">
-                <img
-                  alt="Golden Hour"
-                  src="https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                  className="product-card__img"
-                />
-              </a>
-              <div className="product-card__info">
-                <h3 className="section-content">Golden Hour</h3>
-                <span className="product-card__price">$$$</span>
-                <a href="/product/2">
-                  <div className="btn btn-sm btn-primary">
-                    <span>View Details</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div className="product-card">
-              <a href="/product/3" className="product-card__link">
-                <img
-                  alt="Pastel Dreams"
-                  src="https://images.pexels.com/photos/15358707/pexels-photo-15358707.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                  className="product-card__img"
-                />
-              </a>
-              <div className="product-card__info">
-                <h3 className="section-content">Pastel Dreams</h3>
-                <span className="product-card__price">$$</span>
-                <a href="/product/3">
-                  <div className="btn btn-sm btn-primary">
-                    <span>View Details</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div className="product-card">
-              <a href="/product/4" className="product-card__link">
-                <img
-                  alt="White Serenity"
-                  src="https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                  className="product-card__img"
-                />
-              </a>
-              <div className="product-card__info">
-                <h3 className="section-content">White Serenity</h3>
-                <span className="product-card__price">$$$</span>
-                <a href="/product/4">
-                  <div className="btn btn-sm btn-primary">
-                    <span>View Details</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div className="product-card">
-              <a href="/product/5" className="product-card__link">
-                <img
-                  alt="Wild Meadow"
-                  src="https://images.pexels.com/photos/3184888/pexels-photo-3184888.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500"
-                  className="product-card__img"
-                />
-              </a>
-              <div className="product-card__info">
-                <h3 className="section-content">Wild Meadow</h3>
-                <span className="product-card__price">$$</span>
-                <a href="/product/5">
-                  <div className="btn btn-sm btn-primary">
-                    <span>View Details</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+
         <section className="inspiration-preview">
           <div className="inspiration-preview__header">
-            <h2 className="section-title">Floral Inspiration</h2>
+            <h2 className="section-title">Inspiração Floral</h2>
             <p className="section-subtitle">
-              Explore our gallery of event setups and custom designs.
+              Explore nossa galeria de arranjos e designs personalizados.
             </p>
           </div>
           <div className="inspiration-preview__rail">
@@ -539,9 +467,9 @@ const Home: FC = () => {
             </div>
           </div>
           <div className="inspiration-preview__footer">
-            <a href="#">
+            <a href="#featured-products">
               <div className="btn-outline btn">
-                <span>View Full Gallery</span>
+                <span>Veja nossa galeria de produtos</span>
               </div>
             </a>
           </div>
@@ -597,33 +525,7 @@ const Home: FC = () => {
             ></Script>
           </div>
         </div>
-        <Footer></Footer>
-        <a href="https://play.teleporthq.io/signup">
-          <div aria-label="Sign up to TeleportHQ" className="home-container4">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 19 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="home-icon25"
-            >
-              <path
-                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
-                fill="#B23ADE"
-              ></path>
-              <path
-                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
-                fill="#FF5C5C"
-              ></path>
-              <path
-                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
-                fill="#2874DE"
-              ></path>
-            </svg>
-            <span className="home-text24">Built in TeleportHQ</span>
-          </div>
-        </a>
+        <Footer />
       </div>
       <style jsx>
         {`
