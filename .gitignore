@@ -51,3 +51,4 @@ ehthumbs.db
 # Misc
 .cache/
 .turbo/
+.next/trace
