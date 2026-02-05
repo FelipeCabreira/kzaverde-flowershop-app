@@ -46,14 +46,14 @@ const Navigation: FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/#catalog">
+                  <a href="/#featured-products">
                     <div className="navigation-link">
                       <span>Produtos</span>
                     </div>
                   </a>
                 </li>
                 <li>
-                  <a href="/#store">
+                  <a href="/#inspiration-preview">
                     <div className="navigation-link">
                       <span>Nossa Loja</span>
                     </div>
@@ -178,14 +178,14 @@ const Navigation: FC = () => {
                 </a>
               </li>
               <li className="navigation-stagger-item">
-                <a href="/#catalog">
+                <a href="/#featured-products">
                   <div className="navigation-overlay-link">
                     <span>Produtos</span>
                   </div>
                 </a>
               </li>
               <li className="navigation-stagger-item">
-                <a href="/#store">
+                <a href="/#inspiration-preview">
                   <div className="navigation-overlay-link">
                     <span>Nossa Loja</span>
                   </div>

@@ -415,7 +415,7 @@ const Home: FC = () => {
           </div>
         </section>
 
-        <section className="inspiration-preview">
+        <section id='inspiration-preview' className="inspiration-preview">
           <div className="inspiration-preview__header">
             <h2 className="section-title">Inspiração Floral</h2>
             <p className="section-subtitle">
