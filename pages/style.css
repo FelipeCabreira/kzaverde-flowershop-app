@@ -1453,13 +1453,16 @@
   padding: var(--spacing-4xl) 0;
   overflow: hidden;
   background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
  
 .featured-products__header {
   margin: 0 auto var(--spacing-3xl);
   padding: 0 var(--spacing-xl);
   max-width: var(--content-max-width);
-  text-align: left;
+  text-align: center;
 }
  
 .featured-products__rail {
@@ -1503,6 +1506,9 @@
 .inspiration-preview {
   padding: var(--spacing-4xl) 0;
   background: var(--color-surface-elevated);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
  
 .inspiration-preview__header {
