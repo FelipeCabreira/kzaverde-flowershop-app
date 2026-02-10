@@ -1,37 +1,30 @@
 [
   {
     "id": 1,
-    "name": "Eternal Blush",
-    "price": "R$ 100,00",
-    "image": "https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500",
-    "alt": "Eternal Blush"
+    "name": "Arranjo Base Vidro Grossa",
+    "price": "R$ 495,00",
+    "image": "/catalog/buque_doze_rosas_2.png",
+    "alt": "Arranjo Base Vidro Grossa"
   },
   {
     "id": 2,
-    "name": "Golden Hour",
+    "name": "Buque Doze Rosas",
     "price": "R$ 120,00",
-    "image": "https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&cs=tinysrgb&w=1500",
-    "alt": "Golden Hour"
+    "image": "/catalog/buque_doze_rosas.png",
+    "alt": "Buque Doze Rosas"
   },
   {
     "id": 3,
-    "name": "Pastel Dreams",
+    "name": "Buque Doze Rosas - Rosas",
     "price": "R$ 30,00",
-    "image": "https://images.pexels.com/photos/15358707/pexels-photo-15358707.jpeg?auto=compress&cs=tinysrgb&w=1500",
-    "alt": "Pastel Dreams"
+    "image": "/catalog/buque_doze_rosas_rosas.png",
+    "alt": "Buque Doze Rosas - Rosas"
   },
   {
     "id": 4,
-    "name": "White Serenity",
+    "name": "Buque Seis Rosas",
     "price": "R$ 150,00",
-    "image": "https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&cs=tinysrgb&w=1500",
-    "alt": "White Serenity"
-  },
-  {
-    "id": 5,
-    "name": "Wild Meadow",
-    "price": "R$ 120,00",
-    "image": "https://images.pexels.com/photos/3184888/pexels-photo-3184888.jpeg?auto=compress&cs=tinysrgb&w=1500",
-    "alt": "Wild Meadow"
+    "image": "/catalog/buque_seis_rosas.png",
+    "alt": "Buque Seis Rosas"
   }
 ]

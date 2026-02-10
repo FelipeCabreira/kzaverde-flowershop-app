@@ -1,157 +1,96 @@
 {
-	"catalog": [
-		{
-			"id": 1,
-			"name": "Eternal Blush",
-			"price": "R$ 180,00",
-			"displayPrice": "$$",
-			"description": "Experience the timeless elegance of our signature rose bouquet, featuring hand-selected premium roses paired with delicate eucalyptus leaves. Each bloom is carefully arranged to create a stunning display that speaks volumes. Perfect for special occasions, romantic gestures, or simply brightening someone's day.",
-			"image": "https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500",
-			"images": [
-				"https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/1400172/pexels-photo-1400172.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500"
-			],
-			"category": "bestsellers",
-			"rating": 4,
-			"reviews": 127
-		},
-		{
-			"id": 2,
-			"name": "Golden Hour",
-			"price": "R$ 250,00",
-			"displayPrice": "$$$",
-			"description": "Warm golden and orange tones perfectly blended to capture the magic of sunset. This luxurious arrangement features premium sunflowers, roses, and complementary blooms that bring warmth and joy to any space. Ideal for celebrations and special moments.",
-			"image": "https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&cs=tinysrgb&w=1500",
-			"images": [
-				"https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/9475521/pexels-photo-9475521.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/3620881/pexels-photo-3620881.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/3681405/pexels-photo-3681405.jpeg?auto=compress&cs=tinysrgb&w=1500"
-			],
-			"category": "seasonal",
-			"rating": 4,
-			"reviews": 85
-		},
-		{
-			"id": 3,
-			"name": "Pastel Dreams",
-			"price": "R$ 150,00",
-			"displayPrice": "$$",
-			"description": "Soft pastel flowers in gentle, calming tones create a serene and peaceful atmosphere. This delicate arrangement features light pink, lavender, and cream-colored blooms that evoke tranquility and beauty.",
-			"image": "https://images.pexels.com/photos/15358707/pexels-photo-15358707.jpeg?auto=compress&cs=tinysrgb&w=1500",
-			"images": [
-				"https://images.pexels.com/photos/15358707/pexels-photo-15358707.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/3682209/pexels-photo-3682209.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/3620881/pexels-photo-3620881.jpeg?auto=compress&cs=tinysrgb&w=1500"
-			],
-			"category": "occasions",
-			"rating": 4,
-			"reviews": 92
-		},
-		{
-			"id": 4,
-			"name": "White Serenity",
-			"price": "R$ 220,00",
-			"displayPrice": "$$$",
-			"description": "Pure white blooms arranged for elegance and grace. This sophisticated arrangement is perfect for formal occasions, weddings, or any event requiring understated luxury and timeless beauty.",
-			"image": "https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&cs=tinysrgb&w=1500",
-			"images": [
-				"https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/1400172/pexels-photo-1400172.jpeg?auto=compress&cs=tinysrgb&w=1500"
-			],
-			"category": "weddings",
-			"rating": 4,
-			"reviews": 156
-		},
-		{
-			"id": 5,
-			"name": "Wild Meadow",
-			"price": "R$ 160,00",
-			"displayPrice": "$$",
-			"description": "Wildflower mix with natural beauty and charm. This vibrant collection of colorful blooms brings the joy and freedom of nature to your home, perfect for those who appreciate natural, untamed beauty.",
-			"image": "https://images.pexels.com/photos/3184888/pexels-photo-3184888.jpeg?auto=compress&cs=tinysrgb&w=1500",
-			"images": [
-				"https://images.pexels.com/photos/3184888/pexels-photo-3184888.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/1574932/pexels-photo-1574932.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/4739042/pexels-photo-4739042.jpeg?auto=compress&cs=tinysrgb&w=1500"
-			],
-			"category": "bestsellers",
-			"rating": 4,
-			"reviews": 112
-		},
-		{
-			"id": 6,
-			"name": "Pink Peony Arrangement",
-			"price": "R$ 150,00",
-			"displayPrice": "$$",
-			"description": "Gorgeous pink peonies arranged with complementary greenery in a classic vase. These romantic blooms symbolize prosperity and romance, making them perfect for anniversaries and special celebrations.",
-			"image": "https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
-			"images": [
-				"https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/3682209/pexels-photo-3682209.jpeg?auto=compress&cs=tinysrgb&w=1500"
-			],
-			"category": "occasions",
-			"rating": 4.2,
-			"reviews": 98
-		},
-		{
-			"id": 7,
-			"name": "Purple Flower Collection",
-			"price": "R$ 140,00",
-			"displayPrice": "$$",
-			"description": "A stunning collection of purple flowers including lisianthus and statice. This sophisticated arrangement brings elegance and grace to any space, perfect for showing admiration and respect.",
-			"image": "https://images.pexels.com/photos/3681405/pexels-photo-3681405.jpeg?auto=compress&cs=tinysrgb&w=1500",
-			"images": [
-				"https://images.pexels.com/photos/3681405/pexels-photo-3681405.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/3620881/pexels-photo-3620881.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/1400172/pexels-photo-1400172.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500"
-			],
-			"category": "occasions",
-			"rating": 3.9,
-			"reviews": 76
-		},
-		{
-			"id": 8,
-			"name": "White Ranunculus Bouquet",
-			"price": "R$ 165,00",
-			"displayPrice": "$$",
-			"description": "Delicate white ranunculus flowers arranged with fresh greenery. The intricate layers of petals create a romantic and ethereal look, perfect for weddings and formal events.",
-			"image": "https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1500",
-			"images": [
-				"https://images.pexels.com/photos/735869/pexels-photo-735869.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/5706654/pexels-photo-5706654.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/2832880/pexels-photo-2832880.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500"
-			],
-			"category": "weddings",
-			"rating": 4.3,
-			"reviews": 134
-		},
-		{
-			"id": 9,
-			"name": "Orchid Elegance",
-			"price": "R$ 190,00",
-			"displayPrice": "$$$",
-			"description": "Exotic orchids combined with warm autumn tones including gerbera daisies and dried foliage. This luxurious arrangement makes a statement and offers a long-lasting, sophisticated display.",
-			"image": "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500",
-			"images": [
-				"https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/30190403/pexels-photo-30190403.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/3620881/pexels-photo-3620881.jpeg?auto=compress&cs=tinysrgb&w=1500",
-				"https://images.pexels.com/photos/1677009/pexels-photo-1677009.jpeg?auto=compress&cs=tinysrgb&w=1500"
-			],
-			"category": "bestsellers",
-			"rating": 4.4,
-			"reviews": 167
-		}
-	]
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Arranjo base vidro grossa",
+      "price": "R$ 495,00",
+      "displayPrice": "$$",
+      "description": "Arranjo elegante em base de vidro grossa com rosas frescas e acabamento delicado. Ideal para decorar ambientes sofisticados ou presentear em datas especiais.",
+      "image": "/catalog/buque_doze_rosas_2.png",
+      "images": [
+        "/catalog/buque_doze_rosas_2.png",
+        "/catalog/buque_doze_rosas_3.png",
+        "/catalog/buque_doze_rosas_4.png",
+        "/catalog/buque_doze_rosas.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base de vidro e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas que fiquem abaixo da linha da agua"
+      ],
+      "category": "bestsellers",
+      "rating": 4,
+      "reviews": 127
+    },
+    {
+      "id": 2,
+      "name": "Buque doze rosas",
+      "price": "R$ 350,00",
+      "displayPrice": "$$$",
+      "description": "Buque com doze rosas selecionadas, equilibrando volume e elegancia. Um presente classico para comemorar momentos especiais com um toque romantico.",
+      "image": "/catalog/buque_doze_rosas.png",
+      "images": [
+        "/catalog/buque_doze_rosas.png",
+        "/catalog/buque_doze_rosas_2.png",
+        "/catalog/buque_doze_rosas_3.png",
+        "/catalog/buque_doze_rosas_4.png"
+      ],
+      "careInstructions": [
+        "Corte 1 a 2 cm das hastes em angulo antes de colocar no vaso",
+        "Troque a agua diariamente e lave o vaso",
+        "Mantenha em local arejado, longe de frutas e corrente de ar",
+        "Retire flores ou folhas murchas para prolongar a duracao"
+      ],
+      "category": "seasonal",
+      "rating": 4,
+      "reviews": 85
+    },
+    {
+      "id": 3,
+      "name": "Buque doze rosas - Rosas",
+      "price": "R$ 350,00",
+      "displayPrice": "$$",
+      "description": "Buque de doze rosas com enfase nas rosas, criando um visual intenso e apaixonante. Perfeito para declaracoes de carinho e aniversario de namoro.",
+      "image": "/catalog/buque_doze_rosas_rosas.png",
+      "images": [
+        "/catalog/buque_doze_rosas_rosas.png",
+        "/catalog/buque_doze_rosas_rosas_2.png",
+        "/catalog/buque_doze_rosas_rosas_3.png",
+        "/catalog/buque_doze_rosas_rosas_4.png"
+      ],
+      "careInstructions": [
+        "Apare as hastes a cada 2 dias para melhorar a absorcao",
+        "Troque a agua e mantenha o vaso sempre limpo",
+        "Evite luz direta e fontes de calor",
+        "Use conservante floral se disponivel"
+      ],
+      "category": "occasions",
+      "rating": 4,
+      "reviews": 92
+    },
+    {
+      "id": 4,
+      "name": "Buque Seis Rosas",
+      "price": "R$ 180,00",
+      "displayPrice": "$$$",
+      "description": "Buque delicado com seis rosas, compacto e cheio de charme. Ideal para lembrancas, agradecimentos e pequenos gestos cheios de significado.",
+      "image": "/catalog/buque_seis_rosas.png",
+      "images": [
+        "/catalog/buque_seis_rosas.png",
+        "/catalog/buque_seis_rosas_2.png",
+        "/catalog/buque_seis_rosas_3.png",
+        "/catalog/buque_seis_rosas_4.png"
+      ],
+      "careInstructions": [
+        "Coloque o buque em vaso com agua limpa e fresca",
+        "Corte as hastes em angulo para melhor hidratacao",
+        "Troque a agua a cada 2 dias e limpe o vaso",
+        "Mantenha longe de sol direto e aparelhos que esquentem"
+      ],
+      "category": "weddings",
+      "rating": 4,
+      "reviews": 156
+    }
+  ]
 }

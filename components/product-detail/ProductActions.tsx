@@ -99,7 +99,11 @@ export const ProductActions: FC<ProductActionsProps> = ({
           wishlist ? styles.active : ""
         }`}
         onClick={handleAddToWishlist}
-        aria-label={wishlist ? "Remove from wishlist" : "Add to wishlist"}
+        aria-label={
+          wishlist
+            ? "Remover da lista de desejos"
+            : "Adicionar à lista de desejos"
+        }
       >
         <svg
           width="24"
@@ -111,7 +115,7 @@ export const ProductActions: FC<ProductActionsProps> = ({
         >
           <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
         </svg>
-        <span>{wishlist ? "Remove from" : "Add to"} Wishlist</span>
+        <span>{wishlist ? "Remover da" : "Adicionar à"} Lista de Desejos</span>
       </button>
     </div>
   );
