@@ -22,7 +22,7 @@ const RESERVE_STEPS: ReserveStep[] = [
     icon: "check",
     title: "3. Confirmação e Retirada",
     description:
-      "Confirmamos seu pedido e deixamos pronto para retirada no mesmo dia.",
+      "Confirmamos seu pedido e deixamos pronto para retirada ou entrega, abra uma conversa no WhatsApp e confirme os detalhes.",
   },
 ];
 

@@ -295,6 +295,16 @@
   justify-content: center;
 }
 
+.reserve-cta__footer a {
+  color: #e91e8c;
+}
+
+.reserve-cta__footer .btn {
+  background: #e91e8c;
+  border-color: #e91e8c;
+  color: #ffffff;
+}
+
 .reserve-cta__step {
   gap: var(--spacing-md);
   flex: 1;
