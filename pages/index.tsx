@@ -5,8 +5,8 @@ import FeaturedProductsSection from "../components/home/FeaturedProductsSection"
 import ReserveCTASection from "../components/home/ReserveCTASection";
 import InspirationSection from "../components/home/InspirationSection";
 import HomepageScripts from "../components/home/HomepageScripts";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 const Home: FC = () => {
   return (
