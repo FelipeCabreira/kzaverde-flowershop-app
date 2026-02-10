@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Script from "dangerous-html/react";
-import styles from "../styles/Footer.module.scss";
+import styles from "./Footer.module.scss";
 
 const Footer: FC = () => {
   return (

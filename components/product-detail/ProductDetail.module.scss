@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+}
+
+.detail {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .detail {
+    padding: 40px 20px;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

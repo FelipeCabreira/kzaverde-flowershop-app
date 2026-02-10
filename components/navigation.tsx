@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import Script from "dangerous-html/react";
-import styles from "../styles/Navigation.module.scss";
+import styles from "./Navigation.module.scss";
 
 const Navigation: FC = () => {
   return (

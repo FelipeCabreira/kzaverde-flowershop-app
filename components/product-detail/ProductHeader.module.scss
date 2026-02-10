@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.ratingSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #999;
+}
+
+.stars {
+  color: #d946ef;
+  font-size: 16px;
+}
+
+.priceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: 600;
+  color: #d946ef;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .price {
+    font-size: 28px;
+  }
+}

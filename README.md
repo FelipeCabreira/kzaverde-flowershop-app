@@ -25,6 +25,7 @@ A modern, fully-typed Next.js application for browsing and reserving premium flo
 ## ✨ Features
 
 ### User-Facing Features
+
 - **Hero Section** with video background and call-to-action
 - **Quick Search** functionality to browse flowers by type and occasion
 - **Curated Collections** featuring bestsellers, seasonal picks, weddings, and sympathy arrangements
@@ -35,6 +36,7 @@ A modern, fully-typed Next.js application for browsing and reserving premium flo
 - **Multi-language Support** via next-intl
 
 ### Technical Features
+
 - **TypeScript Support** with full type safety
 - **Server-Side Rendering** for optimal SEO
 - **Static Generation** where applicable for performance
@@ -46,8 +48,16 @@ A modern, fully-typed Next.js application for browsing and reserving premium flo
 
 ---
 
-## Be aware to check vulnerabilities in react
-Run 
+## Be aware to check vulnerabilities in react and dependencies
+
+Run
+
+```bash
+npm audit
+```
+
+Or use the specific fix for React vulnerabilities:
+
 ```bash
 npx fix-react2shell-next
 ```
@@ -55,24 +65,31 @@ npx fix-react2shell-next
 ## 🛠 Tech Stack
 
 ### Core
+
 - **React** 17.0.2 - UI framework
 - **Next.js** 12.1.10 - React meta-framework
 - **TypeScript** 4.9.5 - Static typing
 
 ### Internationalization
+
 - **next-intl** 2.10.0 - Multi-language support
 
 ### UI & Styling
-- **styled-jsx** - CSS-in-JS (built into Next.js)
+
+- **SCSS/Sass** 1.70.0 - CSS preprocessor with partials and modules
+- **CSS Modules** - Component-scoped styling for components
+- **CSS Custom Properties** - Design system variables for theming
 - **dangerous-html** 0.1.13 - Safe inline script injection
 - **Animate.css** 4.1.1 - Animation library
 
 ### Development
+
 - **@types/node** 18.11.18
 - **@types/react** 17.0.52
 - **@types/react-dom** 17.0.18
 
 ### Fonts
+
 - Noto Sans
 - Playfair Display
 - STIX Two Text
@@ -87,20 +104,47 @@ npx fix-react2shell-next
 worthwhile-bewitched-tapir-next/
 ├── components/                 # Reusable React components
 │   ├── navigation.tsx         # Main navigation bar with mobile menu
-│   └── footer.tsx             # Footer with contact info and links
+│   ├── footer.tsx             # Footer with contact info and links
+│   └── product-card.tsx       # Product card component
 │
 ├── pages/                      # Next.js pages and routing
 │   ├── _app.tsx               # App wrapper, layout, providers
 │   ├── _document.tsx          # Custom HTML document
 │   ├── index.tsx              # Home page
 │   ├── 404.tsx                # 404 error page
-│   └── style.css              # Global styles
+│   ├── style.css              # Legacy global styles (safeguard fallback)
+│   └── product/
+│       └── [id].tsx           # Dynamic product page
+│
+├── styles/                     # SCSS modules and partials
+│   ├── main.scss              # Aggregator importing all partials
+│   ├── _variables.scss        # CSS custom properties and design tokens
+│   ├── _mixins.scss           # SCSS mixins and utilities
+│   ├── _base.scss             # Global utilities (buttons, text, layout)
+│   ├── _components.scss       # Global component styles
+│   ├── _layout.scss           # Layout utilities
+│   ├── _pages.scss            # Page-specific sections (hero, search, collections)
+│   ├── _utilities.scss        # Legacy thq-* design system utilities
+│   ├── Footer.module.scss     # Footer component scoped styles
+│   └── Navigation.module.scss # Navigation component scoped styles
 │
 ├── locales/                    # Internationalization files
 │   └── en.json                # English translations
 │
+├── data/                       # Data files
+│   ├── products.json          # Product catalog
+│   └── catalog.json           # Catalog data
+│
 ├── types/                      # TypeScript type declarations
 │   └── dangerous-html.d.ts     # Type definitions for untyped libraries
+│
+├── assets/                     # Static assets
+│   ├── logo/                  # Logo files
+│   ├── logo_transparent/      # Transparent logo variants
+│   └── svg/                   # SVG icons
+│
+├── public/                     # Public static files
+│   └── catalog/               # Catalog images
 │
 ├── global-context.tsx         # React Context for global state
 ├── next.config.js             # Next.js configuration
@@ -115,23 +159,27 @@ worthwhile-bewitched-tapir-next/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - **Node.js** v18.0.0 or higher
 - **npm** v8.0.0 or higher
 
 ### Installation
 
 1. **Clone the repository** (if applicable)
+
    ```bash
    git clone <repository-url>
    cd worthwhile-bewitched-tapir-next
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start the development server**
+
    ```bash
    npm run dev
    ```
@@ -167,12 +215,14 @@ npx tsc --noEmit
 ### Project Configuration
 
 #### TypeScript Configuration (`tsconfig.json`)
+
 - **Strict mode enabled** for maximum type safety
 - **JSX preservation** for Next.js JSX compilation
 - **Module resolution** set to Node.js style
 - **ES module interop** enabled for CommonJS compatibility
 
 #### Next.js Configuration (`next.config.js`)
+
 ```javascript
 {
   i18n: {
@@ -183,6 +233,7 @@ npx tsc --noEmit
 ```
 
 #### Path Aliases (`tsconfig.json`)
+
 ```typescript
 {
   "paths": {
@@ -190,6 +241,7 @@ npx tsc --noEmit
   }
 }
 ```
+
 Access root files from anywhere: `import { GlobalProvider } from '@/global-context'`
 
 ---
@@ -197,24 +249,29 @@ Access root files from anywhere: `import { GlobalProvider } from '@/global-conte
 ## 🔨 Build & Deploy
 
 ### Development Build
+
 ```bash
 npm run dev
 ```
+
 - Unoptimized build
 - Hot module replacement enabled
 - Detailed error messages
 - SourceMaps included
 
 ### Production Build
+
 ```bash
 npm run build && npm start
 ```
+
 - Fully optimized and minified
 - All pages pre-rendered where possible
 - Code split by route
 - Ready for deployment
 
 ### Output Metrics (Production Build)
+
 ```
 Route (pages)                   Size     First Load JS
 ├ ○ /                          7.51 kB  102 kB
@@ -224,6 +281,7 @@ Route (pages)                   Size     First Load JS
 ```
 
 ### Deployment Targets
+
 - **Vercel** (recommended, native Next.js support)
 - **AWS Amplify**
 - **Netlify** (with adapter)
@@ -237,6 +295,7 @@ Route (pages)                   Size     First Load JS
 ### Component Development
 
 #### Creating a New Component
+
 ```typescript
 import React, { FC, PropsWithChildren } from 'react'
 
@@ -245,10 +304,10 @@ interface CardProps {
   description?: string
 }
 
-export const Card: FC<PropsWithChildren<CardProps>> = ({ 
-  title, 
-  description, 
-  children 
+export const Card: FC<PropsWithChildren<CardProps>> = ({
+  title,
+  description,
+  children
 }) => {
   return (
     <div className="card">
@@ -261,6 +320,7 @@ export const Card: FC<PropsWithChildren<CardProps>> = ({
 ```
 
 #### Using the Global Context
+
 ```typescript
 import { useGlobalContext } from '@/global-context'
 
@@ -282,12 +342,76 @@ export const LanguageSwitcher: FC = () => {
 
 ### Styling Guidelines
 
-- Use **styled-jsx** for component-scoped styles
-- Leverage CSS variables for theming (colors defined in `_document.tsx`)
-- Mobile-first responsive design
-- Follow BEM naming convention: `component-name__element--modifier`
+#### SCSS Architecture
+
+The project uses a **modular SCSS architecture** with organized partials:
+
+- **`_variables.scss`** - All CSS custom properties (colors, spacing, typography, shadows)
+- **`_mixins.scss`** - Reusable SCSS mixins
+- **`_base.scss`** - Global utilities (button styles, typography, layout helpers)
+- **`_components.scss`** - Global component styles
+- **`_layout.scss`** - Layout-related global utilities
+- **`_pages.scss`** - Page-specific sections (hero, collections, search, etc.)
+- **`_utilities.scss`** - Legacy design system utilities (`.thq-*` classes)
+- **`main.scss`** - Aggregator that imports all partials
+
+#### CSS Modules for Components
+
+Component-scoped styles use **CSS Modules** to prevent style leakage:
+
+```tsx
+// Footer.module.scss
+.footerWrapper { /* ... */ }
+.footerGrid { /* ... */ }
+.footerBrandName { /* ... */ }
+
+// footer.tsx
+import styles from "../styles/Footer.module.scss";
+export const Footer = () => (
+  <footer className={styles.footerWrapper}>
+    {/* ... */}
+  </footer>
+);
+```
+
+#### Design System with CSS Custom Properties
+
+Leverage CSS variables for theming:
+
+```scss
+// _variables.scss
+:root {
+  --color-primary: #2d5016;
+  --color-accent: #a64b2a;
+  --color-surface: #f7f5f0;
+  --spacing-md: 0.75rem;
+  --font-family-heading: "Playfair Display", serif;
+}
+
+// Usage
+.button {
+  background: var(--color-primary);
+  padding: var(--spacing-md);
+  font-family: var(--font-family-heading);
+}
+```
+
+#### Styling Best Practices
+
+- Use **CSS custom properties** for theming and consistency
+- Follow **BEM naming** for global classes: `component-name__element--modifier`
+- Use **camelCase** for CSS Module class names: `footerBrandName`
+- Mobile-first responsive design with media queries
+- Organize selectors by component in SCSS partials
+- Import SCSS through `main.scss` aggregator in `_app.tsx`
+
+#### Legacy Fallback
+
+- `pages/style.css` remains as a safeguard fallback (imported in `_app.tsx`)
+- Can be removed once all styles are verified working via SCSS architecture
 
 ### Accessibility Standards
+
 - Semantic HTML5 elements
 - ARIA labels for interactive elements
 - Keyboard navigation support
@@ -298,7 +422,53 @@ export const LanguageSwitcher: FC = () => {
 
 ## 🏗 Architecture
 
+### Styling Architecture
+
+The application uses a **modular SCSS system** organized into logical partials:
+
+```
+styles/
+├── main.scss              # Entry point: imports all partials via @use
+├── _variables.scss        # Design tokens (colors, spacing, typography)
+├── _mixins.scss           # Reusable SCSS mixins
+├── _base.scss             # Global utilities (buttons, text, helpers)
+├── _components.scss       # Global component defaults
+├── _layout.scss           # Layout utilities
+├── _pages.scss            # Page sections (hero, collections, products, etc.)
+├── _utilities.scss        # Legacy design system classes
+├── Footer.module.scss     # Footer component styles (scoped)
+└── Navigation.module.scss # Navigation component styles (scoped)
+```
+
+**Import pattern:**
+
+```scss
+// main.scss
+@use "./_variables" as vars;
+@use "./_mixins" as mixins;
+@use "./_base" as base;
+@use "./_components" as components;
+@use "./_layout" as layout;
+@use "./_pages" as pages;
+@use "./_utilities" as utilities;
+```
+
+**In `_app.tsx`:**
+
+```typescript
+import "../styles/main.scss"; // Main SCSS aggregator
+import "./style.css"; // Legacy fallback (safeguard)
+```
+
+**Component scoping with CSS Modules:**
+
+```typescript
+import styles from "../styles/Footer.module.scss";
+// All class names are scoped to this component: styles.footerWrapper, etc.
+```
+
 ### State Management
+
 The application uses **React Context API** for global state management:
 
 ```typescript
@@ -312,6 +482,7 @@ GlobalContext
 Consumed via `useGlobalContext()` hook with type safety.
 
 ### Internationalization (i18n)
+
 - Powered by **next-intl** library
 - Configuration in `next.config.js`
 - Translation files in `locales/` directory
@@ -340,6 +511,7 @@ Consumed via `useGlobalContext()` hook with type safety.
 ```
 
 ### Rendering Strategy
+
 - **Automatic Static Optimization** for pages without dynamic content
 - **ISR (Incremental Static Regeneration)** available for future dynamic pages
 - **SSR** for pages requiring real-time data
@@ -350,18 +522,20 @@ Consumed via `useGlobalContext()` hook with type safety.
 ## 🔒 Type Safety
 
 All files are TypeScript with:
+
 - ✅ `strict: true` enabled
 - ✅ No implicit `any` types
 - ✅ Proper interface definitions
 - ✅ Third-party library type declarations
 
 **Example TypeScript benefits:**
+
 ```typescript
 // This will error at compile time:
-const { nonExistentProp } = useGlobalContext()
+const { nonExistentProp } = useGlobalContext();
 
 // But this is safe:
-const { locale, setLocale } = useGlobalContext()
+const { locale, setLocale } = useGlobalContext();
 ```
 
 ---
@@ -401,6 +575,7 @@ All components tested and optimized for these breakpoints.
 ## 🤝 Contributing
 
 ### Code Style
+
 - Follow TypeScript strict mode conventions
 - Use camelCase for variables/functions
 - Use PascalCase for components/interfaces
@@ -408,12 +583,14 @@ All components tested and optimized for these breakpoints.
 - Add comments for complex logic
 
 ### Testing
+
 - Manual testing in development
 - Type check before commits
 - Test on multiple screen sizes
 - Verify WhatsApp links work correctly
 
 ### Git Workflow
+
 1. Create a feature branch
 2. Make changes with meaningful commits
 3. Verify build: `npm run build`
@@ -446,16 +623,19 @@ MIT License - See LICENSE file for details
 
 ## 🎯 Project Status
 
-| Component | Status | Last Updated |
-|-----------|--------|--------------|
-| TypeScript Migration | ✅ Complete | Feb 4, 2026 |
-| Development Server | ✅ Working | Feb 4, 2026 |
-| Production Build | ✅ Passing | Feb 4, 2026 |
-| Type Checking | ✅ Zero Errors | Feb 4, 2026 |
-| Deployment Ready | ✅ Yes | Feb 4, 2026 |
+| Component                  | Status         | Last Updated |
+| -------------------------- | -------------- | ------------ |
+| TypeScript Migration       | ✅ Complete    | Feb 4, 2026  |
+| SCSS Refactoring           | ✅ Complete    | Feb 10, 2026 |
+| CSS Modules for Components | ✅ Complete    | Feb 10, 2026 |
+| Development Server         | ✅ Working     | Feb 10, 2026 |
+| Production Build           | ✅ Passing     | Feb 10, 2026 |
+| Type Checking              | ✅ Zero Errors | Feb 10, 2026 |
+| Deployment Ready           | ✅ Yes         | Feb 10, 2026 |
 
 ---
 
 **Project Generated by:** TeleportHQ  
-**Last Updated:** February 4, 2026  
-**Framework:** Next.js 12.1.10 + TypeScript 4.9.5
+**Last Updated:** February 10, 2026  
+**Framework:** Next.js 12.1.10 + TypeScript 4.9.5  
+**Styling:** SCSS with CSS Modules + Partials Architecture
