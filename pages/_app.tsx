@@ -12,6 +12,11 @@ interface MyAppProps extends AppProps {
   };
 }
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function MyApp({ Component, pageProps }: MyAppProps) {
   return (
     <NextIntlProvider messages={pageProps?.messages}>

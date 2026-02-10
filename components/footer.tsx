@@ -347,7 +347,7 @@ const Footer: FC = () => {
             <div className={styles.footerBottom}>
               <div className={styles.footerBottomContent}>
                 <p className={styles.footerCopyright}>
-                  &amp;copy; 2026 KzaVerde. All rights reserved.
+                  KzaVerde. All rights reserved.
                 </p>
                 <div className={styles.footerBottomLinks}>
                   <a href="#">

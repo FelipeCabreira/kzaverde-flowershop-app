@@ -1,22 +1,25 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document'
+import React from "react";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+  DocumentInitialProps,
+} from "next/document";
 
 class CustomDocument extends Document {
   static async getInitialProps(
-    ctx: DocumentContext
+    ctx: DocumentContext,
   ): Promise<DocumentInitialProps> {
-    const initialProps = await Document.getInitialProps(ctx)
-    return initialProps
+    const initialProps = await Document.getInitialProps(ctx);
+    return initialProps;
   }
 
   render() {
     return (
       <Html>
         <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          ></meta>
           <meta charSet="utf-8"></meta>
           <meta property="twitter:card" content="summary_large_image"></meta>
           <style
@@ -29,7 +32,7 @@ class CustomDocument extends Document {
           <style
             dangerouslySetInnerHTML={{
               __html:
-                '\n  html {\n    font-family: Inter;\n    font-size: 1rem;\n  }\n\n  body {\n    font-weight: 400;\n    font-style:normal;\n    text-decoration: undefined;\n    text-transform: undefined;\n    letter-spacing: 0.02em;\n    line-height: 1.65;\n    color: var(--color-on-surface);\n    background: var(--color-surface);\n    \n    fill: var(--color-on-surface);\n  }\n\n  \n\n  ',
+                "\n  html {\n    font-family: Inter;\n    font-size: 1rem;\n  }\n\n  body {\n    font-weight: 400;\n    font-style:normal;\n    text-decoration: undefined;\n    text-transform: undefined;\n    letter-spacing: 0.02em;\n    line-height: 1.65;\n    color: var(--color-on-surface);\n    background: var(--color-surface);\n    \n    fill: var(--color-on-surface);\n  }\n\n  \n\n  ",
             }}
             data-tag="default-style-sheet"
           ></style>
@@ -67,7 +70,7 @@ class CustomDocument extends Document {
           <NextScript></NextScript>
         </body>
       </Html>
-    )
+    );
   }
 }
-export default CustomDocument
+export default CustomDocument;
