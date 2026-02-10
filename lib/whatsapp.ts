@@ -14,11 +14,11 @@ export const WHATSAPP_BUSINESS_PHONE = "555183388338";
 export function generateWhatsAppOrderLink(params: WhatsAppOrderParams): string {
   const baseMessage =
     `Olá! Gostaria de fazer um pedido:\n\n` +
-    `📦 Produto: ${params.productName}\n` +
-    `🔢 Quantidade: ${params.quantity}`;
+    `• Produto: ${params.productName}\n` +
+    `• Quantidade: ${params.quantity}`;
 
   const detailsSection = params.orderDetails.trim()
-    ? `\n\n📝 Detalhes do pedido:\n${params.orderDetails}`
+    ? `\n\n• Detalhes do pedido:\n${params.orderDetails}`
     : "";
 
   const message =

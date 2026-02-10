@@ -33,12 +33,12 @@ export const ProductActions: FC<ProductActionsProps> = ({
   const generateWhatsAppMessage = () => {
     const baseMessage =
       `Olá! Gostaria de fazer um pedido:\n\n` +
-      `📦 Produto: ${productName}\n` +
-      `🔢 Quantidade: ${quantity}\n` +
-      `💰 Preço: ${productPrice}`;
+      `• Produto: ${productName}\n` +
+      `• Quantidade: ${quantity}\n` +
+      `• Preço: ${productPrice}`;
 
     const detailsSection = orderDetails.trim()
-      ? `\n\n📝 Detalhes do pedido:\n${orderDetails}`
+      ? `\n\n• Detalhes do pedido:\n${orderDetails}`
       : "";
 
     const finalMessage =
