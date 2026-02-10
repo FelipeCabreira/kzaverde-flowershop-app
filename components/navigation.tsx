@@ -1,19 +1,20 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 
-import Script from 'dangerous-html/react'
+import Script from "dangerous-html/react";
+import styles from "../styles/Navigation.module.scss";
 
 const Navigation: FC = () => {
   return (
     <>
       <div className="navigation-container1">
-        <nav id="main-navigation" className="navigation-root">
-          <div className="navigation-container">
+        <nav id="main-navigation" className={styles["navigation-root"]}>
+          <div className={styles["navigation-container"]}>
             <a href="/">
               <div
                 aria-label="KzaVerde Homepage"
-                className="navigation-logo-link"
+                className={styles["navigation-logo-link"]}
               >
-                <div className="navigation-logo-wrapper">
+                <div className={styles["navigation-logo-wrapper"]}>
                   <svg
                     width="32"
                     xmlns="http://www.w3.org/2000/svg"
@@ -32,56 +33,58 @@ const Navigation: FC = () => {
                       <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12A4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5a4.5 4.5 0 1 1-4.5 4.5m0-9V9m-4.5 3H9m7.5 0H15m-3 4.5V15M8 8l1.88 1.88m4.24 0L16 8m-8 8l1.88-1.88m4.24 0L16 16"></path>
                     </g>
                   </svg>
-                  <span className="navigation-brand-name">KzaVerde</span>
+                  <span className={styles["navigation-brand-name"]}>
+                    KzaVerde
+                  </span>
                 </div>
               </div>
             </a>
-            <div className="navigation-desktop-menu">
-              <ul className="navigation-links-list">
+            <div className={styles["navigation-desktop-menu"]}>
+              <ul className={styles["navigation-links-list"]}>
                 <li>
                   <a href="/">
-                    <div className="navigation-link">
+                    <div className={styles["navigation-link"]}>
                       <span>Ínicio</span>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a href="/#featured-products">
-                    <div className="navigation-link">
+                    <div className={styles["navigation-link"]}>
                       <span>Produtos</span>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a href="/#inspiration-preview">
-                    <div className="navigation-link">
+                    <div className={styles["navigation-link"]}>
                       <span>Nossa Loja</span>
                     </div>
                   </a>
                 </li>
                 <li>
                   <a href="/#contact">
-                    <div className="navigation-link">
+                    <div className={styles["navigation-link"]}>
                       <span>Contato</span>
                     </div>
                   </a>
                 </li>
               </ul>
-              <div className="navigation-actions">
+              <div className={styles["navigation-actions"]}>
                 <a
                   href="https://wa.me/c/555183388338"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
                   <div
-                    className="btn btn-sm navigation-whatsapp-btn btn-primary"
+                    className={`btn btn-sm btn-primary ${styles["navigation-whatsapp-btn"]}`}
                   >
                     <svg
                       width="20"
                       xmlns="http://www.w3.org/2000/svg"
                       height="20"
                       viewBox="0 0 24 24"
-                      className="navigation-btn-icon"
+                      className={styles["navigation-btn-icon"]}
                     >
                       <g
                         fill="none"
@@ -103,7 +106,7 @@ const Navigation: FC = () => {
               id="mobile-menu-open"
               aria-label="Open navigation menu"
               aria-expanded="false"
-              className="navigation-mobile-toggle"
+              className={styles["navigation-mobile-toggle"]}
             >
               <svg
                 fill="none"
@@ -121,11 +124,14 @@ const Navigation: FC = () => {
             </button>
           </div>
         </nav>
-        <div id="mobile-overlay" className="navigation-mobile-overlay">
-          <div className="navigation-overlay-header">
+        <div
+          id="mobile-overlay"
+          className={styles["navigation-mobile-overlay"]}
+        >
+          <div className={styles["navigation-overlay-header"]}>
             <a href="/">
-              <div className="navigation-logo-link">
-                <div className="navigation-logo-wrapper">
+              <div className={styles["navigation-logo-link"]}>
+                <div className={styles["navigation-logo-wrapper"]}>
                   <svg
                     width="32"
                     xmlns="http://www.w3.org/2000/svg"
@@ -144,14 +150,16 @@ const Navigation: FC = () => {
                       <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12A4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5a4.5 4.5 0 1 1-4.5 4.5m0-9V9m-4.5 3H9m7.5 0H15m-3 4.5V15M8 8l1.88 1.88m4.24 0L16 8m-8 8l1.88-1.88m4.24 0L16 16"></path>
                     </g>
                   </svg>
-                  <span className="navigation-brand-name">KzaVerde</span>
+                  <span className={styles["navigation-brand-name"]}>
+                    KzaVerde
+                  </span>
                 </div>
               </div>
             </a>
             <button
               id="mobile-menu-close"
               aria-label="Close navigation menu"
-              className="navigation-mobile-close"
+              className={styles["navigation-mobile-close"]}
             >
               <svg
                 fill="none"
@@ -168,38 +176,40 @@ const Navigation: FC = () => {
               </svg>
             </button>
           </div>
-          <div className="navigation-overlay-content">
-            <ul className="navigation-overlay-links">
-              <li className="navigation-stagger-item">
+          <div className={styles["navigation-overlay-content"]}>
+            <ul className={styles["navigation-overlay-links"]}>
+              <li className={styles["navigation-stagger-item"]}>
                 <a href="/">
-                  <div className="navigation-overlay-link">
+                  <div className={styles["navigation-overlay-link"]}>
                     <span>Ínicio</span>
                   </div>
                 </a>
               </li>
-              <li className="navigation-stagger-item">
+              <li className={styles["navigation-stagger-item"]}>
                 <a href="/#featured-products">
-                  <div className="navigation-overlay-link">
+                  <div className={styles["navigation-overlay-link"]}>
                     <span>Produtos</span>
                   </div>
                 </a>
               </li>
-              <li className="navigation-stagger-item">
+              <li className={styles["navigation-stagger-item"]}>
                 <a href="/#inspiration-preview">
-                  <div className="navigation-overlay-link">
+                  <div className={styles["navigation-overlay-link"]}>
                     <span>Nossa Loja</span>
                   </div>
                 </a>
               </li>
-              <li className="navigation-stagger-item">
+              <li className={styles["navigation-stagger-item"]}>
                 <a href="/#contact">
-                  <div className="navigation-overlay-link">
+                  <div className={styles["navigation-overlay-link"]}>
                     <span>Contato</span>
                   </div>
                 </a>
               </li>
             </ul>
-            <div className="navigation-overlay-footer navigation-stagger-item">
+            <div
+              className={`${styles["navigation-overlay-footer"]} ${styles["navigation-stagger-item"]}`}
+            >
               <p className="section-content">Reserve your bouquet today</p>
               <a
                 href="https://wa.me/c/555183388338"
@@ -207,7 +217,7 @@ const Navigation: FC = () => {
                 rel="noreferrer noopener"
               >
                 <div
-                  className="btn navigation-whatsapp-btn-mobile btn-lg btn-primary"
+                  className={`btn btn-lg btn-primary ${styles["navigation-whatsapp-btn-mobile"]}`}
                 >
                   <svg
                     width="24"
@@ -315,7 +325,7 @@ const Navigation: FC = () => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

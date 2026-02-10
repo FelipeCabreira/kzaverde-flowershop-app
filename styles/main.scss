@@ -1,0 +1,8 @@
+@use "sass:color";
+@use "./_variables" as vars;
+@use "./_mixins" as mixins;
+@use "./_base" as base;
+@use "./_components" as components;
+@use "./_layout" as layout;
+
+/* main.scss aggregates partials for global import in _app.tsx */

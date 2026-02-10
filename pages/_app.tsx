@@ -1,14 +1,15 @@
-import './style.css'
+import "../styles/main.scss";
+import "./style.css";
 
-import React from 'react';
-import { GlobalProvider } from '../global-context'
-import { NextIntlProvider } from 'next-intl'
-import { AppProps } from 'next/app'
+import React from "react";
+import { GlobalProvider } from "../global-context";
+import { NextIntlProvider } from "next-intl";
+import { AppProps } from "next/app";
 
 interface MyAppProps extends AppProps {
-  pageProps: AppProps['pageProps'] & {
-    messages?: any
-  }
+  pageProps: AppProps["pageProps"] & {
+    messages?: any;
+  };
 }
 
 export default function MyApp({ Component, pageProps }: MyAppProps) {
@@ -18,5 +19,5 @@ export default function MyApp({ Component, pageProps }: MyAppProps) {
         <Component {...pageProps} />
       </GlobalProvider>
     </NextIntlProvider>
-  )
+  );
 }

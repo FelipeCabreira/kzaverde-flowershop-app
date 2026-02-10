@@ -1,0 +1,254 @@
+/* Navigation-specific styles moved into a CSS Module */
+.navigation-root {
+  top: 0;
+  width: 100%;
+  padding: var(--spacing-md) 0;
+  z-index: 1000;
+  position: sticky;
+  background: linear-gradient(
+    to bottom,
+    #1a3d3a,
+    color-mix(in oklab, #1a3d3a 95%, black)
+  );
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navigation-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 var(--spacing-xl);
+  max-width: var(--content-max-width);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation-logo-link {
+  display: flex;
+  transition: transform 0.3s ease;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navigation-desktop-menu {
+  gap: var(--spacing-3xl);
+  display: flex;
+  align-items: center;
+}
+
+.navigation-mobile-toggle {
+  color: var(--color-surface);
+  border: none;
+  cursor: pointer;
+  display: none;
+  padding: var(--spacing-sm);
+  background: transparent;
+  transition: color 0.3s ease;
+}
+
+.navigation-logo-wrapper {
+  gap: var(--spacing-sm);
+  color: #e91e8c;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-links-list {
+  gap: var(--spacing-xl);
+  margin: 0;
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-actions {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-brand-name {
+  font-size: var(--font-size-xl);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+  letter-spacing: -0.02em;
+}
+
+.navigation-whatsapp-btn {
+  color: var(--color-on-primary);
+  border-color: #e91e8c;
+  background-color: #e91e8c;
+}
+
+.navigation-link {
+  color: var(--color-surface);
+  padding: var(--spacing-xs) 0;
+  position: relative;
+  font-size: var(--font-size-sm);
+  transition: color 0.3s ease;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.navigation-btn-icon {
+  margin-right: var(--spacing-xs);
+}
+
+.navigation-mobile-overlay {
+  inset: 0;
+  display: none;
+  z-index: 1100;
+  position: fixed;
+  transform: translateX(100%);
+  background: #1a3d3a;
+  min-height: 100vh;
+  overflow-y: auto;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-direction: column;
+}
+
+.navigation-overlay-header {
+  top: 0;
+  display: flex;
+  padding: var(--spacing-xl);
+  z-index: 1110;
+  position: sticky;
+  background: #1a3d3a;
+  align-items: center;
+  border-bottom: 1px solid
+    color-mix(in oklab, var(--color-border) 20%, transparent);
+  justify-content: space-between;
+}
+
+.navigation-overlay-content {
+  gap: var(--spacing-4xl);
+  flex: 1;
+  display: flex;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  flex-direction: column;
+}
+
+.navigation-mobile-close {
+  color: var(--color-surface);
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  background: transparent;
+}
+
+.navigation-overlay-links {
+  gap: var(--spacing-xl);
+  margin: 0;
+  display: flex;
+  padding: 0;
+  list-style: none;
+  flex-direction: column;
+}
+
+.navigation-overlay-footer {
+  gap: var(--spacing-lg);
+  display: flex;
+  margin-top: auto;
+  flex-direction: column;
+  padding-bottom: var(--spacing-4xl);
+}
+
+.navigation-stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.navigation-whatsapp-btn-mobile {
+  color: var(--color-on-primary);
+  width: 100%;
+  border-color: #e91e8c;
+  background-color: #e91e8c;
+}
+
+.navigation-overlay-link {
+  color: var(--color-surface);
+  display: inline-block;
+  font-size: var(--font-size-3xl);
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+  text-decoration: none;
+}
+
+.navigation-logo-link:hover {
+  transform: scale(1.02);
+}
+
+.navigation-link::after {
+  left: 0;
+  width: 0;
+  bottom: 0;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background: #e91e8c;
+  transition: width 0.3s ease;
+}
+
+.navigation-link:hover {
+  color: #e91e8c;
+}
+
+.navigation-link:hover::after {
+  width: 100%;
+}
+
+.navigation-whatsapp-btn:hover {
+  transform: translateY(-2px);
+  background-color: color-mix(in oklab, #e91e8c 85%, white);
+}
+
+.navigation-mobile-toggle:hover {
+  color: #e91e8c;
+}
+
+.navigation-mobile-overlay.is-active {
+  display: flex;
+  transform: translateX(0);
+}
+
+.navigation-mobile-overlay.is-active .navigation-stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navigation-mobile-overlay.is-active .navigation-stagger-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.navigation-mobile-overlay.is-active .navigation-stagger-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.navigation-mobile-overlay.is-active .navigation-stagger-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.navigation-mobile-overlay.is-active .navigation-stagger-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.navigation-mobile-overlay.is-active .navigation-stagger-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.navigation-overlay-link:hover {
+  color: #e91e8c;
+  transform: translateX(10px);
+}
+
+.navigation-overlay-footer .section-content {
+  color: color-mix(in oklab, var(--color-surface) 70%, transparent);
+}

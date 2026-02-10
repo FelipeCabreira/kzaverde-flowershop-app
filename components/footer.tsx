@@ -1,18 +1,19 @@
 import React, { FC } from "react";
-
 import Script from "dangerous-html/react";
-import { useTranslations } from "next-intl";
+import styles from "../styles/Footer.module.scss";
 
 const Footer: FC = () => {
   return (
     <>
       <div className="footer-container1">
-        <footer id="contact" className="footer-wrapper">
-          <div className="footer-container">
-            <div className="footer-grid">
-              <div className="footer-column footer-brand-column">
-                <div className="footer-logo-group">
-                  <div className="footer-logo-icon">
+        <footer id="contact" className={styles.footerWrapper}>
+          <div className={styles.footerContainer}>
+            <div className={styles.footerGrid}>
+              <div
+                className={`${styles.footerColumn} ${styles.footerBrandColumn}`}
+              >
+                <div className={styles.footerLogoGroup}>
+                  <div className={styles.footerLogoIcon}>
                     <svg
                       width="24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -32,16 +33,23 @@ const Footer: FC = () => {
                       </g>
                     </svg>
                   </div>
-                  <span className="footer-brand-name">KzaVerde</span>
+                  <span
+                    className={`${styles.footerBrandName} footer-brand-name`}
+                  >
+                    KzaVerde
+                  </span>
                 </div>
-                <p className="section-content footer-description">
+                <p className={`section-content ${styles.footerDescription}`}>
                   Trazendo as flores mais belas da natureza até a sua porta.
                   Arranjos artesanais para cada emoção, cultivados com amor e
                   entregues com carinho.
                 </p>
-                <div className="footer-social-links">
+                <div className={styles.footerSocialLinks}>
                   <a href="https://www.facebook.com/kzaverde">
-                    <div aria-label="Facebook" className="footer-social-icon">
+                    <div
+                      aria-label="Facebook"
+                      className={styles.footerSocialIcon}
+                    >
                       <svg
                         width="24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +68,10 @@ const Footer: FC = () => {
                     </div>
                   </a>
                   <a href="https://www.instagram.com/kzaverde/">
-                    <div aria-label="Instagram" className="footer-social-icon">
+                    <div
+                      aria-label="Instagram"
+                      className={styles.footerSocialIcon}
+                    >
                       <svg
                         width="24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +99,10 @@ const Footer: FC = () => {
                     </div>
                   </a>
                   <a href="#">
-                    <div aria-label="WhatsApp" className="footer-social-icon">
+                    <div
+                      aria-label="WhatsApp"
+                      className={styles.footerSocialIcon}
+                    >
                       <svg
                         width="24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +123,10 @@ const Footer: FC = () => {
                     </div>
                   </a>
                   <a href="https://linktr.ee/kzaverdefloricultura">
-                    <div aria-label="Linktree" className="footer-social-icon">
+                    <div
+                      aria-label="Linktree"
+                      className={styles.footerSocialIcon}
+                    >
                       <svg
                         width="24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -175,28 +192,28 @@ const Footer: FC = () => {
                   </ul>
                 </nav>
               </div> */}
-              <div className="footer-column">
+              <div className={styles.footerColumn}>
                 <h2 className="section-subtitle footer-column-title">
                   Horário de Funcionamento
                 </h2>
-                <div className="footer-opening-hours">
-                  <div className="footer-hours-item">
+                <div className={styles.footerOpeningHours}>
+                  <div className={styles.footerHoursItem}>
                     <span className="footer-hours-day">Seg à Sexta</span>
                     <span className="footer-hours-time">9h - 18h</span>
                   </div>
-                  <div className="footer-hours-item">
+                  <div className={styles.footerHoursItem}>
                     <span className="footer-hours-day">Sábado</span>
                     <span className="footer-hours-time">9h - 16h</span>
                   </div>
                 </div>
               </div>
-              <div className="footer-column">
+              <div className={styles.footerColumn}>
                 <h2 className="section-subtitle footer-column-title">
                   Visite nossa loja
                 </h2>
-                <div className="footer-contact-info">
-                  <div className="footer-contact-item">
-                    <div className="footer-contact-icon">
+                <div className={styles.footerContactInfo}>
+                  <div className={styles.footerContactItem}>
+                    <div className={styles.footerContactIcon}>
                       <svg
                         width="24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -220,13 +237,16 @@ const Footer: FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span className="footer-contact-text">
-                        Rua Tomaz Flores, 141
+                      <span
+                        className={`footer-contact-text ${styles.footerContactText}`}
+                      >
+                        Rua Tomaz Flores, 141 - Porto Alegre, Rio Grande do Sul
+                        - 90035-200
                       </span>
                     </a>
                   </div>
-                  <div className="footer-contact-item">
-                    <div className="footer-contact-icon">
+                  <div className={styles.footerContactItem}>
+                    <div className={styles.footerContactIcon}>
                       <svg
                         width="24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -243,10 +263,14 @@ const Footer: FC = () => {
                         ></path>
                       </svg>
                     </div>
-                    <span className="footer-contact-text">(51) 98338.8338</span>
+                    <span
+                      className={`footer-contact-text ${styles.footerContactText}`}
+                    >
+                      (51) 98338.8338
+                    </span>
                   </div>
-                  <div className="footer-contact-item">
-                    <div className="footer-contact-icon">
+                  <div className={styles.footerContactItem}>
+                    <div className={styles.footerContactIcon}>
                       <svg
                         width="24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -271,16 +295,24 @@ const Footer: FC = () => {
                         </g>
                       </svg>
                     </div>
-                    <a href="mailto:sergio@kzaverde.com">
-                      <span className="footer-contact-text">
-                        sergio@kzaverde.com
+                    <a href="mailto:kzaverde@gmail.com">
+                      <span
+                        className={`footer-contact-text ${styles.footerContactText}`}
+                      >
+                        kzaverde@gmail.com
                       </span>
                     </a>
                   </div>
                 </div>
-                <div className="footer-cta-wrapper">
-                  <a href="https://wa.me/15551234567">
-                    <div className="btn footer-whatsapp-btn btn-primary">
+                <div className={styles.footerCtaWrapper}>
+                  <a
+                    href="https://wa.me/c/555183388338"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div
+                      className={`btn footer-whatsapp-btn btn-primary ${styles.footerWhatsappBtn}`}
+                    >
                       <svg
                         width="20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -312,19 +344,19 @@ const Footer: FC = () => {
                 </div>
               </div>
             </div>
-            <div className="footer-bottom">
-              <div className="footer-bottom-content">
-                <p className="footer-copyright">
+            <div className={styles.footerBottom}>
+              <div className={styles.footerBottomContent}>
+                <p className={styles.footerCopyright}>
                   &amp;copy; 2026 KzaVerde. All rights reserved.
                 </p>
-                <div className="footer-bottom-links">
+                <div className={styles.footerBottomLinks}>
                   <a href="#">
-                    <div className="footer-bottom-link">
+                    <div className={styles.footerBottomLink}>
                       <span>Privacy Policy</span>
                     </div>
                   </a>
                   <a href="#">
-                    <div className="footer-bottom-link">
+                    <div className={styles.footerBottomLink}>
                       <span>Terms of Service</span>
                     </div>
                   </a>

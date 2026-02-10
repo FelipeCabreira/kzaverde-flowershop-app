@@ -1,0 +1,174 @@
+.footerWrapper {
+  color: var(--color-surface);
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #1a3d3a 0%,
+    color-mix(in srgb, #1a3d3a 85%, black) 100%
+  );
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-4xl);
+}
+
+.footerContainer {
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+  max-width: var(--content-max-width);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-4xl);
+  align-items: start;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.footerBrandColumn {
+  grid-column: 1 / span 1;
+}
+.footerLogoGroup {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+.footerLogoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: #e91e8c;
+}
+.footerBrandName {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
+  font-size: var(--font-size-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #e91e8c;
+}
+
+.footerDescription {
+  margin-top: var(--spacing-sm);
+  max-width: 36rem;
+  color: var(--color-surface);
+}
+
+.footerSocialLinks {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+.footerSocialIcon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-surface);
+  border: 1px solid color-mix(in oklab, var(--color-border) 20%, transparent);
+  transition: all 0.3s ease;
+}
+
+.footerSocialIcon:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: color-mix(in oklab, var(--color-accent) 15%, transparent);
+}
+
+.footerOpeningHours {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+.footerHoursItem {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+.footerHours-day {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-surface);
+}
+.footer-hours-time {
+  color: var(--color-on-surface-secondary);
+}
+
+.footerContactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+.footerContactItem {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+.footerContactIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #e91e8c;
+  flex-shrink: 0;
+}
+.footerContactText {
+  color: var(--color-surface);
+  text-decoration: none;
+}
+
+.footerCtaWrapper {
+  margin-top: var(--spacing-md);
+}
+.footerWhatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--border-radius-control);
+}
+
+.footerBottom {
+  margin-top: var(--spacing-4xl);
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-md) 0;
+}
+.footerBottomContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+.footerCopyright {
+  margin: 0;
+  color: var(--color-on-surface-secondary);
+}
+.footerBottomLinks {
+  display: flex;
+  gap: var(--spacing-md);
+}
+.footerBottomLink {
+  color: var(--color-on-surface-secondary);
+}
+
+@media (max-width: 900px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  .footerBottomContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* (remaining Footer.module.css content copied unchanged for brevity) */

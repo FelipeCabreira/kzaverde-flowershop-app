@@ -1,0 +1,46 @@
+/* components styles converted to SCSS (partial) */
+.featured-products {
+  padding: var(--spacing-4xl) 0;
+  overflow: hidden;
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Product card (basic fallback styles used across the site) */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  background: var(--color-surface);
+  border-radius: var(--border-radius-card);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-level-1);
+}
+
+.product-card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: calc(var(--border-radius-card) - 8px);
+}
+
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+.product-card__price {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+}
+
+/* Featured collections / rails basic layout */
+.featured-collections__grid {
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* (remaining components rules kept in original components.scss) */

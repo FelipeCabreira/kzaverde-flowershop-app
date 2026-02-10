@@ -1,50 +1,52 @@
-import React, { FC, useState, useEffect } from 'react'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import Navigation from '../../components/navigation'
-import Footer from '../../components/footer'
-import catalogData from '../../data/catalog.json'
+import React, { FC, useState, useEffect } from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import Navigation from "../../components/navigation";
+import Footer from "../../components/footer";
+import catalogData from "../../data/catalog.json";
 
 interface Product {
-  id: number
-  name: string
-  price: string
-  displayPrice?: string
-  description: string
-  image: string
-  images?: string[]
-  category: string
-  rating?: number
-  reviews?: number
-  careInstructions?: string[]
+  id: number;
+  name: string;
+  price: string;
+  displayPrice?: string;
+  description: string;
+  image: string;
+  images?: string[];
+  category: string;
+  rating?: number;
+  reviews?: number;
+  careInstructions?: string[];
 }
 
 const ProductDetail: FC = () => {
-  const router = useRouter()
-  const { id } = router.query
+  const router = useRouter();
+  const { id } = router.query;
 
-  const product = catalogData.catalog.find((p) => p.id === parseInt(id as string)) as Product | undefined
+  const product = catalogData.catalog.find(
+    (p) => p.id === parseInt(id as string),
+  ) as Product | undefined;
 
-  const [size, setSize] = useState<string>('Small')
-  const [type, setType] = useState<string>('Bouquet')
-  const [quantity, setQuantity] = useState<number>(1)
-  const [wishlist, setWishlist] = useState<boolean>(false)
-  const [selectedImage, setSelectedImage] = useState<string>('')
+  const [size, setSize] = useState<string>("Small");
+  const [type, setType] = useState<string>("Bouquet");
+  const [quantity, setQuantity] = useState<number>(1);
+  const [wishlist, setWishlist] = useState<boolean>(false);
+  const [selectedImage, setSelectedImage] = useState<string>("");
 
   useEffect(() => {
     if (product) {
-      setSelectedImage(product.image)
+      setSelectedImage(product.image);
     }
-  }, [product])
+  }, [product]);
 
   if (!product) {
-    return <div>Product not found</div>
+    return <div>Product not found</div>;
   }
 
   // Get similar products from the same category
   const similarProducts = catalogData.catalog
     .filter((p) => p.category === product.category && p.id !== product.id)
-    .slice(0, 4) as Product[]
+    .slice(0, 4) as Product[];
 
   const generateWhatsAppMessage = () => {
     const message = encodeURIComponent(
@@ -54,32 +56,41 @@ const ProductDetail: FC = () => {
         `Type: ${type}\n` +
         `Quantity: ${quantity}\n` +
         `Price: ${product.price}\n\n` +
-        `Please confirm availability and provide further details.`
-    )
-    return `https://wa.me/c/555183388338?text=${message}`
-  }
+        `Please confirm availability and provide further details.`,
+    );
+    return `https://wa.me/c/555183388338?text=${message}`;
+  };
 
   const handleAddToWishlist = () => {
-    setWishlist(!wishlist)
+    setWishlist(!wishlist);
     // In a real app, this would save to localStorage or a backend
     if (!wishlist) {
-      const currentWishlist = JSON.parse(localStorage.getItem('kzaverde-wishlist') || '[]')
-      localStorage.setItem('kzaverde-wishlist', JSON.stringify([...currentWishlist, product.id]))
-    } else {
-      const currentWishlist = JSON.parse(localStorage.getItem('kzaverde-wishlist') || '[]')
+      const currentWishlist = JSON.parse(
+        localStorage.getItem("kzaverde-wishlist") || "[]",
+      );
       localStorage.setItem(
-        'kzaverde-wishlist',
-        JSON.stringify(currentWishlist.filter((id: number) => id !== product.id))
-      )
+        "kzaverde-wishlist",
+        JSON.stringify([...currentWishlist, product.id]),
+      );
+    } else {
+      const currentWishlist = JSON.parse(
+        localStorage.getItem("kzaverde-wishlist") || "[]",
+      );
+      localStorage.setItem(
+        "kzaverde-wishlist",
+        JSON.stringify(
+          currentWishlist.filter((id: number) => id !== product.id),
+        ),
+      );
     }
-  }
+  };
 
   const handleQuantityChange = (change: number) => {
-    const newQuantity = quantity + change
+    const newQuantity = quantity + change;
     if (newQuantity > 0) {
-      setQuantity(newQuantity)
+      setQuantity(newQuantity);
     }
-  }
+  };
 
   return (
     <>
@@ -101,7 +112,7 @@ const ProductDetail: FC = () => {
                 {(product.images || [product.image]).map((img, index) => (
                   <button
                     key={index}
-                    className={`product-detail__thumbnail ${selectedImage === img ? 'active' : ''}`}
+                    className={`product-detail__thumbnail ${selectedImage === img ? "active" : ""}`}
                     onClick={() => setSelectedImage(img)}
                   >
                     <img src={img} alt={`${product.name} view ${index + 1}`} />
@@ -125,13 +136,19 @@ const ProductDetail: FC = () => {
                 <span className="product-detail__price">{product.price}</span>
               </div>
 
-              <p className="product-detail__description">{product.description}</p>
+              <p className="product-detail__description">
+                {product.description}
+              </p>
 
               <div className="product-detail__care">
-                <h3 className="product-detail__care-title">Care Instructions</h3>
+                <h3 className="product-detail__care-title">
+                  Care Instructions
+                </h3>
                 <ul className="product-detail__care-list">
                   <li>Change water every 2-3 days for freshness</li>
-                  <li>Trim stems at a 45-degree angle before placing in water</li>
+                  <li>
+                    Trim stems at a 45-degree angle before placing in water
+                  </li>
                   <li>Keep away from direct sunlight and heat sources</li>
                   <li>Remove any wilted petals to extend bouquet life</li>
                 </ul>
@@ -141,10 +158,10 @@ const ProductDetail: FC = () => {
                 <div className="product-detail__option-group">
                   <label className="product-detail__option-label">Size</label>
                   <div className="product-detail__option-buttons">
-                    {['Small', 'Medium', 'Large'].map((s) => (
+                    {["Small", "Medium", "Large"].map((s) => (
                       <button
                         key={s}
-                        className={`product-detail__option-btn ${size === s ? 'active' : ''}`}
+                        className={`product-detail__option-btn ${size === s ? "active" : ""}`}
                         onClick={() => setSize(s)}
                       >
                         {s}
@@ -156,10 +173,10 @@ const ProductDetail: FC = () => {
                 <div className="product-detail__option-group">
                   <label className="product-detail__option-label">Type</label>
                   <div className="product-detail__option-buttons">
-                    {['Bouquet', 'Arrangement', 'Vase'].map((t) => (
+                    {["Bouquet", "Arrangement", "Vase"].map((t) => (
                       <button
                         key={t}
-                        className={`product-detail__option-btn ${type === t ? 'active' : ''}`}
+                        className={`product-detail__option-btn ${type === t ? "active" : ""}`}
                         onClick={() => setType(t)}
                       >
                         {t}
@@ -169,7 +186,9 @@ const ProductDetail: FC = () => {
                 </div>
 
                 <div className="product-detail__option-group">
-                  <label className="product-detail__option-label">Quantity</label>
+                  <label className="product-detail__option-label">
+                    Quantity
+                  </label>
                   <div className="product-detail__quantity">
                     <button
                       className="product-detail__quantity-btn"
@@ -211,7 +230,7 @@ const ProductDetail: FC = () => {
                   </button>
                 </a>
                 <button
-                  className={`btn btn-lg btn-outline ${wishlist ? 'wishlist-active' : ''}`}
+                  className={`btn btn-lg btn-outline ${wishlist ? "wishlist-active" : ""}`}
                   onClick={handleAddToWishlist}
                 >
                   <svg
@@ -219,18 +238,19 @@ const ProductDetail: FC = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill={wishlist ? 'currentColor' : 'none'}
+                    fill={wishlist ? "currentColor" : "none"}
                     stroke="currentColor"
                   >
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                   </svg>
-                  <span>{wishlist ? 'Remove from' : 'Add to'} Wishlist</span>
+                  <span>{wishlist ? "Remove from" : "Add to"} Wishlist</span>
                 </button>
               </div>
             </div>
           </div>
         </section>
 
+        {/*
         <section className="similar-products">
           <div className="similar-products__inner">
             <h2 className="similar-products__title">You May Also Like</h2>
@@ -256,6 +276,7 @@ const ProductDetail: FC = () => {
             </div>
           </div>
         </section>
+        */}
 
         <Footer></Footer>
       </div>
@@ -413,7 +434,7 @@ const ProductDetail: FC = () => {
           }
 
           .product-detail__care-list li:before {
-            content: '◆';
+            content: "◆";
             position: absolute;
             left: 0;
             color: #d946ef;
@@ -530,7 +551,11 @@ const ProductDetail: FC = () => {
 
           .similar-products {
             padding: 60px 20px;
-            background: linear-gradient(135deg, rgba(217, 70, 239, 0.05) 0%, rgba(45, 212, 191, 0.05) 100%);
+            background: linear-gradient(
+              135deg,
+              rgba(217, 70, 239, 0.05) 0%,
+              rgba(45, 212, 191, 0.05) 100%
+            );
             margin-top: 40px;
           }
 
@@ -641,7 +666,7 @@ const ProductDetail: FC = () => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default ProductDetail
+export default ProductDetail;

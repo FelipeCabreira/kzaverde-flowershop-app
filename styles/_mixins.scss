@@ -1,0 +1,7 @@
+@mixin prefers-reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+/* add shared mixins here */
