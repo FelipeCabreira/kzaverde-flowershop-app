@@ -4,5 +4,8 @@
 @use "./_base" as base;
 @use "./_components" as components;
 @use "./_layout" as layout;
+@use "./_pages" as pages;
+@use "./_utilities" as utilities;
 
-/* main.scss aggregates partials for global import in _app.tsx */
+/* main.scss aggregates all SCSS partials for global import in _app.tsx */
+/* Imports: variables, mixins, base utilities, components, layout, pages, and legacy utilities */
