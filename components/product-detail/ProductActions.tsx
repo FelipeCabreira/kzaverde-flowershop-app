@@ -4,18 +4,20 @@ import styles from "./ProductActions.module.scss";
 interface ProductActionsProps {
   productName: string;
   productPrice: string;
-  size: string;
-  type: string;
+  // size: string; // Commented for now
+  // type: string; // Commented for now
   quantity: number;
+  orderDetails: string;
   productId: number;
 }
 
 export const ProductActions: FC<ProductActionsProps> = ({
   productName,
   productPrice,
-  size,
-  type,
+  // size, // Commented for now
+  // type, // Commented for now
   quantity,
+  orderDetails,
   productId,
 }) => {
   const [wishlist, setWishlist] = useState(false);
@@ -29,16 +31,22 @@ export const ProductActions: FC<ProductActionsProps> = ({
   }, [productId]);
 
   const generateWhatsAppMessage = () => {
-    const message = encodeURIComponent(
-      `Hi! I'd like to reserve the following product:\n\n` +
-        `Product: ${productName}\n` +
-        `Size: ${size}\n` +
-        `Type: ${type}\n` +
-        `Quantity: ${quantity}\n` +
-        `Price: ${productPrice}\n\n` +
-        `Please confirm availability and provide further details.`,
-    );
-    return `https://wa.me/c/555183388338?text=${message}`;
+    const baseMessage =
+      `Olá! Gostaria de fazer um pedido:\n\n` +
+      `📦 Produto: ${productName}\n` +
+      `🔢 Quantidade: ${quantity}\n` +
+      `💰 Preço: ${productPrice}`;
+
+    const detailsSection = orderDetails.trim()
+      ? `\n\n📝 Detalhes do pedido:\n${orderDetails}`
+      : "";
+
+    const finalMessage =
+      baseMessage +
+      detailsSection +
+      `\n\nPor favor, confirme a disponibilidade e forneça mais detalhes.`;
+
+    return `https://wa.me/555183388338?text=${encodeURIComponent(finalMessage)}`;
   };
 
   const handleAddToWishlist = () => {

@@ -20,9 +20,10 @@ const ProductDetail: FC = () => {
   const { product, loading: productLoading } = useProduct(productId || 0);
   const { products: allProducts } = useProducts();
 
-  const [size, setSize] = useState<string>("Small");
-  const [type, setType] = useState<string>("Bouquet");
+  // const [size, setSize] = useState<string>("Small"); // Commented for now
+  // const [type, setType] = useState<string>("Bouquet"); // Commented for now
   const [quantity, setQuantity] = useState<number>(1);
+  const [orderDetails, setOrderDetails] = useState<string>("");
 
   // Get similar products from the same category
   const similarProducts = allProducts
@@ -91,20 +92,23 @@ const ProductDetail: FC = () => {
               <ProductCare instructions={product.careInstructions} />
 
               <ProductOptions
-                onSizeChange={setSize}
-                onTypeChange={setType}
+                // onSizeChange={setSize} // Commented for now
+                // onTypeChange={setType} // Commented for now
                 onQuantityChange={setQuantity}
-                initialSize={size}
-                initialType={type}
+                onOrderDetailsChange={setOrderDetails}
+                // initialSize={size} // Commented for now
+                // initialType={type} // Commented for now
                 initialQuantity={quantity}
+                initialOrderDetails={orderDetails}
               />
 
               <ProductActions
                 productName={product.name}
                 productPrice={product.price}
-                size={size}
-                type={type}
+                // size={size} // Commented for now
+                // type={type} // Commented for now
                 quantity={quantity}
+                orderDetails={orderDetails}
                 productId={product.id}
               />
             </div>
