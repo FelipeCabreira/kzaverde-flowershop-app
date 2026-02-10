@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Navigation from "../../components/Navigation";
-import Footer from "../../components/Footer";
+import Navigation from "../../components/navigation";
+import Footer from "../../components/footer";
 import ProductGallery from "../../components/product-detail/ProductGallery";
 import ProductHeader from "../../components/product-detail/ProductHeader";
 import ProductCare from "../../components/product-detail/ProductCare";
