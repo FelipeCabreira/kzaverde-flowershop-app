@@ -1,12 +1,12 @@
-import React, { FC } from 'react'
-import Head from 'next/head'
+import React, { FC } from "react";
+import Head from "next/head";
 
-import Script from 'dangerous-html/react'
+import Script from "dangerous-html/react";
 
-import Navigation from '../components/navigation'
-import Footer from '../components/footer'
-import ProductCard from '../components/product-card'
-import productsData from '../data/products.json'
+import Navigation from "../components/navigation";
+import Footer from "../components/footer";
+import ProductCard from "../components/product-card";
+import productsData from "../data/products.json";
 
 const Home: FC = () => {
   return (
@@ -39,7 +39,8 @@ const Home: FC = () => {
               com miniaturas que contam histórias e antiguidades que guardam memórias.
     <br />
     <br /> */}
-              Cada detalhe e um gesto de carinho. <br /> Cada flor, uma promessa de beleza.
+              Cada detalhe e um gesto de carinho. <br /> Cada flor, uma promessa
+              de beleza.
             </p>
             <div className="hero-welcome__actions">
               <a href="https://wa.me/c/555183388338">
@@ -56,11 +57,11 @@ const Home: FC = () => {
                     ></path>
                   </svg>
                   <span>
-                    {' '}
+                    {" "}
                     Reserve via WhatsApp
                     <span
                       dangerouslySetInnerHTML={{
-                        __html: ' ',
+                        __html: " ",
                       }}
                     />
                   </span>
@@ -291,7 +292,10 @@ const Home: FC = () => {
             </div>
           </div>
         </section> */}
-          <section id="featured-products" className="featured-products flex flex-column align-center">
+        <section
+          id="featured-products"
+          className="featured-products flex flex-column align-center"
+        >
           <div className="featured-products__header">
             <h2 className="section-title">Mais vendidos</h2>
             <p className="section-subtitle">
@@ -316,7 +320,7 @@ const Home: FC = () => {
             <div className="reserve-cta__header">
               <h2 className="section-title">Como reservar</h2>
               <p className="section-subtitle">
-               Etapas simples para garantir suas flores favoritas.
+                Etapas simples para garantir suas flores favoritas.
               </p>
             </div>
             <div className="reserve-cta__steps">
@@ -337,7 +341,9 @@ const Home: FC = () => {
                     <path d="m21 21l-4.3-4.3"></path>
                   </svg>
                 </div>
-                <h3 className="section-content">1. Escolha seu produto no nosso catálogo</h3>
+                <h3 className="section-content">
+                  1. Escolha seu produto no nosso catálogo
+                </h3>
                 <p className="section-content">
                   Encontre o arranjo perfeito na nossa seleção curada.
                 </p>
@@ -360,8 +366,8 @@ const Home: FC = () => {
                 </div>
                 <h3 className="section-content">2. WhatsApp</h3>
                 <p className="section-content">
-                  Envie-nos uma mensagem com o nome do produto e a data desejada.
-
+                  Envie-nos uma mensagem com o nome do produto e a data
+                  desejada.
                 </p>
               </div>
               <div className="reserve-cta__step">
@@ -382,7 +388,8 @@ const Home: FC = () => {
                 </div>
                 <h3 className="section-content">3. Confirmação e Retirada</h3>
                 <p className="section-content">
-                  Confirmamos seu pedido e deixamos pronto para retirada no mesmo dia.
+                  Confirmamos seu pedido e deixamos pronto para retirada no
+                  mesmo dia.
                 </p>
               </div>
             </div>
@@ -401,11 +408,11 @@ const Home: FC = () => {
                     ></path>
                   </svg>
                   <span>
-                    {' '}
+                    {" "}
                     Fale conosco via WhatsApp
                     <span
                       dangerouslySetInnerHTML={{
-                        __html: ' ',
+                        __html: " ",
                       }}
                     />
                   </span>
@@ -415,7 +422,7 @@ const Home: FC = () => {
           </div>
         </section>
 
-        <section id='inspiration-preview' className="inspiration-preview">
+        <section id="inspiration-preview" className="inspiration-preview">
           <div className="inspiration-preview__header">
             <h2 className="section-title">Inspiração Floral</h2>
             <p className="section-subtitle">
@@ -510,15 +517,29 @@ const Home: FC = () => {
     revealObserver.observe(el)
   })
 
-  // Horizontal scroll behavior for rails (mouse wheel support)
+  // Horizontal scroll behavior for rails (mouse wheel support with proper event scope)
   const rails = document.querySelectorAll(".featured-products__rail, .inspiration-preview__rail")
   rails.forEach((rail) => {
     rail.addEventListener("wheel", (e) => {
-      if (e.deltaY !== 0) {
+      // Only handle horizontal scrolling if the carousel has overflow
+      const hasHorizontalScroll = rail.scrollWidth > rail.clientWidth
+      
+      if (!hasHorizontalScroll) return
+      
+      // Check scroll boundaries
+      const isAtStart = rail.scrollLeft === 0
+      const isAtEnd = rail.scrollLeft >= rail.scrollWidth - rail.clientWidth
+      const isScrollingRight = e.deltaY > 0
+      const isScrollingLeft = e.deltaY < 0
+      
+      // Only prevent default if we can actually scroll in the desired direction
+      const canScroll = (isScrollingRight && !isAtEnd) || (isScrollingLeft && !isAtStart)
+      
+      if (canScroll && e.deltaY !== 0) {
         e.preventDefault()
         rail.scrollLeft += e.deltaY
       }
-    })
+    }, { passive: false }) // passive: false allows preventDefault
   })
 })()
 </script>`}
@@ -572,7 +593,7 @@ const Home: FC = () => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
