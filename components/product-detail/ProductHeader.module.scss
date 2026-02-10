@@ -23,11 +23,37 @@
   gap: 10px;
   font-size: 14px;
   color: #999;
+  flex-wrap: wrap;
 }
 
 .stars {
-  color: #d946ef;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 16px;
+}
+
+.starsSaving {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.starButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #d946ef;
+  }
+}
+
+.starActive {
+  color: #d946ef;
 }
 
 .priceSection {
@@ -47,6 +73,10 @@
   line-height: 1.6;
   color: #ccc;
   margin: 0;
+}
+
+.userRating {
+  color: #bbb;
 }
 
 @media (max-width: 768px) {

@@ -83,6 +83,7 @@ const ProductDetail: FC = () => {
 
             <div className={styles.info}>
               <ProductHeader
+                productId={product.id}
                 name={product.name}
                 price={product.price}
                 rating={product.rating}
