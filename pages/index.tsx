@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import Head from "next/head";
-import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
 import HeroSection from "../components/home/HeroSection";
 import FeaturedProductsSection from "../components/home/FeaturedProductsSection";
 import ReserveCTASection from "../components/home/ReserveCTASection";
 import InspirationSection from "../components/home/InspirationSection";
 import HomepageScripts from "../components/home/HomepageScripts";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Home: FC = () => {
   return (
@@ -20,7 +20,7 @@ const Home: FC = () => {
             href="https://worthwhile-bewitched-tapir-xn2j0r.teleporthq.app/"
           />
         </Head>
-        <Navigation></Navigation>
+        <Navigation />
         <HeroSection />
         <FeaturedProductsSection />
         <ReserveCTASection />
