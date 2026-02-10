@@ -5,6 +5,12 @@ import {
   getProductsByCategory,
   createProduct,
 } from "../../../lib/db";
+import {
+  requireAuth,
+  logSecurityEvent,
+  getClientIp,
+  extractApiKey,
+} from "../../../lib/auth";
 
 type ResponseData = any;
 
@@ -211,6 +217,23 @@ export default function handler(
       });
     }
   } else if (req.method === "POST") {
+    // Require authentication for write operations
+    if (!requireAuth(req)) {
+      const ip = getClientIp(req);
+      logSecurityEvent({
+        type: "UNAUTHORIZED_API_ACCESS",
+        method: "POST",
+        endpoint: "/api/products",
+        ip: ip,
+        status: 401,
+        message: "Unauthorized POST attempt",
+      });
+      return res.status(401).json({
+        success: false,
+        error: "Unauthorized. Provide valid x-api-key header.",
+      });
+    }
+
     try {
       const {
         name,

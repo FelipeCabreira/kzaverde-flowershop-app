@@ -2,6 +2,8 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import React from "react";
 import { GetServerSideProps } from "next";
+import { requireAuth, getClientIp, logSecurityEvent } from "../lib/auth";
+import type { NextApiRequest } from "next";
 
 const SwaggerUI = dynamic(() => import("swagger-ui-react"), {
   ssr: false,
@@ -21,13 +23,35 @@ export default function DocsPage() {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const host = req.headers.host || "";
-  const hostname = host.split(":")[0].toLowerCase();
-  const isLocalhost =
-    hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
+  // Allow docs in development
+  if (process.env.NODE_ENV === "development") {
+    return { props: {} };
+  }
 
-  if (!isLocalhost) {
-    return { notFound: true };
+  // In production, require authentication
+  const apiKey = Array.isArray(req.headers["x-api-key"])
+    ? req.headers["x-api-key"][0]
+    : req.headers["x-api-key"];
+
+  const isValid =
+    apiKey &&
+    requireAuth({
+      headers: { "x-api-key": apiKey },
+    } as unknown as NextApiRequest);
+
+  if (!isValid) {
+    const ip = getClientIp(req as unknown as NextApiRequest);
+    logSecurityEvent({
+      type: "UNAUTHORIZED_DOCS_ACCESS",
+      endpoint: "/docs",
+      ip: ip,
+      status: 403,
+      message: "Unauthorized documentation access attempt",
+    });
+
+    return {
+      notFound: true,
+    };
   }
 
   return { props: {} };

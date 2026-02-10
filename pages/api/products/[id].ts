@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getProductById, updateProduct, deleteProduct } from "../../../lib/db";
+import { requireAuth, logSecurityEvent, getClientIp } from "../../../lib/auth";
 
 type ResponseData = any;
 
@@ -158,6 +159,23 @@ export default function handler(
       });
     }
   } else if (req.method === "PUT" || req.method === "PATCH") {
+    // Require authentication for write operations
+    if (!requireAuth(req)) {
+      const ip = getClientIp(req);
+      logSecurityEvent({
+        type: "UNAUTHORIZED_API_ACCESS",
+        method: req.method,
+        endpoint: `/api/products/${id}`,
+        ip: ip,
+        status: 401,
+        message: `Unauthorized ${req.method} attempt`,
+      });
+      return res.status(401).json({
+        success: false,
+        error: "Unauthorized. Provide valid x-api-key header.",
+      });
+    }
+
     try {
       const product = getProductById(productId);
 
@@ -182,6 +200,23 @@ export default function handler(
       });
     }
   } else if (req.method === "DELETE") {
+    // Require authentication for write operations
+    if (!requireAuth(req)) {
+      const ip = getClientIp(req);
+      logSecurityEvent({
+        type: "UNAUTHORIZED_API_ACCESS",
+        method: "DELETE",
+        endpoint: `/api/products/${id}`,
+        ip: ip,
+        status: 401,
+        message: "Unauthorized DELETE attempt",
+      });
+      return res.status(401).json({
+        success: false,
+        error: "Unauthorized. Provide valid x-api-key header.",
+      });
+    }
+
     try {
       const product = getProductById(productId);
 

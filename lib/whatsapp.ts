@@ -4,7 +4,21 @@
 
 import { WhatsAppOrderParams } from "@/types/product";
 
-export const WHATSAPP_BUSINESS_PHONE = "555183388338";
+/**
+ * Get WhatsApp business phone from environment variables
+ * Falls back to default if not configured
+ */
+export function getWhatsAppPhone(): string {
+  return (
+    process.env.NEXT_PUBLIC_WHATSAPP_PHONE ||
+    process.env.WHATSAPP_PHONE ||
+    "555183388338" // Default fallback (should be configured in .env)
+  );
+}
+
+const WHATSAPP_BUSINESS_PHONE = getWhatsAppPhone();
+
+export { WHATSAPP_BUSINESS_PHONE };
 
 /**
  * Generate a WhatsApp link with a pre-filled order message
