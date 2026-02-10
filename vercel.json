@@ -7,7 +7,6 @@
     "ADMIN_API_KEY": "@admin_api_key",
     "WHATSAPP_PHONE": "@whatsapp_phone"
   },
-  "envToHide": ["ADMIN_API_KEY", "WHATSAPP_PHONE"],
   "functions": {
     "pages/api/products/**": {
       "memory": 128,
