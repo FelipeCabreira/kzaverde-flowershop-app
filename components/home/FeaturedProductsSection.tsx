@@ -1,21 +1,17 @@
 import React, { FC } from "react";
 import ProductCard from "../product-card";
-
-interface Product {
-  id: number;
-  name: string;
-  price: string;
-  image: string;
-  alt: string;
-}
+import { useProducts } from "../../lib/hooks";
 
 interface FeaturedProductsSectionProps {
-  products: Product[];
+  products?: any[]; // Optional - if not provided, will fetch from API
 }
 
 const FeaturedProductsSection: FC<FeaturedProductsSectionProps> = ({
-  products,
+  products: staticProducts,
 }) => {
+  const { products: apiProducts, loading } = useProducts();
+  const products = staticProducts || apiProducts;
+
   return (
     <section
       id="featured-products"
@@ -27,18 +23,24 @@ const FeaturedProductsSection: FC<FeaturedProductsSectionProps> = ({
           Nossos favoritos atuais, disponíveis para pré-encomenda imediata.
         </p>
       </div>
-      <div className="featured-products__rail">
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            id={product.id}
-            name={product.name}
-            price={product.price}
-            image={product.image}
-            alt={product.alt}
-          />
-        ))}
-      </div>
+      {loading ? (
+        <div style={{ padding: "40px", textAlign: "center", color: "#ccc" }}>
+          Carregando produtos...
+        </div>
+      ) : (
+        <div className="featured-products__rail">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              name={product.name}
+              price={product.price}
+              image={product.image}
+              alt={product.alt || product.name}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

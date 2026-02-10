@@ -1,5 +1,6 @@
 import "../styles/main.scss";
 import "./style.css";
+import "swagger-ui-react/swagger-ui.css";
 
 import React from "react";
 import { GlobalProvider } from "../global-context";

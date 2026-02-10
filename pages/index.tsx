@@ -7,7 +7,6 @@ import FeaturedProductsSection from "../components/home/FeaturedProductsSection"
 import ReserveCTASection from "../components/home/ReserveCTASection";
 import InspirationSection from "../components/home/InspirationSection";
 import HomepageScripts from "../components/home/HomepageScripts";
-import productsData from "../data/products.json";
 
 const Home: FC = () => {
   return (
@@ -23,7 +22,7 @@ const Home: FC = () => {
         </Head>
         <Navigation></Navigation>
         <HeroSection />
-        <FeaturedProductsSection products={productsData} />
+        <FeaturedProductsSection />
         <ReserveCTASection />
         <InspirationSection />
         <HomepageScripts />

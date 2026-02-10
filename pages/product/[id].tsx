@@ -9,26 +9,40 @@ import ProductCare from "../../components/product-detail/ProductCare";
 import ProductOptions from "../../components/product-detail/ProductOptions";
 import ProductActions from "../../components/product-detail/ProductActions";
 import SimilarProducts from "../../components/product-detail/SimilarProducts";
-import catalogData from "../../data/catalog.json";
-import { Product } from "../../types/product";
+import { useProduct, useProducts } from "../../lib/hooks";
 import styles from "../../components/product-detail/ProductDetail.module.scss";
 
 const ProductDetail: FC = () => {
   const router = useRouter();
   const { id } = router.query;
+  const productId = id ? parseInt(id as string) : undefined;
 
-  const product = catalogData.catalog.find(
-    (p) => p.id === parseInt(id as string),
-  ) as Product | undefined;
+  const { product, loading: productLoading } = useProduct(productId || 0);
+  const { products: allProducts } = useProducts();
 
   const [size, setSize] = useState<string>("Small");
   const [type, setType] = useState<string>("Bouquet");
   const [quantity, setQuantity] = useState<number>(1);
 
   // Get similar products from the same category
-  const similarProducts = catalogData.catalog
+  const similarProducts = allProducts
     .filter((p) => p.category === product?.category && p.id !== product?.id)
-    .slice(0, 4) as Product[];
+    .slice(0, 4);
+
+  if (productLoading) {
+    return (
+      <>
+        <Navigation />
+        <div
+          className={styles.container}
+          style={{ textAlign: "center", paddingTop: "100px" }}
+        >
+          <h1>Carregando...</h1>
+        </div>
+        <Footer />
+      </>
+    );
+  }
 
   if (!product) {
     return (
