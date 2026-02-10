@@ -24,6 +24,7 @@ const ProductDetail: FC = () => {
   // const [type, setType] = useState<string>("Bouquet"); // Commented for now
   const [quantity, setQuantity] = useState<number>(1);
   const [orderDetails, setOrderDetails] = useState<string>("");
+  const [shippingAddress, setShippingAddress] = useState<string>("");
 
   // Get similar products from the same category
   const similarProducts = allProducts
@@ -96,10 +97,12 @@ const ProductDetail: FC = () => {
                 // onTypeChange={setType} // Commented for now
                 onQuantityChange={setQuantity}
                 onOrderDetailsChange={setOrderDetails}
+                onShippingAddressChange={setShippingAddress}
                 // initialSize={size} // Commented for now
                 // initialType={type} // Commented for now
                 initialQuantity={quantity}
                 initialOrderDetails={orderDetails}
+                initialShippingAddress={shippingAddress}
               />
 
               <ProductActions
@@ -109,6 +112,7 @@ const ProductDetail: FC = () => {
                 // type={type} // Commented for now
                 quantity={quantity}
                 orderDetails={orderDetails}
+                shippingAddress={shippingAddress}
                 productId={product.id}
               />
             </div>

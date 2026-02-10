@@ -8,6 +8,7 @@ interface ProductActionsProps {
   // type: string; // Commented for now
   quantity: number;
   orderDetails: string;
+  shippingAddress: string;
   productId: number;
 }
 
@@ -18,6 +19,7 @@ export const ProductActions: FC<ProductActionsProps> = ({
   // type, // Commented for now
   quantity,
   orderDetails,
+  shippingAddress,
   productId,
 }) => {
   const [wishlist, setWishlist] = useState(false);
@@ -41,9 +43,14 @@ export const ProductActions: FC<ProductActionsProps> = ({
       ? `\n\n• Detalhes do pedido:\n${orderDetails}`
       : "";
 
+    const shippingSection = shippingAddress.trim()
+      ? `\n\n• Endereço de entrega:\n${shippingAddress}`
+      : "";
+
     const finalMessage =
       baseMessage +
       detailsSection +
+      shippingSection +
       `\n\nPor favor, confirme a disponibilidade e forneça mais detalhes.`;
 
     return `https://wa.me/555183388338?text=${encodeURIComponent(finalMessage)}`;

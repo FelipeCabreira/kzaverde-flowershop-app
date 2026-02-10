@@ -30,6 +30,7 @@ export interface OrderDetails {
   productName: string;
   quantity: number;
   orderDetails: string;
+  shippingAddress?: string;
   timestamp: string;
 }
 
@@ -41,4 +42,5 @@ export interface WhatsAppOrderParams {
   productName: string;
   quantity: number;
   orderDetails: string;
+  shippingAddress?: string;
 }

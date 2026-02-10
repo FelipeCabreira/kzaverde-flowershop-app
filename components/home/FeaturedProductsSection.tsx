@@ -20,7 +20,8 @@ const FeaturedProductsSection: FC<FeaturedProductsSectionProps> = ({
       <div className="featured-products__header">
         <h2 className="section-title">Mais vendidos</h2>
         <p className="section-subtitle">
-          Nossos favoritos atuais, disponíveis para pré-encomenda imediata.
+          Descubra os produtos mais procurados por nossos clientes. Qualidade
+          garantida, verifique disponibilidade de entrega pelo nosso WhatsApp.
         </p>
       </div>
       {loading ? (

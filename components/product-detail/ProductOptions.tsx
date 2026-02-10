@@ -6,10 +6,12 @@ interface ProductOptionsProps {
   // onTypeChange: (type: string) => void; // Commented for now
   onQuantityChange: (quantity: number) => void;
   onOrderDetailsChange: (orderDetails: string) => void;
+  onShippingAddressChange: (shippingAddress: string) => void;
   // initialSize?: string; // Commented for now
   // initialType?: string; // Commented for now
   initialQuantity?: number;
   initialOrderDetails?: string;
+  initialShippingAddress?: string;
 }
 
 // const SIZES = ["Small", "Medium", "Large"]; // Commented for now
@@ -20,15 +22,20 @@ export const ProductOptions: FC<ProductOptionsProps> = ({
   // onTypeChange, // Commented for now
   onQuantityChange,
   onOrderDetailsChange,
+  onShippingAddressChange,
   // initialSize = "Small", // Commented for now
   // initialType = "Bouquet", // Commented for now
   initialQuantity = 1,
   initialOrderDetails = "",
+  initialShippingAddress = "",
 }) => {
   // const [size, setSize] = useState(initialSize); // Commented for now
   // const [type, setType] = useState(initialType); // Commented for now
   const [quantity, setQuantity] = useState(initialQuantity);
   const [orderDetails, setOrderDetails] = useState(initialOrderDetails);
+  const [shippingAddress, setShippingAddress] = useState(
+    initialShippingAddress,
+  );
 
   // const handleSizeChange = (newSize: string) => { // Commented for now
   //   setSize(newSize);
@@ -54,6 +61,14 @@ export const ProductOptions: FC<ProductOptionsProps> = ({
     const value = e.target.value;
     setOrderDetails(value);
     onOrderDetailsChange(value);
+  };
+
+  const handleShippingAddressChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement>,
+  ) => {
+    const value = e.target.value;
+    setShippingAddress(value);
+    onShippingAddressChange(value);
   };
 
   return (
@@ -129,6 +144,21 @@ export const ProductOptions: FC<ProductOptionsProps> = ({
           placeholder="Adicione informações adicionais sobre seu pedido (cores preferidas, mensagem especial, data de entrega, etc.)"
           rows={4}
           aria-label="Order details"
+        />
+      </div>
+
+      <div className={styles.optionGroup}>
+        <label className={styles.label} htmlFor="shippingAddress">
+          Endereço de entrega
+        </label>
+        <textarea
+          id="shippingAddress"
+          className={styles.shippingAddressInput}
+          value={shippingAddress}
+          onChange={handleShippingAddressChange}
+          placeholder="Rua, número, complemento, bairro, cidade e CEP"
+          rows={3}
+          aria-label="Shipping address"
         />
       </div>
     </div>

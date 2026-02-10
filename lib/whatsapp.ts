@@ -35,9 +35,14 @@ export function generateWhatsAppOrderLink(params: WhatsAppOrderParams): string {
     ? `\n\n• Detalhes do pedido:\n${params.orderDetails}`
     : "";
 
+  const shippingSection = params.shippingAddress?.trim()
+    ? `\n\n• Endereço de entrega:\n${params.shippingAddress}`
+    : "";
+
   const message =
     baseMessage +
     detailsSection +
+    shippingSection +
     `\n\nPor favor, confirme a disponibilidade e forneça mais detalhes.`;
 
   const encodedMessage = encodeURIComponent(message);

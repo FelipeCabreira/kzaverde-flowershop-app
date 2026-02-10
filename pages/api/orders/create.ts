@@ -31,6 +31,9 @@ type ResponseData = {
  *         orderDetails:
  *           type: string
  *           example: "Red roses preferred, delivery on Friday"
+ *         shippingAddress:
+ *           type: string
+ *           example: "Rua A, 123, Centro, Porto Alegre, RS, 90000-000"
  *         timestamp:
  *           type: string
  *           format: date-time
