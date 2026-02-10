@@ -198,12 +198,12 @@ const Footer: FC = () => {
                 </h2>
                 <div className={styles.footerOpeningHours}>
                   <div className={styles.footerHoursItem}>
-                    <span className="footer-hours-day">Seg à Sexta</span>
-                    <span className="footer-hours-time">9h - 18h</span>
+                    <span className={styles.footerHoursDay}>Seg à Sexta</span>
+                    <span className={styles.footerHoursTime}>9h - 18h</span>
                   </div>
                   <div className={styles.footerHoursItem}>
-                    <span className="footer-hours-day">Sábado</span>
-                    <span className="footer-hours-time">9h - 16h</span>
+                    <span className={styles.footerHoursDay}>Sábado</span>
+                    <span className={styles.footerHoursTime}>9h - 16h</span>
                   </div>
                 </div>
               </div>
@@ -409,9 +409,6 @@ const Footer: FC = () => {
           }
           .footer-container3 {
             display: contents;
-          }
-          .footer-hours-time {
-            padding: 2rem;
           }
         `}
       </style>

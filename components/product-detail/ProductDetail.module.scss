@@ -33,3 +33,27 @@
     gap: 30px;
   }
 }
+
+@media (max-width: 430px) {
+  .detail {
+    padding: 32px 16px;
+  }
+
+  .inner {
+    gap: 24px;
+  }
+
+  .info {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .detail {
+    padding: 28px 14px;
+  }
+
+  .inner {
+    gap: 20px;
+  }
+}

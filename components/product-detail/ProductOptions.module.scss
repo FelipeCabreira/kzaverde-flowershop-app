@@ -91,3 +91,38 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 430px) {
+  .options {
+    gap: 20px;
+  }
+
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    padding: 10px 16px;
+  }
+
+  .quantity {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .quantityInput {
+    width: 56px;
+  }
+}
+
+@media (max-width: 360px) {
+  .quantityBtn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .quantityInput {
+    width: 48px;
+    height: 32px;
+  }
+}

@@ -91,16 +91,20 @@
   gap: var(--spacing-sm);
 }
 .footerHoursItem {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--spacing-sm);
-  align-items: center;
+  align-items: baseline;
+  width: 200px;
 }
-.footerHours-day {
+.footerHoursDay {
   font-weight: var(--font-weight-medium);
   color: var(--color-surface);
 }
-.footer-hours-time {
+.footerHoursTime {
   color: var(--color-on-surface-secondary);
+  text-align: right;
+  white-space: nowrap;
 }
 
 .footerContactInfo {
@@ -165,9 +169,74 @@
   .footerGrid {
     grid-template-columns: 1fr;
   }
+  .footerHoursItem {
+    width: 100%;
+  }
   .footerBottomContent {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerContainer {
+    padding: 0 var(--spacing-lg);
+  }
+
+  .footerSocialLinks {
+    flex-wrap: wrap;
+  }
+
+  .footerContactItem {
+    align-items: flex-start;
+  }
+
+  .footerBottomLinks {
+    flex-wrap: wrap;
+    row-gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 430px) {
+  .footerContainer {
+    padding: 0 var(--spacing-md);
+  }
+
+  .footerGrid {
+    gap: var(--spacing-3xl);
+  }
+
+  .footerLogoIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footerBrandName {
+    font-size: var(--font-size-base);
+  }
+
+  .footerHoursItem {
+    grid-template-columns: 1fr auto;
+  }
+
+  .footerWhatsappBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .footerContainer {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .footerSocialIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footerHoursItem {
+    gap: var(--spacing-xs);
   }
 }
 
