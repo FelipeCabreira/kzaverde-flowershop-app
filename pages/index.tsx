@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Head from "next/head";
-import Navigation from "../components/navigation";
-import Footer from "../components/footer";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import HeroSection from "../components/home/HeroSection";
 import FeaturedProductsSection from "../components/home/FeaturedProductsSection";
 import ReserveCTASection from "../components/home/ReserveCTASection";

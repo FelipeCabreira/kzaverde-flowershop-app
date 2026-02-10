@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import ProductCard from "../product-card";
 import { useProducts } from "../../lib/hooks";
+import ProductCard from "../ProductCard";
 
 interface FeaturedProductsSectionProps {
   products?: any[]; // Optional - if not provided, will fetch from API
