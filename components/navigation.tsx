@@ -1,9 +1,50 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 import Script from "dangerous-html/react";
 import styles from "./Navigation.module.scss";
 
 const Navigation: FC = () => {
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  useEffect(() => {
+    const nav = document.getElementById("main-navigation");
+
+    if (!nav) return;
+
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        nav.style.padding = "var(--spacing-sm) 0";
+        nav.style.boxShadow = "0 10px 30px -10px rgba(0,0,0,0.3)";
+      } else {
+        nav.style.padding = "var(--spacing-md) 0";
+        nav.style.boxShadow = "none";
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <div className="navigation-container1">
@@ -105,8 +146,9 @@ const Navigation: FC = () => {
             <button
               id="mobile-menu-open"
               aria-label="Open navigation menu"
-              aria-expanded="false"
+              aria-expanded={isMobileOpen}
               className={styles["navigation-mobile-toggle"]}
+              onClick={() => setIsMobileOpen(true)}
             >
               <svg
                 fill="none"
@@ -126,7 +168,9 @@ const Navigation: FC = () => {
         </nav>
         <div
           id="mobile-overlay"
-          className={styles["navigation-mobile-overlay"]}
+          className={`${styles["navigation-mobile-overlay"]} ${
+            isMobileOpen ? styles["navigation-mobile-overlay--active"] : ""
+          }`}
         >
           <div className={styles["navigation-overlay-header"]}>
             <a href="/">
@@ -160,6 +204,7 @@ const Navigation: FC = () => {
               id="mobile-menu-close"
               aria-label="Close navigation menu"
               className={styles["navigation-mobile-close"]}
+              onClick={() => setIsMobileOpen(false)}
             >
               <svg
                 fill="none"
@@ -180,28 +225,44 @@ const Navigation: FC = () => {
             <ul className={styles["navigation-overlay-links"]}>
               <li className={styles["navigation-stagger-item"]}>
                 <a href="/">
-                  <div className={styles["navigation-overlay-link"]}>
+                  <div
+                    className={styles["navigation-overlay-link"]}
+                    data-nav-overlay-link
+                    onClick={() => setIsMobileOpen(false)}
+                  >
                     <span>Ínicio</span>
                   </div>
                 </a>
               </li>
               <li className={styles["navigation-stagger-item"]}>
                 <a href="/#featured-products">
-                  <div className={styles["navigation-overlay-link"]}>
+                  <div
+                    className={styles["navigation-overlay-link"]}
+                    data-nav-overlay-link
+                    onClick={() => setIsMobileOpen(false)}
+                  >
                     <span>Produtos</span>
                   </div>
                 </a>
               </li>
               <li className={styles["navigation-stagger-item"]}>
                 <a href="/#inspiration-preview">
-                  <div className={styles["navigation-overlay-link"]}>
+                  <div
+                    className={styles["navigation-overlay-link"]}
+                    data-nav-overlay-link
+                    onClick={() => setIsMobileOpen(false)}
+                  >
                     <span>Nossa Loja</span>
                   </div>
                 </a>
               </li>
               <li className={styles["navigation-stagger-item"]}>
                 <a href="/#contact">
-                  <div className={styles["navigation-overlay-link"]}>
+                  <div
+                    className={styles["navigation-overlay-link"]}
+                    data-nav-overlay-link
+                    onClick={() => setIsMobileOpen(false)}
+                  >
                     <span>Contato</span>
                   </div>
                 </a>
@@ -261,48 +322,7 @@ const Navigation: FC = () => {
           </div>
         </div>
         <div className="navigation-container4">
-          <div className="navigation-container5">
-            <Script
-              html={`<script defer data-name="navigation-logic">
-(function(){
-  const nav = document.getElementById("main-navigation")
-  const mobileOverlay = document.getElementById("mobile-overlay")
-  const openBtn = document.getElementById("mobile-menu-open")
-  const closeBtn = document.getElementById("mobile-menu-close")
-  const overlayLinks = document.querySelectorAll(".navigation-overlay-link")
-
-  const toggleMenu = (state) => {
-    mobileOverlay.classList.toggle("is-active", state)
-    openBtn.setAttribute("aria-expanded", state)
-    document.body.style.overflow = state ? "hidden" : ""
-  }
-
-  openBtn.addEventListener("click", () => toggleMenu(true))
-  closeBtn.addEventListener("click", () => toggleMenu(false))
-
-  overlayLinks.forEach((link) => {
-    link.addEventListener("click", () => toggleMenu(false))
-  })
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      nav.style.padding = "var(--spacing-sm) 0"
-      nav.style.boxShadow = "0 10px 30px -10px rgba(0,0,0,0.3)"
-    } else {
-      nav.style.padding = "var(--spacing-md) 0"
-      nav.style.boxShadow = "none"
-    }
-  })
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && mobileOverlay.classList.contains("is-active")) {
-      toggleMenu(false)
-    }
-  })
-})()
-</script>`}
-            ></Script>
-          </div>
+          <div className="navigation-container5"></div>
         </div>
       </div>
       <style jsx>
