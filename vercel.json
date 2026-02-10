@@ -3,10 +3,6 @@
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "env": {
-    "ADMIN_API_KEY": "@admin_api_key",
-    "WHATSAPP_PHONE": "@whatsapp_phone"
-  },
   "functions": {
     "pages/api/products/**": {
       "memory": 128,
