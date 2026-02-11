@@ -11,6 +11,10 @@
   padding-top: var(--spacing-4xl);
 }
 
+.footerWrapper :global(.footer-column-title) {
+  color: #e91e8c;
+}
+
 .footerContainer {
   margin: 0 auto;
   padding: 0 var(--spacing-xl);
@@ -58,7 +62,7 @@
 .footerDescription {
   margin-top: var(--spacing-sm);
   max-width: 36rem;
-  color: var(--color-surface);
+  color: #ffffff;
 }
 
 .footerSocialLinks {
@@ -99,10 +103,10 @@
 }
 .footerHoursDay {
   font-weight: var(--font-weight-medium);
-  color: var(--color-surface);
+  color: #ffffff;
 }
 .footerHoursTime {
-  color: var(--color-on-surface-secondary);
+  color: #ffffff;
   text-align: right;
   white-space: nowrap;
 }
@@ -127,7 +131,7 @@
   flex-shrink: 0;
 }
 .footerContactText {
-  color: var(--color-surface);
+  color: #ffffff;
   text-decoration: none;
 }
 

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  color-scheme: dark;
 }
 
 .optionGroup {
@@ -13,7 +14,7 @@
 .label {
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
+  color: #f4efe7;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -26,23 +27,23 @@
 
 .button {
   padding: 12px 20px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #3b2d22;
   border-radius: 6px;
-  background: transparent;
-  color: #ffffff;
+  background: #1b140f;
+  color: #f4efe7;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: #d946ef;
-    color: #d946ef;
+    border-color: #e91e8c;
+    color: #e91e8c;
   }
 
   &.active {
-    background: #d946ef;
-    border-color: #d946ef;
+    background: #e91e8c;
+    border-color: #e91e8c;
     color: #ffffff;
   }
 }
@@ -57,10 +58,10 @@
 .quantityBtn {
   width: 36px;
   height: 36px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #3b2d22;
   border-radius: 4px;
-  background: transparent;
-  color: #ffffff;
+  background: #1b140f;
+  color: #f4efe7;
   font-size: 16px;
   cursor: pointer;
   display: flex;
@@ -69,18 +70,18 @@
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: #d946ef;
-    color: #d946ef;
+    border-color: #e91e8c;
+    color: #e91e8c;
   }
 }
 
 .quantityInput {
   width: 50px;
   height: 36px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #3b2d22;
   border-radius: 4px;
-  background: transparent;
-  color: #ffffff;
+  background: #1b140f;
+  color: #f4efe7;
   font-size: 14px;
   text-align: center;
   font-weight: 500;
@@ -131,10 +132,10 @@
 .shippingAddressInput {
   width: 100%;
   padding: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #3b2d22;
   border-radius: 6px;
-  background: transparent;
-  color: #ffffff;
+  background: #1b140f;
+  color: #f4efe7;
   font-family: inherit;
   font-size: 14px;
   line-height: 1.5;
@@ -143,11 +144,11 @@
 
   &:focus {
     outline: none;
-    border-color: #d946ef;
-    box-shadow: 0 0 0 3px rgba(217, 70, 239, 0.1);
+    border-color: #e91e8c;
+    box-shadow: 0 0 0 3px rgba(233, 30, 140, 0.2);
   }
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: #b9aea3;
   }
 }

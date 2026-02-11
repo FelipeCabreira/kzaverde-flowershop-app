@@ -1,4 +1,11 @@
 /* base styles converted to SCSS (partial) */
+html,
+body {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  color-scheme: dark;
+}
+
 .button {
   color: var(--dl-color-theme-neutral-dark);
   display: inline-block;

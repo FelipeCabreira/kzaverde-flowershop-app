@@ -1,5 +1,5 @@
 import "../styles/main.scss";
-import "./style.css";
+// import "./style.css";
 import "swagger-ui-react/swagger-ui.css";
 
 import React from "react";

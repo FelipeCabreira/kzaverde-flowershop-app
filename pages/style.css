@@ -1,10 +1,10 @@
-:root {
+.legacy-theme {
   --spacing-lg: 1rem;
   --spacing-md: 0.75rem;
   --spacing-sm: 0.5rem;
   --spacing-xl: 1.5rem;
   --spacing-xs: 0.25rem;
-  --color-scrim: color-mix(in oklab, #000000 70%, transparent);
+  --color-scrim: rgba(0, 0, 0, 0.7);
   --spacing-2xl: 2rem;
   --spacing-3xl: 3rem;
   --spacing-4xl: 4rem;
@@ -16,7 +16,7 @@
   --font-size-xs: clamp(0.7rem, 0.9vw, 0.85rem);
   --color-neutral: #333333;
   --color-outline: #333333;
-  --color-overlay: color-mix(in oklab, #000000 40%, transparent);
+  --color-overlay: rgba(0, 0, 0, 0.4);
   --color-primary: #2d5016;
   --color-surface: #f7f5f0;
   --divider-value: 0px none neutral;
@@ -27,7 +27,7 @@
   --shadow-level-1: 0 2px 8px rgba(76, 175, 80, 0.12);
   --shadow-level-2: 0 8px 24px rgba(76, 175, 80, 0.16);
   --shadow-level-3: 0 16px 40px rgba(76, 175, 80, 0.2);
-  --color-backplate: color-mix(in oklab, #000000 58%, transparent);
+  --color-backplate: rgba(0, 0, 0, 0.58);
   --color-on-accent: #ffffff;
   --color-secondary: #b35634;
   --border-radius-lg: 32px;
@@ -60,7 +60,7 @@
   --dl-layout-size-xlarge: 192px;
   --dl-layout-size-xsmall: 16px;
   --font-style-subheading: italic;
-  --color-surface-elevated: color-mix(in oklab, #f7f5f0 92%, #c2714a);
+  --color-surface-elevated: #1b140f;
   --dl-color-theme-accent1: #ffffff;
   --dl-color-theme-accent2: #f5d1b0;
   --dl-layout-radius-round: 50%;
@@ -89,6 +89,14 @@
   --dl-layout-radius-inputradius: 24px;
   --dl-layout-radius-buttonradius: 24px;
   --dl-layout-space-oneandhalfunits: 24px;
+}
+
+@supports (color: color-mix(in oklab, #000000 50%, #ffffff)) {
+  :root {
+    --color-scrim: color-mix(in oklab, #000000 70%, transparent);
+    --color-overlay: color-mix(in oklab, #000000 40%, transparent);
+    --color-backplate: color-mix(in oklab, #000000 58%, transparent);
+  }
 }
 
 .button {
@@ -1525,7 +1533,7 @@
 .featured-products {
   padding: var(--spacing-4xl) 0;
   overflow: hidden;
-  background: var(--color-surface);
+  background: #1b140f;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1548,9 +1556,9 @@
 }
 
 .product-card {
-  border: 1px solid #333;
+  border: 1px solid #4a3a2d;
   overflow: hidden;
-  background: var(--color-surface-elevated);
+  background: #2a1e15;
   transition: transform 0.3s ease;
   border-radius: var(--border-radius-lg);
 }
@@ -1576,7 +1584,7 @@
 
 .inspiration-preview {
   padding: var(--spacing-4xl) 0;
-  background: var(--color-surface-elevated);
+  background: #1b140f;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1615,7 +1623,7 @@
 
 .inspiration-card {
   flex: 0 0 260px;
-  border: 1px solid #333;
+  border: 1px solid #4a3a2d;
   overflow: hidden;
   aspect-ratio: 1;
   border-radius: var(--border-radius-md);

@@ -38,7 +38,7 @@
 }
 
 .navigation-mobile-toggle {
-  color: var(--color-surface);
+  color: var(--color-on-surface);
   border: none;
   cursor: pointer;
   display: none;
@@ -68,6 +68,7 @@
 }
 
 .navigation-brand-name {
+  color: var(--color-on-surface);
   font-size: var(--font-size-xl);
   font-family: "Playfair Display", serif;
   font-weight: var(--font-weight-heading);
@@ -89,7 +90,7 @@
 }
 
 .navigation-link {
-  color: var(--color-surface);
+  color: var(--color-on-surface);
   padding: var(--spacing-xs) 0;
   position: relative;
   font-size: var(--font-size-sm);
@@ -139,7 +140,7 @@
 }
 
 .navigation-mobile-close {
-  color: var(--color-surface);
+  color: var(--color-on-surface);
   border: none;
   cursor: pointer;
   padding: var(--spacing-sm);
@@ -179,7 +180,7 @@
 }
 
 .navigation-overlay-link {
-  color: var(--color-surface);
+  color: var(--color-on-surface);
   display: inline-block;
   font-size: var(--font-size-3xl);
   transition:
@@ -258,7 +259,7 @@
 }
 
 .navigation-overlay-footer .section-content {
-  color: color-mix(in oklab, var(--color-surface) 70%, transparent);
+  color: var(--color-on-surface-secondary);
 }
 
 @media (max-width: 900px) {
