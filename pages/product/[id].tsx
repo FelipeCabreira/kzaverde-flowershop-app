@@ -1,17 +1,16 @@
-import React, { FC, useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Navigation from "../../components/navigation";
+import { FC, useState } from "react";
 import Footer from "../../components/footer";
+import Navigation from "../../components/navigation";
+import ProductActions from "../../components/product-detail/ProductActions";
+import ProductCare from "../../components/product-detail/ProductCare";
+import styles from "../../components/product-detail/ProductDetail.module.scss";
 import ProductGallery from "../../components/product-detail/ProductGallery";
 import ProductHeader from "../../components/product-detail/ProductHeader";
-import ProductCare from "../../components/product-detail/ProductCare";
 import ProductOptions from "../../components/product-detail/ProductOptions";
-import ProductActions from "../../components/product-detail/ProductActions";
 import SimilarProducts from "../../components/product-detail/SimilarProducts";
 import { useProduct, useProducts } from "../../lib/hooks";
-import styles from "../../components/product-detail/ProductDetail.module.scss";
-import ProductDisclaimer from "@/components/product-detail/ProductDisclaimer";
 
 const ProductDetail: FC = () => {
   const router = useRouter();
