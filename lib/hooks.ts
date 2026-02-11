@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export interface Product {
   id: number;
@@ -21,9 +21,17 @@ interface ApiResponse<T> {
   message?: string;
 }
 
-export function useProducts() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(false);
+interface UseProductsOptions {
+  initialProducts?: Product[];
+  enabled?: boolean;
+}
+
+export function useProducts(options: UseProductsOptions = {}) {
+  const { initialProducts = [], enabled = true } = options;
+  const [products, setProducts] = useState<Product[]>(initialProducts);
+  const [loading, setLoading] = useState(
+    enabled && initialProducts.length === 0,
+  );
   const [error, setError] = useState<string | null>(null);
 
   const fetchProducts = async (query?: string, category?: string) => {
@@ -54,8 +62,9 @@ export function useProducts() {
   };
 
   useEffect(() => {
+    if (!enabled || initialProducts.length > 0) return;
     fetchProducts();
-  }, []);
+  }, [enabled, initialProducts.length]);
 
   return { products, loading, error, refetch: fetchProducts };
 }

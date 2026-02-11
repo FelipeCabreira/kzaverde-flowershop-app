@@ -1,6 +1,5 @@
-import React, { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
-import Script from "dangerous-html/react";
 import styles from "./Navigation.module.scss";
 
 interface NavigationProps {
@@ -311,21 +310,7 @@ const Navigation: FC<NavigationProps> = ({ brandImageAlt = "KzaVerde" }) => {
           </div>
         </div>
         <div className="navigation-container2">
-          <div className="navigation-container3">
-            <Script
-              html={`<style>
-@media (prefers-reduced-motion: reduce) {
-.navigation-root, .navigation-mobile-overlay, .navigation-stagger-item, .navigation-link::after {
-  transition: none;
-}
-.navigation-mobile-overlay.is-active .navigation-stagger-item {
-  opacity: 1;
-  transform: none;
-}
-}
-</style>`}
-            ></Script>
-          </div>
+          <div className="navigation-container3"></div>
         </div>
         <div className="navigation-container4">
           <div className="navigation-container5"></div>

@@ -1,5 +1,6 @@
+import { GetStaticPaths, GetStaticProps } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import { FC, useState } from "react";
 import Footer from "../../components/footer";
 import Navigation from "../../components/navigation";
@@ -9,85 +10,27 @@ import styles from "../../components/product-detail/ProductDetail.module.scss";
 import ProductGallery from "../../components/product-detail/ProductGallery";
 import ProductHeader from "../../components/product-detail/ProductHeader";
 import ProductOptions from "../../components/product-detail/ProductOptions";
-import SimilarProducts from "../../components/product-detail/SimilarProducts";
-import { useProduct, useProducts } from "../../lib/hooks";
+import { getAllProducts, getProductById, Product } from "../../lib/db";
+const SimilarProducts = dynamic(
+  () => import("../../components/product-detail/SimilarProducts"),
+);
 
-const ProductDetail: FC = () => {
-  const router = useRouter();
-  const { id } = router.query;
-  const productId = id ? parseInt(id as string) : undefined;
-  const isRouterReady = router.isReady;
+interface ProductDetailProps {
+  product: Product;
+  similarProducts: Product[];
+}
 
-  const { product, loading: productLoading } = useProduct(productId || 0);
-  const { products: allProducts } = useProducts();
-
+const ProductDetail: FC<ProductDetailProps> = ({
+  product,
+  similarProducts,
+}) => {
   // const [size, setSize] = useState<string>("Small"); // Commented for now
   // const [type, setType] = useState<string>("Bouquet"); // Commented for now
   const [quantity, setQuantity] = useState<number>(1);
   const [orderDetails, setOrderDetails] = useState<string>("");
   const [shippingAddress, setShippingAddress] = useState<string>("");
 
-  // Get similar products from the same category
-  const similarProducts = allProducts
-    .filter((p) => p.category === product?.category && p.id !== product?.id)
-    .slice(0, 4);
-
-  if (productLoading) {
-    return (
-      <>
-        <Navigation />
-        <div
-          className={styles.container}
-          style={{ textAlign: "center", paddingTop: "100px" }}
-        >
-          <img src="/loader.svg" alt="Carregando" width={96} height={96} />
-        </div>
-        <Footer />
-      </>
-    );
-  }
-
-  if (!product && !productLoading && isRouterReady) {
-    return (
-      <>
-        <Navigation />
-        <div
-          className={styles.container}
-          style={{ textAlign: "center", paddingTop: "100px" }}
-        >
-          <h1>Product not found</h1>
-          <p>The product you're looking for doesn't exist.</p>
-          <a href="/#featured-products" className="btn btn-primary">
-            Voltar ao catalogo
-          </a>
-        </div>
-        <Footer />
-      </>
-    );
-  }
-
-  if (!product) {
-    return (
-      <>
-        <Head>
-          <title>Produto - KzaVerde</title>
-          <meta property="og:title" content="Produto - KzaVerde" />
-          <meta
-            property="og:description"
-            content="Detalhes do produto da KzaVerde"
-          />
-        </Head>
-        <Navigation />
-        <div
-          className={styles.container}
-          style={{ textAlign: "center", paddingTop: "100px" }}
-        >
-          <img src="/loader.svg" alt="Carregando" width={96} height={96} />
-        </div>
-        <Footer />
-      </>
-    );
-  }
+  if (!product) return null;
 
   return (
     <>
@@ -155,6 +98,50 @@ const ProductDetail: FC = () => {
       </div>
     </>
   );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const products = getAllProducts();
+
+  return {
+    paths: products.map((product) => ({
+      params: { id: String(product.id) },
+    })),
+    fallback: "blocking",
+  };
+};
+
+export const getStaticProps: GetStaticProps<ProductDetailProps> = async (
+  context,
+) => {
+  const idParam = context.params?.id;
+  const productId = parseInt(
+    Array.isArray(idParam) ? idParam[0] : String(idParam),
+    10,
+  );
+
+  if (!productId) {
+    return { notFound: true };
+  }
+
+  const products = getAllProducts();
+  const product = getProductById(productId);
+
+  if (!product) {
+    return { notFound: true };
+  }
+
+  const similarProducts = products
+    .filter((p) => p.category === product.category && p.id !== product.id)
+    .slice(0, 4);
+
+  return {
+    props: {
+      product,
+      similarProducts,
+    },
+    revalidate: 60,
+  };
 };
 
 export default ProductDetail;

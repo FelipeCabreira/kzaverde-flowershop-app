@@ -1,11 +1,10 @@
-import React from "react";
 import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
   DocumentContext,
   DocumentInitialProps,
+  Head,
+  Html,
+  Main,
+  NextScript,
 } from "next/document";
 
 class CustomDocument extends Document {
@@ -23,6 +22,13 @@ class CustomDocument extends Document {
           <meta charSet="utf-8"></meta>
           <meta property="twitter:card" content="summary_large_image"></meta>
           <link rel="icon" href="/favicon.png" type="image/png"></link>
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          ></link>
+          <link rel="dns-prefetch" href="https://fonts.googleapis.com"></link>
+          <link rel="dns-prefetch" href="https://unpkg.com"></link>
           <style
             dangerouslySetInnerHTML={{
               __html:
@@ -38,33 +44,126 @@ class CustomDocument extends Document {
             data-tag="default-style-sheet"
           ></style>
           <link
+            rel="preload"
+            as="style"
+            href="https://unpkg.com/animate.css@4.1.1/animate.css"
+          ></link>
+          <link
             rel="stylesheet"
             href="https://unpkg.com/animate.css@4.1.1/animate.css"
+            media="print"
+            data-deferred="true"
+          ></link>
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://unpkg.com/animate.css@4.1.1/animate.css"
+            />
+          </noscript>
+
+          <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
           ></link>
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
             data-tag="font"
+            media="print"
+            data-deferred="true"
+          ></link>
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+              data-tag="font"
+            />
+          </noscript>
+
+          <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
           ></link>
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
             data-tag="font"
+            media="print"
+            data-deferred="true"
+          ></link>
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+              data-tag="font"
+            />
+          </noscript>
+
+          <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
           ></link>
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
             data-tag="font"
+            media="print"
+            data-deferred="true"
+          ></link>
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+              data-tag="font"
+            />
+          </noscript>
+
+          <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
           ></link>
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
             data-tag="font"
+            media="print"
+            data-deferred="true"
+          ></link>
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+              data-tag="font"
+            />
+          </noscript>
+
+          <link
+            rel="preload"
+            as="style"
+            href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
           ></link>
           <link
             rel="stylesheet"
             href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+            media="print"
+            data-deferred="true"
           ></link>
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+            />
+          </noscript>
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                "(function(){var links=document.querySelectorAll('link[data-deferred=\"true\"]');links.forEach(function(link){if(link.sheet){link.media='all';return;}link.addEventListener('load',function(){link.media='all';});});})();",
+            }}
+          ></script>
         </Head>
         <body>
           <Main></Main>

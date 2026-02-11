@@ -1,5 +1,5 @@
-import React, { FC } from "react";
 import Image, { StaticImageData } from "next/image";
+import { FC } from "react";
 
 interface HeroSectionProps {
   brandImageSrc?: StaticImageData;
@@ -19,6 +19,7 @@ const HeroSection: FC<HeroSectionProps> = ({
         poster="https://images.pexels.com/videos/4191603/pictures/preview-0.jpg"
         autoPlay={true}
         playsInline={true}
+        preload="metadata"
         className="hero-welcome__video"
       ></video>
       <div className="hero-welcome__overlay"></div>
@@ -31,6 +32,7 @@ const HeroSection: FC<HeroSectionProps> = ({
             width={320}
             height={120}
             priority
+            loading="eager"
           />
         ) : (
           <h1 className="hero-title">KzaVerde</h1>

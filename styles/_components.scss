@@ -47,4 +47,18 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .navigation-root,
+  .navigation-mobile-overlay,
+  .navigation-stagger-item,
+  .navigation-link::after {
+    transition: none;
+  }
+
+  .navigation-mobile-overlay.is-active .navigation-stagger-item {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* (remaining components rules kept in original components.scss) */

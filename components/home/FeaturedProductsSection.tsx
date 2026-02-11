@@ -1,4 +1,4 @@
-import React, { FC, useMemo, useRef, useState } from "react";
+import { FC, useMemo, useRef, useState } from "react";
 import { useProducts } from "../../lib/hooks";
 import ProductCard from "../ProductCard";
 
@@ -9,7 +9,10 @@ interface FeaturedProductsSectionProps {
 const FeaturedProductsSection: FC<FeaturedProductsSectionProps> = ({
   products: staticProducts,
 }) => {
-  const { products: apiProducts, loading } = useProducts();
+  const { products: apiProducts, loading } = useProducts({
+    initialProducts: staticProducts ?? [],
+    enabled: !staticProducts,
+  });
   const products = staticProducts || apiProducts;
   const sectionRef = useRef<HTMLElement | null>(null);
   const pageSize = 8;

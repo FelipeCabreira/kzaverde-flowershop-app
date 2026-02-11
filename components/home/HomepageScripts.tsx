@@ -1,70 +1,100 @@
-import React, { FC } from "react";
-import Script from "dangerous-html/react";
+import { FC, useEffect } from "react";
 
 const HomepageScripts: FC = () => {
-  return (
-    <Script
-      html={`<script defer data-name="verdantia-logic">
-(function(){
-  // Chip interaction for search
-  const chips = document.querySelectorAll(".quick-search__chip")
-  chips.forEach((chip) => {
-    chip.addEventListener("click", () => {
-      chips.forEach((c) => c.classList.remove("active"))
-      chip.classList.add("active")
-    })
-  })
+  useEffect(() => {
+    let didRun = false;
+    let cleanup = () => {};
 
-  // Simple intersection observer for reveal effects
-  const revealElements = document.querySelectorAll(".featured-collections__item, .reserve-cta__step, .product-card")
+    const run = () => {
+      if (didRun) return;
+      didRun = true;
 
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = "1"
-          entry.target.style.transform = "translateY(0)"
-        }
-      })
-    },
-    { threshold: 0.1 }
-  )
+      const chips = Array.from(
+        document.querySelectorAll<HTMLElement>(".quick-search__chip"),
+      );
+      const chipHandlers = chips.map((chip) => {
+        const handler = () => {
+          chips.forEach((c) => c.classList.remove("active"));
+          chip.classList.add("active");
+        };
+        chip.addEventListener("click", handler);
+        return { chip, handler };
+      });
 
-  revealElements.forEach((el) => {
-    el.style.opacity = "0"
-    el.style.transform = "translateY(20px)"
-    el.style.transition = "all 0.6s ease-out"
-    revealObserver.observe(el)
-  })
+      const revealElements = Array.from(
+        document.querySelectorAll<HTMLElement>(
+          ".featured-collections__item, .reserve-cta__step, .product-card",
+        ),
+      );
 
-  // Horizontal scroll behavior for rails (mouse wheel support with proper event scope)
-  const rails = document.querySelectorAll(".featured-products__rail, .inspiration-preview__rail")
-  rails.forEach((rail) => {
-    rail.addEventListener("wheel", (e) => {
-      // Only handle horizontal scrolling if the carousel has overflow
-      const hasHorizontalScroll = rail.scrollWidth > rail.clientWidth
-      
-      if (!hasHorizontalScroll) return
-      
-      // Check scroll boundaries
-      const isAtStart = rail.scrollLeft === 0
-      const isAtEnd = rail.scrollLeft >= rail.scrollWidth - rail.clientWidth
-      const isScrollingRight = e.deltaY > 0
-      const isScrollingLeft = e.deltaY < 0
-      
-      // Only prevent default if we can actually scroll in the desired direction
-      const canScroll = (isScrollingRight && !isAtEnd) || (isScrollingLeft && !isAtStart)
-      
-      if (canScroll && e.deltaY !== 0) {
-        e.preventDefault()
-        rail.scrollLeft += e.deltaY
-      }
-    }, { passive: false }) // passive: false allows preventDefault
-  })
-})()
-</script>`}
-    />
-  );
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = entry.target as HTMLElement;
+              target.style.opacity = "1";
+              target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      revealElements.forEach((el) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        el.style.transition = "all 0.6s ease-out";
+        revealObserver.observe(el);
+      });
+
+      const rails = Array.from(
+        document.querySelectorAll<HTMLElement>(
+          ".featured-products__rail, .inspiration-preview__rail",
+        ),
+      );
+      const railHandlers = rails.map((rail) => {
+        const handler: EventListener = (event) => {
+          const wheelEvent = event as WheelEvent;
+          const hasHorizontalScroll = rail.scrollWidth > rail.clientWidth;
+          if (!hasHorizontalScroll) return;
+
+          const isAtStart = rail.scrollLeft === 0;
+          const isAtEnd =
+            rail.scrollLeft >= rail.scrollWidth - rail.clientWidth;
+          const isScrollingRight = wheelEvent.deltaY > 0;
+          const isScrollingLeft = wheelEvent.deltaY < 0;
+          const canScroll =
+            (isScrollingRight && !isAtEnd) || (isScrollingLeft && !isAtStart);
+
+          if (canScroll && wheelEvent.deltaY !== 0) {
+            wheelEvent.preventDefault();
+            rail.scrollLeft += wheelEvent.deltaY;
+          }
+        };
+        rail.addEventListener("wheel", handler);
+        return { rail, handler };
+      });
+
+      cleanup = () => {
+        chipHandlers.forEach(({ chip, handler }) =>
+          chip.removeEventListener("click", handler),
+        );
+        railHandlers.forEach(({ rail, handler }) =>
+          rail.removeEventListener("wheel", handler),
+        );
+        revealObserver.disconnect();
+      };
+    };
+
+    const deferId = window.setTimeout(run, 800);
+
+    return () => {
+      window.clearTimeout(deferId);
+      cleanup();
+    };
+  }, []);
+
+  return null;
 };
 
 export default HomepageScripts;
