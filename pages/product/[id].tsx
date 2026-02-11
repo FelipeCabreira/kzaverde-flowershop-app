@@ -16,6 +16,7 @@ const ProductDetail: FC = () => {
   const router = useRouter();
   const { id } = router.query;
   const productId = id ? parseInt(id as string) : undefined;
+  const isRouterReady = router.isReady;
 
   const { product, loading: productLoading } = useProduct(productId || 0);
   const { products: allProducts } = useProducts();
@@ -39,14 +40,14 @@ const ProductDetail: FC = () => {
           className={styles.container}
           style={{ textAlign: "center", paddingTop: "100px" }}
         >
-          <h1>Carregando...</h1>
+          <img src="/loader.svg" alt="Carregando" width={96} height={96} />
         </div>
         <Footer />
       </>
     );
   }
 
-  if (!product) {
+  if (!product && !productLoading && isRouterReady) {
     return (
       <>
         <Navigation />
@@ -56,6 +57,32 @@ const ProductDetail: FC = () => {
         >
           <h1>Product not found</h1>
           <p>The product you're looking for doesn't exist.</p>
+          <a href="/#featured-products" className="btn btn-primary">
+            Voltar ao catalogo
+          </a>
+        </div>
+        <Footer />
+      </>
+    );
+  }
+
+  if (!product) {
+    return (
+      <>
+        <Head>
+          <title>Produto - KzaVerde</title>
+          <meta property="og:title" content="Produto - KzaVerde" />
+          <meta
+            property="og:description"
+            content="Detalhes do produto da KzaVerde"
+          />
+        </Head>
+        <Navigation />
+        <div
+          className={styles.container}
+          style={{ textAlign: "center", paddingTop: "100px" }}
+        >
+          <img src="/loader.svg" alt="Carregando" width={96} height={96} />
         </div>
         <Footer />
       </>

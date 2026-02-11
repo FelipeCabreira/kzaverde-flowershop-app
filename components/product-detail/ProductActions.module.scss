@@ -17,13 +17,20 @@
 }
 
 .whatsappBtn {
-  background: #e91e8c;
-  border-color: #e91e8c;
-  color: #ffffff;
+  background: #2d5016;
+  border-color: #4f6e2a;
+  color: #f7f5f0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
 
   svg {
     margin-right: 8px;
   }
+}
+
+.whatsappBtn:hover {
+  background: #35611a;
+  border-color: #6b8a32;
 }
 
 .wishlistBtn {

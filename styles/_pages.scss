@@ -581,9 +581,11 @@
     scroll-snap-type: x mandatory;
     grid-template-columns: unset;
     padding: 0 var(--spacing-md) var(--spacing-lg);
+    scroll-padding: 0 var(--spacing-md);
+    -webkit-overflow-scrolling: touch;
   }
   .product-card {
-    flex: 0 0 260px;
+    flex: 0 0 clamp(220px, 78vw, 320px);
     scroll-snap-align: start;
   }
   .inspiration-card {
@@ -618,7 +620,7 @@
     flex-direction: column;
   }
   .product-card {
-    flex: 0 0 220px;
+    flex: 0 0 clamp(200px, 82vw, 300px);
   }
   .featured-products__header,
   .inspiration-preview__header,
@@ -658,7 +660,7 @@
   }
 
   .product-card {
-    flex: 0 0 200px;
+    flex: 0 0 clamp(190px, 86vw, 280px);
   }
 
   .inspiration-card {
@@ -680,7 +682,7 @@
   }
 
   .product-card {
-    flex: 0 0 180px;
+    flex: 0 0 clamp(170px, 88vw, 260px);
   }
 
   .inspiration-card {

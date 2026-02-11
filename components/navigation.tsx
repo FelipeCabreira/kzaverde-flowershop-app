@@ -277,7 +277,7 @@ const Navigation: FC<NavigationProps> = ({ brandImageAlt = "KzaVerde" }) => {
             <div
               className={`${styles["navigation-overlay-footer"]} ${styles["navigation-stagger-item"]}`}
             >
-              <p className="section-content">Reserve your bouquet today</p>
+              <p className="section-content">Reserve seu buquê</p>
               <a
                 href="https://wa.me/c/555183388338"
                 target="_blank"
@@ -304,7 +304,7 @@ const Navigation: FC<NavigationProps> = ({ brandImageAlt = "KzaVerde" }) => {
                       <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0za5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"></path>
                     </g>
                   </svg>
-                  <span>WhatsApp Pre-order</span>
+                  <span>Reserve pelo WhatsApp</span>
                 </div>
               </a>
             </div>

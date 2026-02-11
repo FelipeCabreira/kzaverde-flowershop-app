@@ -1,4 +1,4 @@
-import React, { FC, useMemo, useState } from "react";
+import React, { FC, useMemo, useRef, useState } from "react";
 import { useProducts } from "../../lib/hooks";
 import ProductCard from "../ProductCard";
 
@@ -11,6 +11,7 @@ const FeaturedProductsSection: FC<FeaturedProductsSectionProps> = ({
 }) => {
   const { products: apiProducts, loading } = useProducts();
   const products = staticProducts || apiProducts;
+  const sectionRef = useRef<HTMLElement | null>(null);
   const pageSize = 8;
   const [pageIndex, setPageIndex] = useState(0);
 
@@ -29,8 +30,21 @@ const FeaturedProductsSection: FC<FeaturedProductsSectionProps> = ({
   const canGoPrev = pageIndex > 0;
   const canGoNext = pageIndex + 1 < totalPages;
 
+  const goToPage = (nextPage: number) => {
+    setPageIndex(nextPage);
+    const target = sectionRef.current;
+    if (target) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    }
+  };
+
   return (
     <section
+      ref={sectionRef}
       id="featured-products"
       className="featured-products flex flex-column align-center"
     >
@@ -42,32 +56,46 @@ const FeaturedProductsSection: FC<FeaturedProductsSectionProps> = ({
         </p>
       </div>
       {loading ? (
-        <div className="featured-products__rail">
-          {Array.from({ length: pageSize }).map((_, index) => (
-            <div
-              key={`skeleton-${index}`}
-              className="product-card"
-              style={{ opacity: 0.6 }}
-            >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            minHeight: "320px",
+          }}
+        >
+          <div className="featured-products__rail">
+            {Array.from({ length: pageSize }).map((_, index) => (
               <div
-                className="product-card__img"
-                style={{ background: "#eee", height: "180px" }}
-              />
-              <div className="product-card__info">
+                key={`skeleton-${index}`}
+                className="product-card"
+                style={{ opacity: 0.6 }}
+              >
                 <div
-                  style={{
-                    background: "#eee",
-                    height: "16px",
-                    marginBottom: "8px",
-                    width: "70%",
-                  }}
+                  className="product-card__img"
+                  style={{ background: "#eee", height: "180px" }}
                 />
-                <div
-                  style={{ background: "#eee", height: "14px", width: "40%" }}
-                />
+                <div className="product-card__info">
+                  <div
+                    style={{
+                      background: "#eee",
+                      height: "16px",
+                      marginBottom: "8px",
+                      width: "70%",
+                    }}
+                  />
+                  <div
+                    style={{
+                      background: "#eee",
+                      height: "14px",
+                      width: "40%",
+                    }}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       ) : (
         <>
@@ -92,7 +120,7 @@ const FeaturedProductsSection: FC<FeaturedProductsSectionProps> = ({
                 type="button"
                 className="btn btn-sm"
                 disabled={!canGoPrev}
-                onClick={() => setPageIndex((prev) => Math.max(prev - 1, 0))}
+                onClick={() => goToPage(Math.max(pageIndex - 1, 0))}
               >
                 Anterior
               </button>
@@ -104,7 +132,7 @@ const FeaturedProductsSection: FC<FeaturedProductsSectionProps> = ({
                 className="btn btn-sm"
                 disabled={!canGoNext}
                 onClick={() =>
-                  setPageIndex((prev) => Math.min(prev + 1, totalPages - 1))
+                  goToPage(Math.min(pageIndex + 1, totalPages - 1))
                 }
               >
                 Proximo
