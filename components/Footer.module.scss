@@ -92,9 +92,9 @@
 }
 
 .footerSocialIcon:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-  background: color-mix(in oklab, var(--color-accent) 15%, transparent);
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #e91e8c;
 }
 
 .footerOpeningHours {
@@ -107,7 +107,7 @@
   grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--spacing-sm);
   align-items: baseline;
-  width: 200px;
+  width: 11.5rem;
 }
 .footerHoursDay {
   font-weight: var(--font-weight-medium);
@@ -137,10 +137,31 @@
   height: 36px;
   color: #e91e8c;
   flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 .footerContactText {
   color: #ffffff;
   text-decoration: none;
+}
+
+.footerContactItem a {
+  text-decoration: none;
+}
+
+.footerContactItem a:hover .footerContactText {
+  color: #ffffff;
+  background: #e91e8c;
+  border: 1px solid #ffffff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+}
+
+.footerContactItem:hover .footerContactIcon {
+  color: #ffffff;
+  background: #e91e8c;
+  border-color: #ffffff;
 }
 
 .footerCtaWrapper {
@@ -155,6 +176,13 @@
   color: #ffffff;
   background: #e91e8c;
   border-color: #e91e8c;
+  transition: all 0.3s ease;
+}
+
+.footerWhatsappBtn:hover {
+  color: #ffffff;
+  background: #e91e8c;
+  border-color: #ffffff;
 }
 
 .footerBottom {
@@ -178,6 +206,16 @@
 }
 .footerBottomLink {
   color: var(--color-on-surface-secondary);
+  border-radius: 6px;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.footerBottomLink:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  background: #e91e8c;
 }
 
 @media (max-width: 900px) {
