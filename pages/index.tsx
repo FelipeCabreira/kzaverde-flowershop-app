@@ -8,7 +8,6 @@ import HomepageScripts from "../components/home/HomepageScripts";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import brandLogo from "../assets/logo_transparent/1.png";
-import navLogo from "../assets/logo_transparent/3.png";
 
 const Home: FC = () => {
   return (
@@ -22,7 +21,7 @@ const Home: FC = () => {
             href="https://worthwhile-bewitched-tapir-xn2j0r.teleporthq.app/"
           />
         </Head>
-        <Navigation brandImageSrc={navLogo} brandImageAlt="KzaVerde" />
+        <Navigation brandImageAlt="KzaVerde" />
         <HeroSection brandImageSrc={brandLogo} brandImageAlt="KzaVerde" />
         <FeaturedProductsSection />
         <ReserveCTASection />
