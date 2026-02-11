@@ -2,7 +2,7 @@
   "catalog": [
     {
       "id": 1,
-      "name": "Arranjo base vidro grossa",
+      "name": "Arranjo com base de vidro grossa",
       "price": "R$ 495,00",
       "displayPrice": "$$",
       "description": "Arranjo elegante em base de vidro grossa com rosas frescas e acabamento delicado. Ideal para decorar ambientes sofisticados ou presentear em datas especiais.",
@@ -47,7 +47,7 @@
     },
     {
       "id": 3,
-      "name": "Buque doze rosas - Rosas",
+      "name": "Buque doze - Cor Rosa",
       "price": "R$ 350,00",
       "displayPrice": "$$",
       "description": "Buque de doze rosas com enfase nas rosas, criando um visual intenso e apaixonante. Perfeito para declaracoes de carinho e aniversario de namoro.",
@@ -97,7 +97,7 @@
     {
       "id": 5,
       "name": "Arranjo Duas Rosas",
-      "price": "R$ 160,00",
+      "price": "R$ 80,00",
       "displayPrice": "$",
       "description": "Arranjo com duas rosas em composicao delicada, ideal para gestos simples e elegantes.",
       "image": "/catalog/arranjos/arranjo_duas_rosas.png",
@@ -119,8 +119,8 @@
     },
     {
       "id": 6,
-      "name": "Arranjo Flores do Campo 75",
-      "price": "R$ 280,00",
+      "name": "Arranjo Flores do Campo - Grande",
+      "price": "R$ 75,00",
       "displayPrice": "$$",
       "description": "Arranjo vibrante com flores do campo em volume generoso, trazendo leveza e cor ao ambiente.",
       "image": "/catalog/arranjos/arranjo_flores_do_campo_75.png",
@@ -143,8 +143,8 @@
     },
     {
       "id": 7,
-      "name": "Arranjo Flores do Campo",
-      "price": "R$ 240,00",
+      "name": "Arranjo Flores do Campo - Pequeno",
+      "price": "R$ 65,00",
       "displayPrice": "$$",
       "description": "Arranjo colorido com flores do campo, textura leve e alegre para ambientes descontraidos.",
       "image": "/catalog/arranjos/arranjo_florex_do_campo.png",
@@ -168,7 +168,7 @@
     {
       "id": 8,
       "name": "Arranjo Mini Arranjo de Mesa",
-      "price": "R$ 190,00",
+      "price": "R$ 20,00",
       "displayPrice": "$",
       "description": "Mini arranjo de mesa com flores selecionadas, perfeito para pequenos espacos e decoracao delicada.",
       "image": "/catalog/arranjos/arranjo_mini_arranjo_de_mesa.png",
@@ -191,30 +191,15 @@
     },
     {
       "id": 9,
-      "name": "Arranjo Mini Rosa",
-      "price": "R$ 140,00",
-      "displayPrice": "$",
-      "description": "Arranjo compacto com mini rosa, ideal para presentes discretos e cheios de carinho.",
-      "image": "/catalog/arranjos/arranjo_mini_rosa.png",
-      "images": ["/catalog/arranjos/arranjo_mini_rosa.png"],
-      "careInstructions": [
-        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
-        "Verifique o nivel de agua na base e complete quando necessario",
-        "Troque a agua a cada 2 dias para manter as flores frescas",
-        "Remova folhas abaixo da linha da agua"
-      ],
-      "category": "arranjos",
-      "rating": 4,
-      "reviews": 45
-    },
-    {
-      "id": 10,
       "name": "Arranjo Mini Rosas",
-      "price": "R$ 150,00",
+      "price": "R$ 250,00",
       "displayPrice": "$",
       "description": "Arranjo com mini rosas em composicao leve, perfeito para decorar e presentear.",
       "image": "/catalog/arranjos/arranjo_mini_rosas.png",
-      "images": ["/catalog/arranjos/arranjo_mini_rosas.png"],
+      "images": [
+        "/catalog/arranjos/arranjo_mini_rosas.png",
+        "/catalog/arranjos/arranjo_mini_rosa.png"
+      ],
       "careInstructions": [
         "Mantenha o arranjo em local fresco, longe de sol direto e calor",
         "Verifique o nivel de agua na base e complete quando necessario",
@@ -226,9 +211,9 @@
       "reviews": 47
     },
     {
-      "id": 11,
+      "id": 10,
       "name": "Arranjo Mini Rosa com Crisantemo",
-      "price": "R$ 170,00",
+      "price": "R$ 250,00",
       "displayPrice": "$",
       "description": "Arranjo delicado com mini rosa e crisantemo, equilibrando textura e cor em um formato compacto.",
       "image": "/catalog/arranjos/arranjo_mini_rosa_com_crisantemo_1.png",
@@ -248,9 +233,9 @@
       "reviews": 52
     },
     {
-      "id": 12,
+      "id": 11,
       "name": "Arranjo Rosa e Alstro",
-      "price": "R$ 260,00",
+      "price": "R$ 250,00",
       "displayPrice": "$$",
       "description": "Arranjo com rosas e alstroemerias, combinando volume e elegancia para ocasioes especiais.",
       "image": "/catalog/arranjos/arranjo_rosa_e_alstro.png",
@@ -272,9 +257,9 @@
       "reviews": 80
     },
     {
-      "id": 13,
+      "id": 12,
       "name": "Arranjo Sorvetao",
-      "price": "R$ 220,00",
+      "price": "R$ 120,00",
       "displayPrice": "$$",
       "description": "Arranjo com visual divertido e moderno, ideal para surpreender com um toque criativo.",
       "image": "/catalog/arranjos/arranjo_sorvetao.png",
@@ -294,10 +279,10 @@
       "reviews": 66
     },
     {
-      "id": 14,
+      "id": 13,
       "name": "Buque Elegance",
-      "price": "R$ 380,00",
-      "displayPrice": "$$$",
+      "price": "R$ 150,00",
+      "displayPrice": "$$",
       "description": "Buque sofisticado com composicao elegante e acabamento premium, ideal para ocasioes marcantes.",
       "image": "/catalog/buque/buque_elegance.png",
       "images": [
@@ -319,9 +304,9 @@
       "reviews": 95
     },
     {
-      "id": 15,
+      "id": 14,
       "name": "Buque Quatro Rosas",
-      "price": "R$ 200,00",
+      "price": "R$ 120,00",
       "displayPrice": "$",
       "description": "Buque com quatro rosas equilibradas, ideal para presentes delicados e cheios de significado.",
       "image": "/catalog/buque/buque_quatro_rosas.png",
@@ -341,9 +326,9 @@
       "reviews": 61
     },
     {
-      "id": 16,
+      "id": 15,
       "name": "Buque Rosas Pink",
-      "price": "R$ 320,00",
+      "price": "R$ 120,00",
       "displayPrice": "$$$",
       "description": "Buque de rosas pink com presenca marcante e acabamento delicado.",
       "image": "/catalog/buque/buque_rosas_pink.png",
@@ -366,31 +351,14 @@
       "reviews": 102
     },
     {
-      "id": 17,
-      "name": "Cesta 1",
-      "price": "R$ 210,00",
-      "displayPrice": "$$",
-      "description": "Cesta classica com arranjo floral e acabamento artesanal, pronta para presente.",
-      "image": "/catalog/cestas/cestas_1.png",
-      "images": ["/catalog/cestas/cestas_1.png"],
-      "careInstructions": [
-        "Mantenha a cesta em local fresco e arejado",
-        "Umedeca levemente o arranjo quando notar as flores mais secas",
-        "Evite sol direto e calor excessivo",
-        "Retire folhas murchas para preservar o visual"
-      ],
-      "category": "cestas",
-      "rating": 4,
-      "reviews": 54
-    },
-    {
-      "id": 18,
-      "name": "Cestas Flor do Campo",
-      "price": "R$ 260,00",
+      "id": 16,
+      "name": "Cestas Flor do Campo Colorido Variados",
+      "price": "R$ 280,00",
       "displayPrice": "$$",
       "description": "Cesta com flores do campo em composicao leve, ideal para alegrar ambientes.",
       "image": "/catalog/cestas/cestas_flor_do_campo_2.png",
       "images": [
+        "/catalog/cestas/cestas_1.png",
         "/catalog/cestas/cestas_flor_do_campo_2.png",
         "/catalog/cestas/cestas_flor_do_campo_3.png"
       ],
@@ -405,9 +373,9 @@
       "reviews": 70
     },
     {
-      "id": 19,
+      "id": 17,
       "name": "Cesta Carinho",
-      "price": "R$ 290,00",
+      "price": "R$ 120,00",
       "displayPrice": "$$",
       "description": "Cesta com selecao especial de flores, montada para transmitir carinho e cuidado.",
       "image": "/catalog/cestas/cesta_carinho.png",
@@ -428,9 +396,9 @@
       "reviews": 83
     },
     {
-      "id": 20,
+      "id": 18,
       "name": "Orquidea",
-      "price": "R$ 350,00",
+      "price": "R$ 180,00",
       "displayPrice": "$$$",
       "description": "Orquidea elegante com floracao duradoura, perfeita para presentes sofisticados.",
       "image": "/catalog/orquideas/orquidea.png",

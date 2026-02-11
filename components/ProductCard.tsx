@@ -1,22 +1,18 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 
 interface ProductCardProps {
-  id: number
-  name: string
-  price: string
-  image: string
-  alt: string
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+  alt: string;
 }
 
 const ProductCard: FC<ProductCardProps> = ({ id, name, price, image, alt }) => {
   return (
     <div className="product-card">
       <a href={`/product/${id}`} className="product-card__link">
-        <img
-          alt={alt}
-          src={image}
-          className="product-card__img"
-        />
+        <img alt={alt} src={image} className="product-card__img" />
       </a>
       <div className="product-card__info">
         <h3 className="section-content">{name}</h3>
@@ -28,7 +24,7 @@ const ProductCard: FC<ProductCardProps> = ({ id, name, price, image, alt }) => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductCard
+export default ProductCard;

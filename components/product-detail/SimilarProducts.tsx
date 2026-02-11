@@ -20,7 +20,7 @@ export const SimilarProducts: FC<SimilarProductsProps> = ({ products }) => {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <h2 className={styles.title}>You May Also Like</h2>
+        <h2 className={styles.title}>Recomendados para você</h2>
         <div className={styles.grid}>
           {products.map((product) => (
             <a
@@ -39,7 +39,7 @@ export const SimilarProducts: FC<SimilarProductsProps> = ({ products }) => {
                 <h3 className={styles.name}>{product.name}</h3>
                 <p className={styles.price}>{product.price}</p>
                 <button className={`btn btn-sm btn-primary ${styles.button}`}>
-                  View Details
+                  Ver Detalhes
                 </button>
               </div>
             </a>

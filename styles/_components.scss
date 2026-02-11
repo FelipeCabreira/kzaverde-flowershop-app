@@ -34,6 +34,10 @@
 .product-card__price {
   font-weight: var(--font-weight-medium);
   color: var(--color-primary);
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* Featured collections / rails basic layout */
