@@ -22,6 +22,7 @@ class CustomDocument extends Document {
         <Head>
           <meta charSet="utf-8"></meta>
           <meta property="twitter:card" content="summary_large_image"></meta>
+          <link rel="icon" href="/favicon.png" type="image/png"></link>
           <style
             dangerouslySetInnerHTML={{
               __html:
