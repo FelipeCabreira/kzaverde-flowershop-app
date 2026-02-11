@@ -11,6 +11,7 @@ import ProductActions from "../../components/product-detail/ProductActions";
 import SimilarProducts from "../../components/product-detail/SimilarProducts";
 import { useProduct, useProducts } from "../../lib/hooks";
 import styles from "../../components/product-detail/ProductDetail.module.scss";
+import ProductDisclaimer from "@/components/product-detail/ProductDisclaimer";
 
 const ProductDetail: FC = () => {
   const router = useRouter();
