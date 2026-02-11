@@ -34,7 +34,7 @@ const Home: FC<HomeProps> = ({ products }) => {
             rel="preload"
             as="image"
             href="https://images.pexels.com/videos/4191603/pictures/preview-0.jpg"
-            fetchpriority="high"
+            fetchPriority="high"
           ></link>
           <link rel="dns-prefetch" href="https://images.pexels.com"></link>
         </Head>
