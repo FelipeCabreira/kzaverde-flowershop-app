@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import Script from "dangerous-html/react";
 import styles from "./Footer.module.scss";
 
 const Footer: FC = () => {
@@ -369,53 +368,7 @@ const Footer: FC = () => {
             </div>
           </div>
         </footer>
-        <div className="footer-container2">
-          <div className="footer-container3">
-            <Script
-              html={`<script defer data-name="footer-interactivity">
-(function(){
-  const footerIcons = document.querySelectorAll(".footer-social-icon")
-
-  footerIcons.forEach((icon) => {
-    icon.addEventListener("mouseenter", () => {
-      icon.style.transition = "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
-    })
-
-    icon.addEventListener("mouseleave", () => {
-      icon.style.transition = "all 0.3s ease"
-    })
-  })
-
-  const footerLinks = document.querySelectorAll(".footer-link")
-
-  footerLinks.forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-      link.style.paddingLeft = "5px"
-    })
-
-    link.addEventListener("mouseleave", () => {
-      link.style.paddingLeft = "0"
-    })
-  })
-})()
-</script>`}
-            ></Script>
-          </div>
-        </div>
       </div>
-      <style jsx>
-        {`
-          .footer-container1 {
-            display: contents;
-          }
-          .footer-container2 {
-            display: none;
-          }
-          .footer-container3 {
-            display: contents;
-          }
-        `}
-      </style>
     </>
   );
 };
