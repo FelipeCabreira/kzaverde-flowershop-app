@@ -6,12 +6,11 @@
       "price": "R$ 495,00",
       "displayPrice": "$$",
       "description": "Arranjo elegante em base de vidro grossa com rosas frescas e acabamento delicado. Ideal para decorar ambientes sofisticados ou presentear em datas especiais.",
-      "image": "/catalog/buque_doze_rosas_2.png",
+      "image": "/catalog/arranjos/arranjo_base_viro_grossa.png",
       "images": [
-        "/catalog/buque_doze_rosas_2.png",
-        "/catalog/buque_doze_rosas_3.png",
-        "/catalog/buque_doze_rosas_4.png",
-        "/catalog/buque_doze_rosas.png"
+        "/catalog/arranjos/arranjo_base_viro_grossa.png",
+        "/catalog/arranjos/arranjo_base_viro_grossa_2.png",
+        "/catalog/arranjos/arranjo_base_viro_grossa_3.png"
       ],
       "careInstructions": [
         "Mantenha o arranjo em local fresco, longe de sol direto e calor",
@@ -29,12 +28,12 @@
       "price": "R$ 350,00",
       "displayPrice": "$$$",
       "description": "Buque com doze rosas selecionadas, equilibrando volume e elegancia. Um presente classico para comemorar momentos especiais com um toque romantico.",
-      "image": "/catalog/buque_doze_rosas.png",
+      "image": "/catalog/buque/buque_doze_rosas.png",
       "images": [
-        "/catalog/buque_doze_rosas.png",
-        "/catalog/buque_doze_rosas_2.png",
-        "/catalog/buque_doze_rosas_3.png",
-        "/catalog/buque_doze_rosas_4.png"
+        "/catalog/buque/buque_doze_rosas.png",
+        "/catalog/buque/buque_doze_rosas_2.png",
+        "/catalog/buque/buque_doze_rosas_3.png",
+        "/catalog/buque/buque_doze_rosas_4.png"
       ],
       "careInstructions": [
         "Corte 1 a 2 cm das hastes em angulo antes de colocar no vaso",
@@ -52,12 +51,14 @@
       "price": "R$ 350,00",
       "displayPrice": "$$",
       "description": "Buque de doze rosas com enfase nas rosas, criando um visual intenso e apaixonante. Perfeito para declaracoes de carinho e aniversario de namoro.",
-      "image": "/catalog/buque_doze_rosas_rosas.png",
+      "image": "/catalog/buque/buque_doze_rosas_rosas.png",
       "images": [
-        "/catalog/buque_doze_rosas_rosas.png",
-        "/catalog/buque_doze_rosas_rosas_2.png",
-        "/catalog/buque_doze_rosas_rosas_3.png",
-        "/catalog/buque_doze_rosas_rosas_4.png"
+        "/catalog/buque/buque_doze_rosas_rosas.png",
+        "/catalog/buque/buque_doze_rosas_rosas_2.png",
+        "/catalog/buque/buque_doze_rosas_rosas_3.png",
+        "/catalog/buque/buque_doze_rosas_rosas_4.png",
+        "/catalog/buque/buque_doze_rosas_rosas_5.png",
+        "/catalog/buque/buque_doze_rosas_rosas_6.png"
       ],
       "careInstructions": [
         "Apare as hastes a cada 2 dias para melhorar a absorcao",
@@ -75,12 +76,13 @@
       "price": "R$ 180,00",
       "displayPrice": "$$$",
       "description": "Buque delicado com seis rosas, compacto e cheio de charme. Ideal para lembrancas, agradecimentos e pequenos gestos cheios de significado.",
-      "image": "/catalog/buque_seis_rosas.png",
+      "image": "/catalog/buque/buque_seis_rosas.png",
       "images": [
-        "/catalog/buque_seis_rosas.png",
-        "/catalog/buque_seis_rosas_2.png",
-        "/catalog/buque_seis_rosas_3.png",
-        "/catalog/buque_seis_rosas_4.png"
+        "/catalog/buque/buque_seis_rosas.png",
+        "/catalog/buque/buque_seis_rosas_2.png",
+        "/catalog/buque/buque_seis_rosas_3.png",
+        "/catalog/buque/buque_seis_rosas_4.png",
+        "/catalog/buque/buque_seis_rosas_5.png"
       ],
       "careInstructions": [
         "Coloque o buque em vaso com agua limpa e fresca",
@@ -91,6 +93,367 @@
       "category": "weddings",
       "rating": 4,
       "reviews": 156
+    },
+    {
+      "id": 5,
+      "name": "Arranjo Duas Rosas",
+      "price": "R$ 160,00",
+      "displayPrice": "$",
+      "description": "Arranjo com duas rosas em composicao delicada, ideal para gestos simples e elegantes.",
+      "image": "/catalog/arranjos/arranjo_duas_rosas.png",
+      "images": [
+        "/catalog/arranjos/arranjo_duas_rosas.png",
+        "/catalog/arranjos/arranjo_duas_rosas_2.png",
+        "/catalog/arranjos/arranjo_duas_rosas_3.png",
+        "/catalog/arranjos/arranjo_duas_rosas_4.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da agua"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 64
+    },
+    {
+      "id": 6,
+      "name": "Arranjo Flores do Campo 75",
+      "price": "R$ 280,00",
+      "displayPrice": "$$",
+      "description": "Arranjo vibrante com flores do campo em volume generoso, trazendo leveza e cor ao ambiente.",
+      "image": "/catalog/arranjos/arranjo_flores_do_campo_75.png",
+      "images": [
+        "/catalog/arranjos/arranjo_flores_do_campo_75.png",
+        "/catalog/arranjos/arranjo_flores_do_campo_75_2.png",
+        "/catalog/arranjos/arranjo_flores_do_campo_75_3.png",
+        "/catalog/arranjos/arranjo_flores_do_campo_75_4.png",
+        "/catalog/arranjos/arranjo_flores_do_campo_75_5.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da agua"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 88
+    },
+    {
+      "id": 7,
+      "name": "Arranjo Flores do Campo",
+      "price": "R$ 240,00",
+      "displayPrice": "$$",
+      "description": "Arranjo colorido com flores do campo, textura leve e alegre para ambientes descontraidos.",
+      "image": "/catalog/arranjos/arranjo_florex_do_campo.png",
+      "images": [
+        "/catalog/arranjos/arranjo_florex_do_campo.png",
+        "/catalog/arranjos/arranjo_florex_do_campo_2.png",
+        "/catalog/arranjos/arranjo_florex_do_campo_3.png",
+        "/catalog/arranjos/arranjo_florex_do_campo_4.png",
+        "/catalog/arranjos/arranjo_florex_do_campo_5.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da agua"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 73
+    },
+    {
+      "id": 8,
+      "name": "Arranjo Mini Arranjo de Mesa",
+      "price": "R$ 190,00",
+      "displayPrice": "$",
+      "description": "Mini arranjo de mesa com flores selecionadas, perfeito para pequenos espacos e decoracao delicada.",
+      "image": "/catalog/arranjos/arranjo_mini_arranjo_de_mesa.png",
+      "images": [
+        "/catalog/arranjos/arranjo_mini_arranjo_de_mesa.png",
+        "/catalog/arranjos/arranjo_mini_arranjo_de_mesa_2.png",
+        "/catalog/arranjos/arranjo_mini_arranjo_de_mesa_3.png",
+        "/catalog/arranjos/arranjo_mini_arranjo_de_mesa_4.png",
+        "/catalog/arranjos/arranjo_mini_arranjo_de_mesa_5.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da agua"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 58
+    },
+    {
+      "id": 9,
+      "name": "Arranjo Mini Rosa",
+      "price": "R$ 140,00",
+      "displayPrice": "$",
+      "description": "Arranjo compacto com mini rosa, ideal para presentes discretos e cheios de carinho.",
+      "image": "/catalog/arranjos/arranjo_mini_rosa.png",
+      "images": ["/catalog/arranjos/arranjo_mini_rosa.png"],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da agua"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 45
+    },
+    {
+      "id": 10,
+      "name": "Arranjo Mini Rosas",
+      "price": "R$ 150,00",
+      "displayPrice": "$",
+      "description": "Arranjo com mini rosas em composicao leve, perfeito para decorar e presentear.",
+      "image": "/catalog/arranjos/arranjo_mini_rosas.png",
+      "images": ["/catalog/arranjos/arranjo_mini_rosas.png"],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da agua"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 47
+    },
+    {
+      "id": 11,
+      "name": "Arranjo Mini Rosa com Crisantemo",
+      "price": "R$ 170,00",
+      "displayPrice": "$",
+      "description": "Arranjo delicado com mini rosa e crisantemo, equilibrando textura e cor em um formato compacto.",
+      "image": "/catalog/arranjos/arranjo_mini_rosa_com_crisantemo_1.png",
+      "images": [
+        "/catalog/arranjos/arranjo_mini_rosa_com_crisantemo_1.png",
+        "/catalog/arranjos/arranjo_mini_rosa_com_crisantemo_2.png",
+        "/catalog/arranjos/arranjo_mini_rosa_com_crisantemo_3.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da agua"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 52
+    },
+    {
+      "id": 12,
+      "name": "Arranjo Rosa e Alstro",
+      "price": "R$ 260,00",
+      "displayPrice": "$$",
+      "description": "Arranjo com rosas e alstroemerias, combinando volume e elegancia para ocasioes especiais.",
+      "image": "/catalog/arranjos/arranjo_rosa_e_alstro.png",
+      "images": [
+        "/catalog/arranjos/arranjo_rosa_e_alstro.png",
+        "/catalog/arranjos/arranjo_rosa_e_alstro_2.png",
+        "/catalog/arranjos/arranjo_rosa_e_alstro_3.png",
+        "/catalog/arranjos/arranjo_rosa_e_alstro_4.png",
+        "/catalog/arranjos/arranjo_rosa_e_alstro_5.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da agua"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 80
+    },
+    {
+      "id": 13,
+      "name": "Arranjo Sorvetao",
+      "price": "R$ 220,00",
+      "displayPrice": "$$",
+      "description": "Arranjo com visual divertido e moderno, ideal para surpreender com um toque criativo.",
+      "image": "/catalog/arranjos/arranjo_sorvetao.png",
+      "images": [
+        "/catalog/arranjos/arranjo_sorvetao.png",
+        "/catalog/arranjos/arranjo_sorvetao_2.png",
+        "/catalog/arranjos/arranjo_sorvetao_3.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nivel de agua na base e complete quando necessario",
+        "Troque a agua a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da agua"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 66
+    },
+    {
+      "id": 14,
+      "name": "Buque Elegance",
+      "price": "R$ 380,00",
+      "displayPrice": "$$$",
+      "description": "Buque sofisticado com composicao elegante e acabamento premium, ideal para ocasioes marcantes.",
+      "image": "/catalog/buque/buque_elegance.png",
+      "images": [
+        "/catalog/buque/buque_elegance.png",
+        "/catalog/buque/buque_elegance_2.png",
+        "/catalog/buque/buque_elegance_3.png",
+        "/catalog/buque/buque_elegance_4.png",
+        "/catalog/buque/buque_elegance_5.png",
+        "/catalog/buque/buque_elegance_6.png"
+      ],
+      "careInstructions": [
+        "Corte 1 a 2 cm das hastes em angulo antes de colocar no vaso",
+        "Troque a agua diariamente e lave o vaso",
+        "Mantenha em local arejado, longe de sol direto",
+        "Retire flores ou folhas murchas para prolongar a duracao"
+      ],
+      "category": "buque",
+      "rating": 4,
+      "reviews": 95
+    },
+    {
+      "id": 15,
+      "name": "Buque Quatro Rosas",
+      "price": "R$ 200,00",
+      "displayPrice": "$",
+      "description": "Buque com quatro rosas equilibradas, ideal para presentes delicados e cheios de significado.",
+      "image": "/catalog/buque/buque_quatro_rosas.png",
+      "images": [
+        "/catalog/buque/buque_quatro_rosas.png",
+        "/catalog/buque/buque_quatro_rosas_2.png",
+        "/catalog/buque/buque_quatro_rosas_3.png"
+      ],
+      "careInstructions": [
+        "Corte 1 a 2 cm das hastes em angulo antes de colocar no vaso",
+        "Troque a agua diariamente e lave o vaso",
+        "Mantenha em local arejado, longe de sol direto",
+        "Retire flores ou folhas murchas para prolongar a duracao"
+      ],
+      "category": "buque",
+      "rating": 4,
+      "reviews": 61
+    },
+    {
+      "id": 16,
+      "name": "Buque Rosas Pink",
+      "price": "R$ 320,00",
+      "displayPrice": "$$$",
+      "description": "Buque de rosas pink com presenca marcante e acabamento delicado.",
+      "image": "/catalog/buque/buque_rosas_pink.png",
+      "images": [
+        "/catalog/buque/buque_rosas_pink.png",
+        "/catalog/buque/buque_rosas_pink_2.png",
+        "/catalog/buque/buque_rosas_pink_3.png",
+        "/catalog/buque/buque_rosas_pink_4.png",
+        "/catalog/buque/buque_rosas_pink_5.png",
+        "/catalog/buque/buque_rosas_pink_6.png"
+      ],
+      "careInstructions": [
+        "Corte 1 a 2 cm das hastes em angulo antes de colocar no vaso",
+        "Troque a agua diariamente e lave o vaso",
+        "Mantenha em local arejado, longe de sol direto",
+        "Retire flores ou folhas murchas para prolongar a duracao"
+      ],
+      "category": "buque",
+      "rating": 4,
+      "reviews": 102
+    },
+    {
+      "id": 17,
+      "name": "Cesta 1",
+      "price": "R$ 210,00",
+      "displayPrice": "$$",
+      "description": "Cesta classica com arranjo floral e acabamento artesanal, pronta para presente.",
+      "image": "/catalog/cestas/cestas_1.png",
+      "images": ["/catalog/cestas/cestas_1.png"],
+      "careInstructions": [
+        "Mantenha a cesta em local fresco e arejado",
+        "Umedeca levemente o arranjo quando notar as flores mais secas",
+        "Evite sol direto e calor excessivo",
+        "Retire folhas murchas para preservar o visual"
+      ],
+      "category": "cestas",
+      "rating": 4,
+      "reviews": 54
+    },
+    {
+      "id": 18,
+      "name": "Cestas Flor do Campo",
+      "price": "R$ 260,00",
+      "displayPrice": "$$",
+      "description": "Cesta com flores do campo em composicao leve, ideal para alegrar ambientes.",
+      "image": "/catalog/cestas/cestas_flor_do_campo_2.png",
+      "images": [
+        "/catalog/cestas/cestas_flor_do_campo_2.png",
+        "/catalog/cestas/cestas_flor_do_campo_3.png"
+      ],
+      "careInstructions": [
+        "Mantenha a cesta em local fresco e arejado",
+        "Umedeca levemente o arranjo quando notar as flores mais secas",
+        "Evite sol direto e calor excessivo",
+        "Retire folhas murchas para preservar o visual"
+      ],
+      "category": "cestas",
+      "rating": 4,
+      "reviews": 70
+    },
+    {
+      "id": 19,
+      "name": "Cesta Carinho",
+      "price": "R$ 290,00",
+      "displayPrice": "$$",
+      "description": "Cesta com selecao especial de flores, montada para transmitir carinho e cuidado.",
+      "image": "/catalog/cestas/cesta_carinho.png",
+      "images": [
+        "/catalog/cestas/cesta_carinho.png",
+        "/catalog/cestas/cesta_carinho_2.png",
+        "/catalog/cestas/cesta_carinho_3.png",
+        "/catalog/cestas/cesta_carinho_4.png"
+      ],
+      "careInstructions": [
+        "Mantenha a cesta em local fresco e arejado",
+        "Umedeca levemente o arranjo quando notar as flores mais secas",
+        "Evite sol direto e calor excessivo",
+        "Retire folhas murchas para preservar o visual"
+      ],
+      "category": "cestas",
+      "rating": 4,
+      "reviews": 83
+    },
+    {
+      "id": 20,
+      "name": "Orquidea",
+      "price": "R$ 350,00",
+      "displayPrice": "$$$",
+      "description": "Orquidea elegante com floracao duradoura, perfeita para presentes sofisticados.",
+      "image": "/catalog/orquideas/orquidea.png",
+      "images": [
+        "/catalog/orquideas/orquidea.png",
+        "/catalog/orquideas/orquidea_2.png",
+        "/catalog/orquideas/orquidea_3.png",
+        "/catalog/orquideas/orquidea_4.png",
+        "/catalog/orquideas/orquidea_5.png",
+        "/catalog/orquideas/orquidea_6.png",
+        "/catalog/orquideas/orquidea_7.png",
+        "/catalog/orquideas/orquidea_8.png",
+        "/catalog/orquideas/orquidea_9.png"
+      ],
+      "careInstructions": [
+        "Deixe em local iluminado com luz indireta",
+        "Regue 1 a 2 vezes por semana, sem encharcar",
+        "Evite correntes de ar e sol direto",
+        "Remova flores secas para estimular novas floradas"
+      ],
+      "category": "orquideas",
+      "rating": 4,
+      "reviews": 110
     }
   ]
 }
