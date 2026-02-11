@@ -87,12 +87,14 @@ body {
 }
 
 .section-subtitle {
-  color: var(--color-on-surface-secondary);
+  // color: var(--color-on-surface-secondary);
+  color: #e91e8c;
   margin: 0 0 var(--spacing-lg);
 }
 
 .section-content {
-  color: var(--color-on-surface-secondary);
+  // color: var(--color-on-surface-secondary);
+  color: #e91e8c;
   font-family: var(--font-family-body);
   line-height: var(--line-height-body);
 }

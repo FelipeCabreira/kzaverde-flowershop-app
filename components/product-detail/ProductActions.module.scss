@@ -10,21 +10,31 @@
 
   button {
     width: 100%;
+    border-radius: 9999px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
 }
 
 .whatsappBtn {
+  background: #e91e8c;
+  border-color: #e91e8c;
+  color: #ffffff;
+
   svg {
     margin-right: 8px;
   }
 }
 
 .wishlistBtn {
+  background: transparent;
+  border-color: #6b8a32;
+  color: #6b8a32;
   transition: all 0.3s ease;
 
   &.active {
-    background: #d946ef;
-    border-color: #d946ef;
+    background: #e91e8c;
+    border-color: #e91e8c;
     color: #ffffff;
   }
 }

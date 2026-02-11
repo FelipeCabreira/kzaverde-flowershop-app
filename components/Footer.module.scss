@@ -15,6 +15,14 @@
   color: #e91e8c;
 }
 
+.footerWrapper :global(.section-subtitle.footer-column-title) {
+  color: #e91e8c;
+}
+
+.footerColumnTitle {
+  color: #e91e8c;
+}
+
 .footerContainer {
   margin: 0 auto;
   padding: 0 var(--spacing-xl);
@@ -53,7 +61,7 @@
 .footerBrandName {
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-heading);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #e91e8c;

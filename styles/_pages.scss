@@ -320,6 +320,10 @@
   color: #e91e8c;
 }
 
+.reserve-cta .section-subtitle {
+  color: #ffffff;
+}
+
 .reserve-cta__steps {
   gap: var(--spacing-2xl);
   display: flex;
@@ -351,7 +355,7 @@
 }
 
 .reserve-cta__step .section-content {
-  color: var(--color-surface);
+  color: #ffffff;
 }
 
 .reserve-cta__icon-box {

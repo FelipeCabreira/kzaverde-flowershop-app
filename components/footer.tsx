@@ -193,7 +193,9 @@ const Footer: FC = () => {
                 </nav>
               </div> */}
               <div className={styles.footerColumn}>
-                <h2 className="section-subtitle footer-column-title">
+                <h2
+                  className={`section-subtitle footer-column-title ${styles.footerColumnTitle}`}
+                >
                   Horário de Funcionamento
                 </h2>
                 <div className={styles.footerOpeningHours}>
@@ -208,7 +210,9 @@ const Footer: FC = () => {
                 </div>
               </div>
               <div className={styles.footerColumn}>
-                <h2 className="section-subtitle footer-column-title">
+                <h2
+                  className={`section-subtitle footer-column-title ${styles.footerColumnTitle}`}
+                >
                   Visite nossa loja
                 </h2>
                 <div className={styles.footerContactInfo}>

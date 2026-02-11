@@ -855,7 +855,7 @@
 }
 
 .footer-description {
-  color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+  color: #ffffff;
   max-width: 400px;
 }
 
@@ -869,6 +869,10 @@
   display: inline-block;
   position: relative;
   margin-bottom: var(--spacing-sm);
+}
+
+.footer-wrapper .section-subtitle.footer-column-title {
+  color: #e91e8c;
 }
 
 .footer-contact-info {
@@ -898,7 +902,7 @@
 }
 
 .footer-copyright {
-  color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+  color: #ffffff;
   font-size: var(--font-size-xs);
 }
 
@@ -964,7 +968,7 @@
 }
 
 .footer-bottom-link {
-  color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+  color: #ffffff;
   font-size: var(--font-size-xs);
   transition: color 0.2s ease;
   text-decoration: none;
@@ -977,13 +981,13 @@
 }
 
 .footer-contact-text {
-  color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+  color: #ffffff;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-body);
 }
 
 .footer-link {
-  color: color-mix(in srgb, var(--color-surface) 70%, transparent);
+  color: #ffffff;
   display: inline-block;
   font-size: var(--font-size-base);
   transition: all 0.2s ease;
