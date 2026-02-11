@@ -1,9 +1,19 @@
 import React, { FC, useEffect, useState } from "react";
+import Image, { StaticImageData } from "next/image";
+import navLogo from "../assets/logo/3.png";
 
 import Script from "dangerous-html/react";
 import styles from "./Navigation.module.scss";
 
-const Navigation: FC = () => {
+interface NavigationProps {
+  brandImageSrc?: StaticImageData;
+  brandImageAlt?: string;
+}
+
+const Navigation: FC<NavigationProps> = ({
+  brandImageSrc = navLogo,
+  brandImageAlt = "KzaVerde",
+}) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -56,24 +66,35 @@ const Navigation: FC = () => {
                 className={styles["navigation-logo-link"]}
               >
                 <div className={styles["navigation-logo-wrapper"]}>
-                  <svg
-                    width="32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    className="navigation-logo-icon"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                  {brandImageSrc ? (
+                    <Image
+                      src={brandImageSrc}
+                      alt={brandImageAlt}
+                      className={styles["navigation-brand-image"]}
+                      width={64}
+                      height={64}
+                      priority
+                    />
+                  ) : (
+                    <svg
+                      width="32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      className="navigation-logo-icon"
                     >
-                      <circle r="3" cx="12" cy="12"></circle>
-                      <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12A4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5a4.5 4.5 0 1 1-4.5 4.5m0-9V9m-4.5 3H9m7.5 0H15m-3 4.5V15M8 8l1.88 1.88m4.24 0L16 8m-8 8l1.88-1.88m4.24 0L16 16"></path>
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle r="3" cx="12" cy="12"></circle>
+                        <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12A4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5a4.5 4.5 0 1 1-4.5 4.5m0-9V9m-4.5 3H9m7.5 0H15m-3 4.5V15M8 8l1.88 1.88m4.24 0L16 8m-8 8l1.88-1.88m4.24 0L16 16"></path>
+                      </g>
+                    </svg>
+                  )}
                   <span className={styles["navigation-brand-name"]}>
                     KzaVerde
                   </span>
@@ -176,24 +197,35 @@ const Navigation: FC = () => {
             <a href="/">
               <div className={styles["navigation-logo-link"]}>
                 <div className={styles["navigation-logo-wrapper"]}>
-                  <svg
-                    width="32"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    className="navigation-logo-icon"
-                  >
-                    <g
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+                  {brandImageSrc ? (
+                    <Image
+                      src={brandImageSrc}
+                      alt={brandImageAlt}
+                      className={styles["navigation-brand-image"]}
+                      width={64}
+                      height={64}
+                      priority
+                    />
+                  ) : (
+                    <svg
+                      width="32"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      className="navigation-logo-icon"
                     >
-                      <circle r="3" cx="12" cy="12"></circle>
-                      <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12A4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5a4.5 4.5 0 1 1-4.5 4.5m0-9V9m-4.5 3H9m7.5 0H15m-3 4.5V15M8 8l1.88 1.88m4.24 0L16 8m-8 8l1.88-1.88m4.24 0L16 16"></path>
-                    </g>
-                  </svg>
+                      <g
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle r="3" cx="12" cy="12"></circle>
+                        <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12A4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5a4.5 4.5 0 1 1-4.5 4.5m0-9V9m-4.5 3H9m7.5 0H15m-3 4.5V15M8 8l1.88 1.88m4.24 0L16 8m-8 8l1.88-1.88m4.24 0L16 16"></path>
+                      </g>
+                    </svg>
+                  )}
                   <span className={styles["navigation-brand-name"]}>
                     KzaVerde
                   </span>

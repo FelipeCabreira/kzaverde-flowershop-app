@@ -48,7 +48,7 @@
 }
 
 .navigation-logo-wrapper {
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
   color: #e91e8c;
   display: flex;
   align-items: center;
@@ -69,9 +69,17 @@
 
 .navigation-brand-name {
   font-size: var(--font-size-xl);
-  font-family: var(--font-family-heading);
+  font-family: "Playfair Display", serif;
   font-weight: var(--font-weight-heading);
   letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.navigation-brand-image {
+  height: 64px;
+  width: 64px;
+  object-fit: contain;
+  display: block;
 }
 
 .navigation-whatsapp-btn {

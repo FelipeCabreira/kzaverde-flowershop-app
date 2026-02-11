@@ -1,6 +1,15 @@
 import React, { FC } from "react";
+import Image, { StaticImageData } from "next/image";
 
-const HeroSection: FC = () => {
+interface HeroSectionProps {
+  brandImageSrc?: StaticImageData;
+  brandImageAlt?: string;
+}
+
+const HeroSection: FC<HeroSectionProps> = ({
+  brandImageSrc,
+  brandImageAlt = "KzaVerde",
+}) => {
   return (
     <section className="hero-welcome">
       <video
@@ -14,11 +23,22 @@ const HeroSection: FC = () => {
       ></video>
       <div className="hero-welcome__overlay"></div>
       <div className="hero-welcome__content">
-        <h1 className="hero-title">KzaVerde</h1>
-        <p className="hero-subtitle">
+        {brandImageSrc ? (
+          <Image
+            src={brandImageSrc}
+            alt={brandImageAlt}
+            className="hero-title-image"
+            width={320}
+            height={120}
+            priority
+          />
+        ) : (
+          <h1 className="hero-title">KzaVerde</h1>
+        )}
+        {/* <p className="hero-subtitle">
           Cada detalhe e um gesto de carinho. <br /> Cada flor, uma promessa de
           beleza.
-        </p>
+        </p> */}
         <div className="hero-welcome__actions">
           <a href="https://wa.me/c/555183388338">
             <div className="btn btn-lg btn-primary">
