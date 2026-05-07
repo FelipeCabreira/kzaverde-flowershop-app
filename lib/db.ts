@@ -41,9 +41,9 @@ export function writeDataFile(filename: string, data: any): boolean {
   }
 }
 
-// Get all products from catalog.json
+// Get all products from catalog_updated_07_05_2026.json
 export function getAllProducts(): Product[] {
-  const catalogData = readDataFile("catalog.json");
+  const catalogData = readDataFile("catalog_updated_07_05_2026.json");
   return catalogData?.catalog || [];
 }
 
@@ -60,9 +60,9 @@ export function createProduct(productData: Omit<Product, "id">): Product {
     products.length > 0 ? Math.max(...products.map((p) => p.id)) + 1 : 1;
   const newProduct = { id: nextId, ...productData };
 
-  const catalogData = readDataFile("catalog.json");
+  const catalogData = readDataFile("catalog_updated_07_05_2026.json");
   catalogData.catalog.push(newProduct);
-  writeDataFile("catalog.json", catalogData);
+  writeDataFile("catalog_updated_07_05_2026.json", catalogData);
 
   // Also update products.json (simple version)
   const productsData = readDataFile("products.json");
@@ -92,9 +92,9 @@ export function updateProduct(
   const updatedProduct = { ...products[productIndex], ...updates, id };
   products[productIndex] = updatedProduct;
 
-  const catalogData = readDataFile("catalog.json");
+  const catalogData = readDataFile("catalog_updated_07_05_2026.json");
   catalogData.catalog = products;
-  writeDataFile("catalog.json", catalogData);
+  writeDataFile("catalog_updated_07_05_2026.json", catalogData);
 
   return updatedProduct;
 }
@@ -106,9 +106,9 @@ export function deleteProduct(id: number): boolean {
 
   if (filteredProducts.length === products.length) return false; // Product not found
 
-  const catalogData = readDataFile("catalog.json");
+  const catalogData = readDataFile("catalog_updated_07_05_2026.json");
   catalogData.catalog = filteredProducts;
-  writeDataFile("catalog.json", catalogData);
+  writeDataFile("catalog_updated_07_05_2026.json", catalogData);
 
   // Also remove from products.json
   const productsData = readDataFile("products.json");

@@ -64,13 +64,13 @@
         "Troque a água a cada 2 dias para manter as flores frescas",
         "Remova folhas que fiquem abaixo da linha da água"
       ],
-      "category": "occasions",
+      "category": "arranjos",
       "rating": 4,
       "reviews": 0
     },
     {
       "id": 4,
-      "name": "Arranjo Flores Buquê 1",
+      "name": "Arranjo Flores - Padrão Buquê",
       "price": "R$ 95,00",
       "displayPrice": "$",
       "description": "Arranjo de flores do campo variado, colorido padrão básico, ideal para decoração de ambientes e presentes do dia a dia.",
@@ -96,9 +96,7 @@
       "displayPrice": "$$",
       "description": "Buquê com flores do campo variadas, leve e natural para presentear com carinho em qualquer ocasião.",
       "image": "/catalog/mothers_day_2026/buque/buque_flores_campo_1.png",
-      "images": [
-        "/catalog/mothers_day_2026/buque/buque_flores_campo_1.png"
-      ],
+      "images": ["/catalog/mothers_day_2026/buque/buque_flores_campo_1.png"],
       "careInstructions": [
         "Corte 1 a 2 cm das hastes em ângulo antes de colocar no vaso",
         "Troque a água diariamente e lave o vaso",
