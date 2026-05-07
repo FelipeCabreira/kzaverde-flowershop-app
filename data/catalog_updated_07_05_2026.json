@@ -1,0 +1,201 @@
+{
+  "catalog": [
+    {
+      "id": 1,
+      "name": "Buquê 6 Rosas",
+      "price": "R$ 180,00",
+      "displayPrice": "$$",
+      "description": "Buquê com seis rosas selecionadas, equilibrando volume e elegância. Um presente clássico para comemorar momentos especiais com um toque romântico.",
+      "image": "/catalog/mothers_day_2026/buque/buque_seis_rosas_1.png",
+      "images": [
+        "/catalog/mothers_day_2026/buque/buque_seis_rosas_1.png",
+        "/catalog/mothers_day_2026/buque/buque_seis_rosas_2.png",
+        "/catalog/mothers_day_2026/buque/buque_seis_rosas_3.png",
+        "/catalog/mothers_day_2026/buque/buque_seis_rosas_4.png",
+        "/catalog/mothers_day_2026/buque/buque_seis_rosas_5.png"
+      ],
+      "careInstructions": [
+        "Corte 1 a 2 cm das hastes em ângulo antes de colocar no vaso",
+        "Troque a água diariamente e lave o vaso",
+        "Mantenha em local arejado, longe de frutas e corrente de ar",
+        "Retire flores ou folhas murchas para prolongar a duração"
+      ],
+      "category": "buque",
+      "rating": 4,
+      "reviews": 0
+    },
+    {
+      "id": 2,
+      "name": "Arranjo Buquê Rosa Colorido",
+      "price": "R$ 190,00",
+      "displayPrice": "$$",
+      "description": "Arranjo de flores com rosas e flores do campo variadas, trazendo cor, leveza e alegria ao ambiente ou ao presenteado.",
+      "image": "/catalog/mothers_day_2026/arranjos/arranjo_buque_rosa_colorido_1.png",
+      "images": [
+        "/catalog/mothers_day_2026/arranjos/arranjo_buque_rosa_colorido_1.png",
+        "/catalog/mothers_day_2026/arranjos/arranjo_buque_rosa_colorido_2.png",
+        "/catalog/mothers_day_2026/arranjos/arranjo_buque_rosa_colorido_3.png",
+        "/catalog/mothers_day_2026/arranjos/arranjo_buque_rosa_colorido_4.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nível de água na base e complete quando necessário",
+        "Troque a água a cada 2 dias para manter as flores frescas",
+        "Remova folhas que fiquem abaixo da linha da água"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 0
+    },
+    {
+      "id": 3,
+      "name": "Arranjo Buquê Rosas Mãe",
+      "price": "R$ 250,00",
+      "displayPrice": "$$$",
+      "description": "Arranjo buquê com rosas e flores do campo coloridas e variadas, perfeito para homenagear a mamãe com muito carinho e beleza.",
+      "image": "/catalog/mothers_day_2026/arranjos/arranjo_buque_rosas_mae_1.png",
+      "images": [
+        "/catalog/mothers_day_2026/arranjos/arranjo_buque_rosas_mae_1.png",
+        "/catalog/mothers_day_2026/arranjos/arranjo_buque_rosas_mae_2.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nível de água na base e complete quando necessário",
+        "Troque a água a cada 2 dias para manter as flores frescas",
+        "Remova folhas que fiquem abaixo da linha da água"
+      ],
+      "category": "occasions",
+      "rating": 4,
+      "reviews": 0
+    },
+    {
+      "id": 4,
+      "name": "Arranjo Flores Buquê 1",
+      "price": "R$ 95,00",
+      "displayPrice": "$",
+      "description": "Arranjo de flores do campo variado, colorido padrão básico, ideal para decoração de ambientes e presentes do dia a dia.",
+      "image": "/catalog/mothers_day_2026/arranjos/arranjo_flores_campo_variado_padrao_buque_1.png",
+      "images": [
+        "/catalog/mothers_day_2026/arranjos/arranjo_flores_campo_variado_padrao_buque_1.png",
+        "/catalog/mothers_day_2026/arranjos/arranjo_flores_campo_variado_padrao_buque_2.png"
+      ],
+      "careInstructions": [
+        "Mantenha o arranjo em local fresco, longe de sol direto e calor",
+        "Verifique o nível de água na base e complete quando necessário",
+        "Troque a água a cada 2 dias para manter as flores frescas",
+        "Remova folhas abaixo da linha da água"
+      ],
+      "category": "arranjos",
+      "rating": 4,
+      "reviews": 0
+    },
+    {
+      "id": 5,
+      "name": "Buquê Flores do Campo",
+      "price": "R$ 180,00",
+      "displayPrice": "$$",
+      "description": "Buquê com flores do campo variadas, leve e natural para presentear com carinho em qualquer ocasião.",
+      "image": "/catalog/mothers_day_2026/buque/buque_flores_campo_1.png",
+      "images": [
+        "/catalog/mothers_day_2026/buque/buque_flores_campo_1.png"
+      ],
+      "careInstructions": [
+        "Corte 1 a 2 cm das hastes em ângulo antes de colocar no vaso",
+        "Troque a água diariamente e lave o vaso",
+        "Mantenha em local arejado, longe de sol direto",
+        "Retire flores ou folhas murchas para prolongar a duração"
+      ],
+      "category": "buque",
+      "rating": 4,
+      "reviews": 0
+    },
+    {
+      "id": 6,
+      "name": "Buquê Girassol",
+      "price": "R$ 240,00",
+      "displayPrice": "$$$",
+      "description": "Buquê de girassóis radiantes, trazendo alegria, energia positiva e um toque de sol para qualquer ambiente ou presente.",
+      "image": "/catalog/mothers_day_2026/buque/buque_girassol_1.png",
+      "images": [
+        "/catalog/mothers_day_2026/buque/buque_girassol_1.png",
+        "/catalog/mothers_day_2026/buque/buque_girassol_2.png"
+      ],
+      "careInstructions": [
+        "Corte 1 a 2 cm das hastes em ângulo antes de colocar no vaso",
+        "Troque a água diariamente e lave o vaso",
+        "Coloque em local com boa luminosidade, evitando sol direto intenso",
+        "Retire folhas murchas para prolongar a duração"
+      ],
+      "category": "buque",
+      "rating": 4,
+      "reviews": 0
+    },
+    {
+      "id": 7,
+      "name": "Aglaonema Pink Princess",
+      "price": "R$ 150,00",
+      "displayPrice": "$$",
+      "description": "Símbolo de boa sorte e prosperidade, a Aglaonema Pink Princess encanta com suas folhas rosadas e vibrantes, ideal para decorar ambientes internos.",
+      "image": "/catalog/mothers_day_2026/plantas/aglaonema_pink_princess_1.png",
+      "images": [
+        "/catalog/mothers_day_2026/plantas/aglaonema_pink_princess_1.png",
+        "/catalog/mothers_day_2026/plantas/aglaonema_pink_princess_2.png"
+      ],
+      "careInstructions": [
+        "Mantenha em local com luz indireta, longe de sol direto",
+        "Regue 1 a 2 vezes por semana, sem encharcar o solo",
+        "Evite correntes de ar frio e temperaturas abaixo de 15°C",
+        "Limpe as folhas com um pano úmido para manter o brilho"
+      ],
+      "category": "plantas",
+      "rating": 4,
+      "reviews": 0
+    },
+    {
+      "id": 8,
+      "name": "Anturium",
+      "price": "R$ 130,00",
+      "displayPrice": "$$",
+      "description": "Anturium com flores duradouras e folhas brilhantes, ideal para decorar ambientes com elegância tropical e cor marcante.",
+      "image": "/catalog/mothers_day_2026/plantas/anturium_1.png",
+      "images": [
+        "/catalog/mothers_day_2026/plantas/anturium_1.png",
+        "/catalog/mothers_day_2026/plantas/anturium_2.png",
+        "/catalog/mothers_day_2026/plantas/anturium_3.png",
+        "/catalog/mothers_day_2026/plantas/anturium_4.png",
+        "/catalog/mothers_day_2026/plantas/anturium_5.png"
+      ],
+      "careInstructions": [
+        "Mantenha em local com luz indireta e ambiente úmido",
+        "Regue 2 vezes por semana, sem deixar a terra encharcada",
+        "Borrife água nas folhas para aumentar a umidade",
+        "Evite sol direto e correntes de ar frio"
+      ],
+      "category": "plantas",
+      "rating": 4,
+      "reviews": 0
+    },
+    {
+      "id": 9,
+      "name": "Orquídea G",
+      "price": "R$ 230,00",
+      "displayPrice": "$$$",
+      "description": "Orquídea grande com floração exuberante e duradoura, perfeita para presentes sofisticados e decoração de ambientes elegantes.",
+      "image": "/catalog/mothers_day_2026/orquideas/orquidea_g_1.png",
+      "images": [
+        "/catalog/mothers_day_2026/orquideas/orquidea_g_1.png",
+        "/catalog/mothers_day_2026/orquideas/orquidea_g_2.png",
+        "/catalog/mothers_day_2026/orquideas/orquidea_g_3.png"
+      ],
+      "careInstructions": [
+        "Deixe em local iluminado com luz indireta",
+        "Regue 1 a 2 vezes por semana, sem encharcar",
+        "Evite correntes de ar e sol direto",
+        "Remova flores secas para estimular novas floradas"
+      ],
+      "category": "orquideas",
+      "rating": 4,
+      "reviews": 0
+    }
+  ]
+}

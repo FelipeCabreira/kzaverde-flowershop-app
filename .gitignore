@@ -52,3 +52,6 @@ ehthumbs.db
 .cache/
 .turbo/
 .next/trace
+
+# Claude
+.claude/settings.local.json
