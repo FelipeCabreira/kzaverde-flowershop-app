@@ -1,5 +1,5 @@
-import Footer from "@/components/footer";
-import Navigation from "@/components/navigation";
+import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import Head from "next/head";
