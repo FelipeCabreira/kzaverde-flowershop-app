@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Buquê 6 Rosas",
-      "price": "R$ 180,00",
+      "price": "R$ 240,00",
       "displayPrice": "$$",
       "description": "Buquê com seis rosas selecionadas, equilibrando volume e elegância. Um presente clássico para comemorar momentos especiais com um toque romântico.",
       "image": "/catalog/mothers_day_2026/buque/buque_seis_rosas_1.png",
@@ -27,7 +27,7 @@
     {
       "id": 2,
       "name": "Arranjo Buquê Rosa Colorido",
-      "price": "R$ 190,00",
+      "price": "R$ 250,00",
       "displayPrice": "$$",
       "description": "Arranjo de flores com rosas e flores do campo variadas, trazendo cor, leveza e alegria ao ambiente ou ao presenteado.",
       "image": "/catalog/mothers_day_2026/arranjos/arranjo_buque_rosa_colorido_1.png",
@@ -110,7 +110,7 @@
     {
       "id": 6,
       "name": "Buquê Girassol",
-      "price": "R$ 240,00",
+      "price": "R$ 300,00",
       "displayPrice": "$$$",
       "description": "Buquê de girassóis radiantes, trazendo alegria, energia positiva e um toque de sol para qualquer ambiente ou presente.",
       "image": "/catalog/mothers_day_2026/buque/buque_girassol_1.png",
@@ -192,6 +192,26 @@
         "Remova flores secas para estimular novas floradas"
       ],
       "category": "plantas",
+      "rating": 4,
+      "reviews": 0
+    },
+    {
+      "id": 10,
+      "name": "Rosa Dupla",
+      "price": "R$ 80,00",
+      "displayPrice": "$$$",
+      "description": "Rosa dupla com flores duradouras e folhas brilhantes, ideal para decorar ambientes com elegância tropical e cor marcante.",
+      "image": "/catalog/valentines_day/rosa_dupla.jpg",
+      "images": [
+        "/catalog/valentines_day/rosa_dupla.jpg",
+        "/catalog/valentines_day/rosa_dupla_2.jpg"
+      ],
+      "careInstructions": [
+        "Deixe em local iluminado com luz indireta",
+        "Regue 1 a 2 vezes por semana, sem encharcar",
+        "Evite correntes de ar e sol direto"
+      ],
+      "category": "arranjos",
       "rating": 4,
       "reviews": 0
     }
